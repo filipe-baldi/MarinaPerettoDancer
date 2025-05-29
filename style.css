@@ -145,6 +145,7 @@ header h1 {
     padding: 60px 20px;
     background: #fdf5e6; /* areia */
 }
+
 .sobre h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -182,6 +183,8 @@ header h1 {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    object-fit: cover;
+    align-self: center;
 }
 
 .foto-professora:hover {
@@ -193,6 +196,7 @@ header h1 {
     padding: 60px 20px;
     background: #fff;
 }
+
 .servicos h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -230,19 +234,18 @@ header h1 {
 
 .card-btn h3 {
     margin-top: 0;
-    font-size: 1.05rem; /* Tamanho levemente maior */
+    font-size: 1.05rem;
     color: #8B0000;
-    white-space: normal; /* Permite quebra de linha */
-    overflow: visible;   /* Remove corte de texto */
-    text-overflow: clip; /* Evita '...' se o texto for longo */
-    min-height: auto;   /* Altura ajustável */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    min-height: auto;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     line-height: 1.2;
-    padding: 0 10px;     /* Para evitar que toque nas bordas */
 }
 
 .card-btn p {
@@ -253,16 +256,13 @@ header h1 {
 
 @media (max-width: 768px) {
     .card-btn h3 {
-        white-space: normal;
         font-size: 1rem;
-        text-align: center;
-        padding: 0 5px;
+        line-height: 1.3;
     }
 
     .card-btn p {
         font-size: 0.85rem;
     }
-}
 
     .foto-professora {
         order: 1;
@@ -291,6 +291,7 @@ header h1 {
     padding: 60px 20px;
     background: #fdf5e6;
 }
+
 .galeria h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -302,6 +303,7 @@ header h1 {
     background: #fff;
     text-align: center;
 }
+
 .contatos-info {
     display: flex;
     flex-direction: column;
@@ -311,12 +313,14 @@ header h1 {
     font-size: 1rem;
     color: #333;
 }
+
 .botoes-contato {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -393,25 +397,25 @@ footer {
     text-align: center;
     padding: 40px 20px;
 }
+
 footer h3 {
     margin-bottom: 10px;
 }
+
 footer p {
     margin: 5px 0;
 }
 
-/* NOVAS ADIÇÕES PARA PÁGINAS INTERNAS */
-
 /* Hero pequeno para páginas internas */
 .hero-small {
     background: url('imagens/fundao.jpeg') no-repeat center center/cover;
-    height: 40vh; /* Altura menor que o hero principal */
+    height: 40vh;
     position: relative;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px; /* Espaço para o header fixo */
+    margin-top: 60px;
 }
 
 .hero-small .overlay {
@@ -428,8 +432,8 @@ footer p {
     position: relative;
     z-index: 2;
     text-align: center;
-    width: 90%;
     max-width: 900px;
+    width: 90%;
 }
 
 .hero-small h1 {
@@ -443,26 +447,28 @@ footer p {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Main para páginas de experiências */
+/* Conteúdo interno das páginas de experiência */
 .main-experiencia {
     padding: 60px 20px;
     background: #fff;
 }
 
-.descricao, .beneficios, .chamada-acao {
+.descricao,
+.beneficios,
+.chamada-acao {
     margin-bottom: 40px;
+    background: #fffacd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-.descricao h2, .beneficios h2, .chamada-acao h2 {
+.descricao h2,
+.beneficios h2,
+.chamada-acao h2 {
     color: #8B0000;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.descricao p, .chamada-acao p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 20px;
+    margin-bottom: 15px;
 }
 
 .lista-sem-bolinha {
@@ -477,78 +483,36 @@ footer p {
     text-align: center;
 }
 
+.lista-sem-bolinha li::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
 /* Botão de chamada para ação */
 .chamada-acao .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto; /* Alterado de 60px para auto */
-    height: auto; /* Alterado de 60px para auto */
-    border-radius: 30px; /* Alterado de 50% para 30px */
+    width: auto;
+    height: auto;
+    border-radius: 30px;
     font-size: 1rem;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    padding: 10px 25px; /* Adicionado padding horizontal */
+    padding: 10px 25px;
     margin: 20px auto;
     display: block;
     max-width: 200px;
+    text-align: center;
 }
 
-/* Sobrescrever o estilo do botão Instagram para uso como botão genérico */
 .chamada-acao .btn-instagram {
-    background-color: #8B0000; /* Vermelho escuro para combinar com o header */
+    background-color: #8B0000;
     color: white;
 }
 
 .chamada-acao .btn-instagram:hover {
-    background-color: #a30000; /* Vermelho um pouco mais claro ao passar o mouse */
-}
-
-/* Ajustes responsivos para páginas internas */
-@media (max-width: 768px) {
-    .hero-small {
-        height: 30vh;
-    }
-    
-    .hero-small h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero-small p {
-        font-size: 0.95rem;
-    }
-
-    /* Ajuste para o menu na versão mobile */
-    #main-nav {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: #8B0000;
-        padding: 10px 0;
-    }
-
-    #main-nav.active {
-        display: block;
-    }
-
-    #main-nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    #main-nav li {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
+    background-color: #a30000;
 }
 
 /* Centralização do contato em páginas internas */
@@ -558,9 +522,7 @@ footer p {
 }
 
 .main-experiencia + #secao-contato .contato .container {
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1100px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -569,9 +531,4 @@ footer p {
 .main-experiencia + #secao-contato .contatos-info {
     width: 100%;
     max-width: 600px;
-}
-
-.main-experiencia + #secao-contato .botoes-contato {
-    width: 100%;
-    justify-content: center;
 }
