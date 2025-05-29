@@ -230,18 +230,19 @@ header h1 {
 
 .card-btn h3 {
     margin-top: 0;
-    font-size: 1,05rem;
+    font-size: 1.05rem; /* Tamanho levemente maior */
     color: #8B0000;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-height: 2.5em;
+    white-space: normal; /* Permite quebra de linha */
+    overflow: visible;   /* Remove corte de texto */
+    text-overflow: clip; /* Evita '...' se o texto for longo */
+    min-height: auto;   /* Altura ajustável */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 2.5em;
     line-height: 1.2;
+    padding: 0 10px;     /* Para evitar que toque nas bordas */
 }
 
 .card-btn p {
@@ -253,15 +254,15 @@ header h1 {
 @media (max-width: 768px) {
     .card-btn h3 {
         white-space: normal;
-        font-size: 0.95rem;
-        min-height: auto;
-        height: auto;
-        line-height: normal;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 5px;
     }
 
     .card-btn p {
         font-size: 0.85rem;
     }
+}
 
     .foto-professora {
         order: 1;
