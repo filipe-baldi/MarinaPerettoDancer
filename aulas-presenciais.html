@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Marina Peretto | Danças Árabes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aulas Presenciais - Marina Peretto</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -17,15 +17,15 @@
         <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#quem-sou">Quem Sou</a></li>
-                <li><a href="index.html#servicos">Experiências</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="index.html#quem-sou">Quem Sou</a></li> 
+                <li><a href="index.html#servicos">Experiências Oferecidas</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
+<!-- Hero Pequeno -->
 <section class="hero-small">
     <div class="overlay"></div>
     <div class="hero-content">
@@ -36,6 +36,7 @@
 
 <main class="main-experiencia">
     <div class="container">
+        <!-- Descrição -->
         <section class="descricao">
             <h2>O que são as Aulas Presenciais?</h2>
             <p>
@@ -44,6 +45,7 @@
             </p>
         </section>
 
+        <!-- Benefícios -->
         <section class="beneficios">
             <h2>Benefícios</h2>
             <ul class="lista-sem-bolinha">
@@ -55,15 +57,16 @@
             </ul>
         </section>
 
+        <!-- Chamada para ação -->
         <section class="chamada-acao">
             <h2>Venha Experimentar!</h2>
-            <p>Faça uma aula experimental e sinta a diferença de estar fisicamente presente nesse universo mágico da dança árabe.</p>
+            <p>Faça uma aula experimental e descubra como é fácil começar a dançar conosco.</p>
             <a href="#contato" class="btn btn-instagram">Agendar Aula</a>
         </section>
     </div>
 </main>
 
-<!-- Carregar contato dinamicamente -->
+<!-- Carregar Contato Dinamicamente (se quiser usar fetch) -->
 <div id="secao-contato"></div>
 
 <script>
@@ -81,6 +84,15 @@
         });
 </script>
 
+<footer>
+    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão Fixo WhatsApp -->
+<a href="https://wa.me/5511987654321"  target="_blank" class="whatsapp-fixo">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
 <!-- Script do menu hamburguer -->
 <script>
     const menuToggle = document.getElementById('menu-toggle');
@@ -90,8 +102,6 @@
         menuToggle.classList.toggle('active');
         mainNav.classList.toggle('active');
     });
-</script>
-
 </script>
 
 </body>
