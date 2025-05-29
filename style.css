@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
@@ -20,7 +20,7 @@ body {
 
 /* Header */
 header {
-    background: #8B0000;
+    background: #8B0000; /* Vermelho escuro */
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -95,16 +95,16 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 2;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
+    white-space: nowrap;
 }
 
 .hero h2 {
@@ -125,19 +125,25 @@ header h1 {
         background-attachment: scroll;
     }
 
+    .hero-content {
+        white-space: normal;
+        width: 90%;
+        font-size: 0.95rem;
+    }
+
     .hero h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
 /* Seção Quem Sou */
 .sobre {
     padding: 60px 20px;
-    background: #fdf5e6;
+    background: #fdf5e6; /* areia */
 }
 .sobre h2 {
     text-align: center;
@@ -182,7 +188,7 @@ header h1 {
     transform: scale(1.02);
 }
 
-/* Serviços / Experiências */
+/* Serviços / Experiências Oferecidas */
 .servicos {
     padding: 60px 20px;
     background: #fff;
@@ -193,6 +199,7 @@ header h1 {
     font-size: 2rem;
     color: #8B0000;
 }
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -200,10 +207,10 @@ header h1 {
 }
 
 .card-btn {
-    background: #fffacd;
+    background: #fdf5e6; /* Mesma cor da seção "Quem Sou" */
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     text-decoration: none;
     color: inherit;
@@ -218,7 +225,7 @@ header h1 {
 
 .card-btn:hover {
     transform: scale(1.03);
-    background: #F5E6CA;
+    background-color: #f5e8ca;
 }
 
 .card-btn h3 {
@@ -239,14 +246,14 @@ header h1 {
 
 .card-btn p {
     font-size: 0.95rem;
-    color: #555;
+    color: #333;
     margin-top: 10px;
 }
 
 @media (max-width: 768px) {
     .card-btn h3 {
         white-space: normal;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         min-height: auto;
         height: auto;
         line-height: normal;
@@ -270,6 +277,22 @@ header h1 {
     .texto-quem-sou p {
         text-align: left;
     }
+
+    .btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Galeria */
+.galeria {
+    padding: 60px 20px;
+    background: #fdf5e6;
+}
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 /* Contato */
@@ -307,7 +330,7 @@ header h1 {
     cursor: pointer;
 }
 
-/* Estilos dos botões */
+/* Estilos dos botões - não foram modificados */
 .btn-email {
     background-color: #ffd700;
     color: #333;
@@ -367,145 +390,162 @@ footer {
     background: #8B0000;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 20px;
+}
+footer h3 {
+    margin-bottom: 10px;
+}
+footer p {
+    margin: 5px 0;
 }
 
-/* Hero pequeno (para páginas internas como aulas-presenciais.html) */
+/* NOVAS ADIÇÕES PARA PÁGINAS INTERNAS */
+
+/* Hero pequeno para páginas internas */
 .hero-small {
-    background: url('https://images.unsplash.com/photo-1536782376882-dec5f59dd8e2')  no-repeat center center/cover;
-    height: 300px;
+    background: url('imagens/fundao.jpeg') no-repeat center center/cover;
+    height: 40vh; /* Altura menor que o hero principal */
     position: relative;
     color: white;
-}
-.hero-small .overlay {
-    background: rgba(0, 0, 0, 0.5);
-}
-.hero-small .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px; /* Espaço para o header fixo */
 }
 
-/* Conteúdo interno das páginas de experiência */
+.hero-small .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-small .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+.hero-small h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-small p {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Main para páginas de experiências */
 .main-experiencia {
     padding: 60px 20px;
-    background: #fdf5e6;
+    background: #fff;
 }
 
-.descricao,
-.beneficios,
-.detalhes,
-.chamada-acao {
+.descricao, .beneficios, .chamada-acao {
     margin-bottom: 40px;
-    background: #fffacd;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.descricao h2,
-.beneficios h2,
-.detalhes h2,
-.chamada-acao h2 {
+.descricao h2, .beneficios h2, .chamada-acao h2 {
     color: #8B0000;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.descricao p, .chamada-acao p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
 }
 
 .lista-sem-bolinha {
-    list-style: none;
+    list-style-type: none;
     padding-left: 0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.lista-sem-bolinha li::before {
-    content: "";
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-.chamada-acao {
-    background: #ffd700;
+.lista-sem-bolinha li {
+    padding: 8px 0;
     text-align: center;
 }
+
+/* Botão de chamada para ação */
 .chamada-acao .btn {
-    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Alterado de 60px para auto */
+    height: auto; /* Alterado de 60px para auto */
+    border-radius: 30px; /* Alterado de 50% para 30px */
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    padding: 10px 25px; /* Adicionado padding horizontal */
+    margin: 20px auto;
+    display: block;
+    max-width: 200px;
 }
 
-/* Responsivo */
+/* Sobrescrever o estilo do botão Instagram para uso como botão genérico */
+.chamada-acao .btn-instagram {
+    background-color: #8B0000; /* Vermelho escuro para combinar com o header */
+    color: white;
+}
+
+.chamada-acao .btn-instagram:hover {
+    background-color: #a30000; /* Vermelho um pouco mais claro ao passar o mouse */
+}
+
+/* Ajustes responsivos para páginas internas */
 @media (max-width: 768px) {
-    html {
-        font-size: 85%;
+    .hero-small {
+        height: 30vh;
+    }
+    
+    .hero-small h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-small p {
+        font-size: 0.95rem;
     }
 
-    header h1 {
-        float: none;
-        text-align: center;
-        margin-left: 0;
-        font-size: 1.3rem;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-    }
-
+    /* Ajuste para o menu na versão mobile */
     #main-nav {
         display: none;
-        flex-direction: column;
-        background: #8B0000;
+        width: 100%;
         position: absolute;
         top: 60px;
         left: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
+        background: #8B0000;
+        padding: 10px 0;
+    }
+
+    #main-nav.active {
+        display: block;
     }
 
     #main-nav ul {
         flex-direction: column;
-        width: 100%;
+        align-items: center;
+        margin: 0;
+        padding: 0;
     }
 
-    #main-nav ul li {
+    #main-nav li {
         margin: 10px 0;
+        width: 100%;
+        text-align: center;
     }
 
-    #main-nav.active {
-        display: flex;
-    }
-
-    .hero h2 {
-        font-size: 1.8rem;
-        line-height: 1.3;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .sobre h2,
-    .servicos h2,
-    .galeria h2,
-    .contato h2 {
-        font-size: 1.5rem;
-    }
-
-    .card-btn h3 {
-        font-size: 0.9rem;
-    }
-
-    .card-btn p {
-        font-size: 0.85rem;
-    }
-
-    .btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
+    .menu-toggle {
+        display: block;
     }
 }
