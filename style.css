@@ -20,7 +20,7 @@ body {
 
 /* Header */
 header {
-    background: #8B0000; /* Vermelho escuro */
+    background: #8B0000;
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -80,7 +80,7 @@ header h1 {
 
 /* Hero Section */
 .hero {
-    background: url('Imagens/fundao.jpeg') no-repeat center center/cover;
+    background: url('imagens/fundao.jpeg') no-repeat center center/cover;
     height: 100vh;
     position: relative;
     color: white;
@@ -95,13 +95,14 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
+    background: rgba(0,0,0,0.6);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     max-width: 800px;
 }
@@ -136,7 +137,7 @@ header h1 {
 /* Seção Quem Sou */
 .sobre {
     padding: 60px 20px;
-    background: #fdf5e6; /* areia */
+    background: #fdf5e6;
 }
 .sobre h2 {
     text-align: center;
@@ -181,7 +182,7 @@ header h1 {
     transform: scale(1.02);
 }
 
-/* Serviços / Experiências Oferecidas */
+/* Serviços / Experiências */
 .servicos {
     padding: 60px 20px;
     background: #fff;
@@ -192,7 +193,6 @@ header h1 {
     font-size: 2rem;
     color: #8B0000;
 }
-
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -238,7 +238,7 @@ header h1 {
 }
 
 .card-btn p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: #555;
     margin-top: 10px;
 }
@@ -253,7 +253,7 @@ header h1 {
     }
 
     .card-btn p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
     .foto-professora {
@@ -270,22 +270,6 @@ header h1 {
     .texto-quem-sou p {
         text-align: left;
     }
-
-    .btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
-    }
-}
-
-/* Galeria */
-.galeria {
-    padding: 60px 20px;
-    background: #fdf5e6;
-}
-.galeria h2 {
-    text-align: center;
-    margin-bottom: 40px;
 }
 
 /* Contato */
@@ -383,18 +367,12 @@ footer {
     background: #8B0000;
     color: white;
     text-align: center;
-    padding: 40px 20px;
-}
-footer h3 {
-    margin-bottom: 10px;
-}
-footer p {
-    margin: 5px 0;
+    padding: 20px 0;
 }
 
-/* Hero pequeno para páginas internas */
+/* Hero pequeno (para páginas internas como aulas-presenciais.html) */
 .hero-small {
-    background: url('https://images.unsplash.com/photo-1536782376882-dec5f59dd8e2 ') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1536782376882-dec5f59dd8e2')  no-repeat center center/cover;
     height: 300px;
     position: relative;
     color: white;
@@ -501,6 +479,15 @@ footer p {
         display: flex;
     }
 
+    .hero h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
     .sobre h2,
     .servicos h2,
     .galeria h2,
@@ -513,6 +500,12 @@ footer p {
     }
 
     .card-btn p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
     }
 }
