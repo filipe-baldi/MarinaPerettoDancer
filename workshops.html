@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops Temáticos - Marina Peretto | Danças Árabes</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome para ícones oficiais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Marina Peretto</h1>
+
+        <!-- Botão Hamburguer -->
+        <button id="menu-toggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Navegação -->
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#sobre">Quem sou</a></li>
+                <li><a href="index.html#servicos">Experiências oferecidas</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-small">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Workshops Temáticos</h1>
+        <p>Aprofunde-se em temas específicos como técnica, expressão corporal e história.</p>
+    </div>
+</section>
+
+<main class="main-experiencia">
+    <div class="container">
+        <section class="descricao">
+            <h2>O que são os Workshops Temáticos?</h2>
+            <p>Os workshops são encontros intensivos dedicados a temas específicos da dança árabe, como técnica de movimento, história cultural, expressão corporal, ritmos tradicionais e preparação artística. São ideais para quem deseja se aprofundar em um aspecto específico da arte.</p>
+        </section>
+
+        <section class="beneficios">
+            <h2>Benefícios</h2>
+            <ul class="lista-sem-bolinha">
+                <li>Imersão em temas específicos</li>
+                <li>Maior liberdade criativa e técnica</li>
+                <li>Interação direta com a professora e outras alunas</li>
+                <li>Materiais exclusivos e apostilas digitais</li>
+                <li>Flexibilidade: presencial ou online</li>
+            </ul>
+        </section>
+
+        <section class="detalhes">
+            <h2>Temas Comuns Abordados</h2>
+            <ul>
+                <li>Técnica de Movimento e Postura</li>
+                <li>Ritmos Árabes (Maqsoum, Masmoudi, Saidi, etc)</li>
+                <li>Expressão Corporal e Performance</li>
+                <li>Figurino e Estética Oriental</li>
+                <li>História e Cultura das Danças Árabes</li>
+            </ul>
+        </section>
+
+        <section class="chamada-acao">
+            <h2>Participe!</h2>
+            <p>Nossos workshops acontecem regularmente e são abertos tanto para iniciantes quanto para bailarinas experientes. Garanta sua vaga com antecedência!</p>            
+        </section>
+    </div>
+</main>
+
+<section id="contato" class="contato">
+    <div class="container">
+        <h2>Entre em Contato</h2>
+
+        <!-- Informações de contato -->
+        <div class="contatos-info">
+            <p><strong>Email:</strong> samira@raizesdoriente.com.br</p>
+            <p><strong>Instagram:</strong> @RaizesDoOriente</p>
+            <p><strong>WhatsApp:</strong> (11) 98765-4321</p>
+        </div>
+
+        <!-- Botões apenas com ícones oficiais -->
+        <div class="botoes-contato">
+            <a href="mailto:samira@raizesdoriente.com.br" class="btn btn-email" aria-label="Enviar Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/RaizesDoOriente/ " target="_blank" class="btn btn-instagram" aria-label="Acessar Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5511987654321 " target="_blank" class="btn btn-whatsapp" aria-label="Fale no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Marina Peretto. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Script do menu hamburguer -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

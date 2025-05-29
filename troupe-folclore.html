@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troupe de Folclore - Marina Peretto | Danças Árabes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Marina Peretto</h1>
+        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#quem-sou">Quem Sou</a></li>
+                <li><a href="index.html#servicos">Experiências Oferecidas</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-small">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Troupe de Folclore</h1>
+        <p>Participe de um grupo artístico com apresentações regulares e treinamentos intensivos.</p>
+    </div>
+</section>
+
+<main class="main-experiencia">
+    <div class="container">
+        <section class="descricao">
+            <h2>O que é a Troupe de Folclore?</h2>
+            <p>É um grupo de artistas que representa a cultura árabe através de apresentações coletivas. As integrantes recebem treinamento contínuo e participam de eventos culturais e shows com apoio artístico e técnico.</p>
+        </section>
+
+        <section class="beneficios">
+            <h2>Benefícios</h2>
+            <ul class="lista-sem-bolinha">
+                <li>Participação em apresentações públicas</li>
+                <li>Treinamento intensivo mensal</li>
+                <li>Integração com outras artistas</li>
+                <li>Melhora técnica e presença de palco</li>
+                <li>Visibilidade e experiência artística</li>
+            </ul>
+        </section>
+
+        <section class="detalhes">
+            <h2>Como Participar</h2>
+            <p>Para fazer parte da Troupe, é necessário passar por seleção e ter pelo menos nível intermediário em dança árabe. As atividades incluem:</p>
+            <ul>
+                <li>Ensaio semanal</li>
+                <li>Workshops mensais</li>
+                <li>Presença em eventos culturais</li>
+                <li>Uniformização e cenário padronizado</li>
+                <li>Divulgação artística coletiva</li>
+            </ul>
+        </section>
+
+        <section class="chamada-acao">
+            <h2>Quer fazer parte da nossa equipe?</h2>
+            <p>Envie seu vídeo de apresentação e aguarde o convite para o próximo ciclo de seleção.</p>
+            <a href="#contato" class="btn btn-instagram">Enviar Vídeo</a>
+        </section>
+    </div>
+</main>
+
+<section id="contato" class="contato">
+    <div class="container">
+        <h2>Entre em Contato</h2>
+        <div class="contatos-info">
+            <p><strong>Email:</strong> samira@raizesdoriente.com.br</p>
+            <p><strong>Instagram:</strong> @RaizesDoOriente</p>
+            <p><strong>WhatsApp:</strong> (11) 98765-4321</p>
+        </div>
+        <div class="botoes-contato">
+            <a href="mailto:samira@raizesdoriente.com.br" class="btn btn-email" aria-label="Enviar Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/RaizesDoOriente/ " target="_blank" class="btn btn-instagram" aria-label="Acessar Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5511987654321 " target="_blank" class="btn btn-whatsapp" aria-label="Fale no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão Fixo WhatsApp -->
+<a href="https://wa.me/5511987654321 " target="_blank" class="whatsapp-fixo">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

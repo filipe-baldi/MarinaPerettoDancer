@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Marina Peretto | Danças Árabes</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Marina Peretto</h1>
+        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#quem-sou">Quem Sou</a></li>
+                <li><a href="../index.html#servicos">Experiências Oferecidas</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-small">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Portfólio</h1>
+        <p>Confira um pouco da minha trajetória artística através de fotos e vídeos.</p>
+    </div>
+</section>
+
+<main class="main-experiencia">
+    <div class="container">
+        <section class="descricao">
+            <h2>O que você encontrará aqui</h2>
+            <p>Aqui estão alguns registros das minhas apresentações, eventos, aulas e participações em espetáculos ao longo dos anos. Cada imagem conta uma história e reflete o amor à dança árabe, ao movimento e à cultura oriental.</p>
+        </section>
+
+        <section class="beneficios">
+            <h2>Principais momentos</h2>
+            <ul class="lista-sem-bolinha">
+                <li>Shows no Egito (Cairo, Alexandria)</li>
+                <li>Apresentações com a Kazafy Troupe Brasil</li>
+                <li>Workshops e aulas presenciais no Brasil</li>
+                <li>Coreografias autorais e colaborativas</li>
+                <li>Imersão cultural em festivais internacionais</li>
+            </ul>
+        </section>
+
+        <section class="detalhes">
+            <h2>Galeria de Fotos</h2>
+            <p>Abaixo, você pode conferir alguns momentos marcantes da minha carreira:</p>
+            <div class="imagens">
+                <img src="https://via.placeholder.com/300x400?text=Show+Cairo+2023 " alt="Show Cairo 2023">
+                <img src="https://via.placeholder.com/300x400?text=Kazafy+Troupe " alt="Kazafy Troupe">
+                <img src="https://via.placeholder.com/300x400?text=Aula+Presencial " alt="Aula Presencial">
+                <img src="https://via.placeholder.com/300x400?text=Workshop+Eg ípcio" alt="Workshop Egípcio">
+            </div>
+        </section>
+
+        <section class="chamada-acao">
+            <h2>Quer ver mais?</h2>
+            <p>Siga nosso Instagram para acompanhar nossos shows, treinos e bastidores!</p>
+            <a href="https://www.instagram.com/RaizesDoOriente/ " target="_blank" class="btn btn-instagram">Instagram</a>
+        </section>
+    </div>
+</main>
+
+<section id="contato" class="contato">
+    <div class="container">
+        <h2>Entre em Contato</h2>
+        <div class="contatos-info">
+            <p><strong>Email:</strong> samira@raizesdoriente.com.br</p>
+            <p><strong>Instagram:</strong> @RaizesDoOriente</p>
+            <p><strong>WhatsApp:</strong> (11) 98765-4321</p>
+        </div>
+        <div class="botoes-contato">
+            <a href="mailto:samira@raizesdoriente.com.br" class="btn btn-email" aria-label="Enviar Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/RaizesDoOriente/ " target="_blank" class="btn btn-instagram" aria-label="Acessar Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5511987654321 " target="_blank" class="btn btn-whatsapp" aria-label="Fale no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão Fixo WhatsApp -->
+<a href="https://wa.me/5511987654321 " target="_blank" class="whatsapp-fixo">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

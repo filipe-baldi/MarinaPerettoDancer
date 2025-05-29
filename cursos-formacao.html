@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Formação - Marina Peretto | Danças Árabes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Marina Peretto</h1>
+        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#quem-sou">Quem Sou</a></li>
+                <li><a href="index.html#servicos">Experiências Oferecidas</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-small">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Cursos de Formação</h1>
+        <p>Formação completa para futuras bailarinas e professoras de danças árabes.</p>
+    </div>
+</section>
+
+<main class="main-experiencia">
+    <div class="container">
+        <section class="descricao">
+            <h2>O que são os Cursos de Formação?</h2>
+            <p>Programa estruturado para formar bailarinas e professoras com conteúdo técnico, histórico e artístico da dança árabe. Ideal tanto para quem está começando quanto para quem deseja se especializar.</p>
+        </section>
+
+        <section class="beneficios">
+            <h2>O que você vai aprender</h2>
+            <ul class="lista-sem-bolinha">
+                <li>Técnicas de movimento e postura</li>
+                <li>Ritmos tradicionais e variações</li>
+                <li>História e simbologia dos gestos</li>
+                <li>Figurinos, adereços e maquiagem oriental</li>
+                <li>Metodologia de ensino (para professoras)</li>
+            </ul>
+        </section>
+
+        <section class="detalhes">
+            <h2>Estrutura do Curso</h2>
+            <ul>
+                <li>Níveis: Iniciante, Intermediário e Avançado</li>
+                <li>Opção: Presencial ou Online</li>
+                <li>Duração: 6 meses por nível (média)</li>
+                <li>Material didático incluso</li>
+                <li>Aulas práticas + teóricas</li>
+            </ul>
+        </section>
+
+        <section class="chamada-acao">
+            <h2>Matricule-se agora</h2>
+            <p>Seja aluna ou obtenha certificação para ministrar aulas. Garanta sua vaga nas turmas regulares!</p>
+            <a href="#contato" class="btn btn-instagram">Inscreva-se</a>
+        </section>
+    </div>
+</main>
+
+<section id="contato" class="contato">
+    <div class="container">
+        <h2>Entre em Contato</h2>
+
+        <!-- Informações de contato -->
+        <div class="contatos-info">
+            <p><strong>Email:</strong> marinaperetto.dancer@gmail.com.br</p>
+            <p><strong>Instagram:</strong> @marina.peretto</p>
+            <p><strong>WhatsApp:</strong> (51) 9 8138 0686</p>
+        </div>
+
+        <!-- Botões com ícones oficiais -->
+        <div class="botoes-contato">
+            <a href="mailto:marinaperetto.dancer@gmail.com.br" class="btn btn-email" aria-label="Enviar Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/marina.peretto/ " target="_blank" class="btn btn-instagram" aria-label="Acessar Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5551981380686 " target="_blank" class="btn btn-whatsapp" aria-label="Fale no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão Fixo WhatsApp -->
+<a href="https://wa.me/5511987654321 " target="_blank" class="whatsapp-fixo">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

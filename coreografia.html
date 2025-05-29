@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coreografia - Marina Peretto | Danças Árabes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Marina Peretto</h1>
+        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#quem-sou">Quem Sou</a></li>
+                <li><a href="index.html#servicos">Experiências Oferecidas</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-small">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Coreografia</h1>
+        <p>Criação personalizada de coreografias para espetáculos ou apresentações.</p>
+    </div>
+</section>
+
+<main class="main-experiencia">
+    <div class="container">
+        <section class="descricao">
+            <h2>O que é a criação de Coreografia?</h2>
+            <p>Aqui desenvolvo coreografias exclusivas baseadas no seu estilo, nível técnico e intenção artística. Seja para um show, festival ou apresentação pessoal, cada movimento será pensado para transmitir emoção e história através da dança árabe.</p>
+        </section>
+
+        <section class="beneficios">
+            <h2>Vantagens</h2>
+            <ul class="lista-sem-bolinha">
+                <li>Coreografia única e personalizada</li>
+                <li>Adaptada ao seu nível técnico e expressão corporal</li>
+                <li>Ritmos e estilos escolhidos conforme sua preferência</li>
+                <li>Inclui sugestões de figurino e música</li>
+                <li>Ideal para solistas ou grupos</li>
+            </ul>
+        </section>
+
+        <section class="detalhes">
+            <h2>Como funciona</h2>
+            <p>Após uma conversa inicial sobre seus objetivos, começo o processo criativo:</p>
+            <ul>
+                <li>Escolha do ritmo e estilo musical</li>
+                <li>Definição do conceito e narrativa da peça</li>
+                <li>Desenvolvimento da sequência de movimentos</li>
+                <li>Gravação e acompanhamento das etapas</li>
+                <li>Revisão final e ajustes técnicos</li>
+            </ul>
+        </section>
+
+        <section class="chamada-acao">
+            <h2>Solicite sua Coreografia</h2>
+            <p>Faça um orçamento sem compromisso e transforme sua ideia em arte!</p>
+            <a href="#contato" class="btn btn-instagram">Orçamento</a>
+        </section>
+    </div>
+</main>
+
+<section id="contato" class="contato">
+    <div class="container">
+        <h2>Entre em Contato</h2>
+        <div class="contatos-info">
+            <p><strong>Email:</strong> samira@raizesdoriente.com.br</p>
+            <p><strong>Instagram:</strong> @RaizesDoOriente</p>
+            <p><strong>WhatsApp:</strong> (11) 98765-4321</p>
+        </div>
+        <div class="botoes-contato">
+            <a href="mailto:samira@raizesdoriente.com.br" class="btn btn-email" aria-label="Enviar Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/RaizesDoOriente/ " target="_blank" class="btn btn-instagram" aria-label="Acessar Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5511987654321 " target="_blank" class="btn btn-whatsapp" aria-label="Fale no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão Fixo WhatsApp -->
+<a href="https://wa.me/5511987654321 " target="_blank" class="whatsapp-fixo">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
