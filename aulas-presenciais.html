@@ -51,30 +51,28 @@
         </section>
 
         <!-- Nova Seção: Agenda -->
-        <section class="agenda">
-            <div class="container">
-                <h2>Agenda de Aulas</h2>
-                <p style="text-align:center;">Escolha um dia e hora para agendar sua aula:</p>
+        <!-- Seção Agendamento -->
+<section class="agenda">
+    <div class="container">
+        <h2>Agenda de Aulas</h2>
+        <p style="text-align:center;">Confira abaixo os horários disponíveis:</p>
 
-                <!-- Link para Google Agenda -->
-                <div style="text-align:center; margin: 20px 0;">
-                    <a href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" class="btn btn-instagram">Ver Agenda Online</a>
-                </div>
+        <!-- Google Agenda Embed -->
+        <iframe 
+            src="https://calendar.google.com/calendar/embed?src=seu-email@gmail.com&ctz=America%2FSao_Paulo"
+            style="border: 0; width: 100%; height: 600px;" 
+            frameborder="0" 
+            scrolling="no">
+        </iframe>
 
-                <!-- Ou iframe embutido -->
-                <iframe 
-                    src="https://calendar.google.com/calendar/embed?src=seu-email%40gmail.com&ctz=America%2FSao_Paulo" 
-                    style="border: 0; width: 100%; height: 600px;" 
-                    frameborder="0">
-                </iframe>
+        <!-- Botão para agendar -->
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="#formulario-agendamento" class="btn btn-whatsapp">Agende Sua Aula</a> 
+        </div>
+    </div>
+</section>
 
-                <!-- Botão de agendamento -->
-                <div style="margin-top: 30px; text-align: center;">
-                    <a href="#formulario-agendamento" class="btn btn-whatsapp">Agende Sua Aula</a> 
-                </div>
-            </div>
-        </section>
-
+             
         <!-- Formulário -->
         <section id="formulario-agendamento" class="formulario">
             <div class="container">
