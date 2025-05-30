@@ -17,8 +17,8 @@
         <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#quem-sou">Quem Sou</a></li> 
-                <li><a href="index.html#servicos">Experiências Oferecidas</a></li>
+                <li><a href="index.html#servicos">Experiências</a></li> 
+                <li><a href="portfolio.html">Portfólio</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -36,44 +36,72 @@
 
 <main class="main-experiencia">
     <div class="container">
+
         <!-- Descrição -->
         <section class="descricao">
             <h2>Como funcionam as aulas presenciais?</h2>
             <p>
-               As aulas presenciais são oferecidas em escolas nas cidades de Novo Hamburgo e Estância Velha. 
+                As aulas presenciais são oferecidas em escolas nas cidades de Novo Hamburgo e Estância Velha.
                 Você pode escolher entre aulas em grupo (consulte a agenda para verificar os horários disponíveis) ou aulas particulares.
             </p>
             <p>
-             As aulas estão disponíveis nos níveis: iniciante, básico, intermediário e avançado, respeitando o ritmo e a experiência de cada aluna.
-            </p>
-            <p>
-            As aulas em grupo são realizadas mediante pagamento de mensalidade. 
-            Já as aulas particulares podem ser contratadas de forma avulsa ou por meio de pacotes personalizados.   
+                As aulas em grupo são realizadas mediante pagamento de mensalidade. Já as aulas particulares podem ser contratadas de forma avulsa ou por meio de pacotes personalizados.
             </p>
         </section>
 
-        <!-- Benefícios -->
-        <section class="beneficios">
-            <h2>Benefícios</h2>
-            <ul class="lista-sem-bolinha">
-                <li>Aprendizado cultural imersivo</li>
-                <li>Imersão sensorial: música, movimento e energia compartilhada</li>
-                <li>Coordenação motora e consciência corporal com correção imediata da técnica</li>
-                <li>Interação com outras alunas e possibilidade de criar laços</li>
-                <li>Melhora da postura, flexibilidade e fortalecimento da autoestima</li>
-            </ul>
+        <!-- Agenda -->
+        <section class="agenda">
+            <div class="container">
+                <h2>Agenda de Aulas</h2>
+                <p style="text-align: center;">
+                    Confira abaixo os horários disponíveis para aulas presenciais. Para agendar, preencha o formulário logo abaixo!
+                </p>
+
+                <!-- Embed do Google Calendar -->
+                <iframe 
+                    src="https://calendar.google.com/calendar/embed?src=seu-email%40gmail.com&ctz=America%2FSao_Paulo"
+                    style="border: 0; width: 100%; height: 600px;" 
+                    frameborder="0"
+                    scrolling="no">
+                </iframe>
+
+                <div class="btn-agenda">
+                    <a href="#formulario-agendamento" class="btn btn-instagram">Agende Sua Aula</a> 
+                </div>
+            </div>
         </section>
 
-        <!-- Chamada para ação -->
-        <section class="chamada-acao">
-            <h2>Venha Experimentar!</h2>
-            <p>Faça uma aula experimental e descubra como é fácil começar a dançar conosco.</p>
-            <a href="#contato" class="btn btn-instagram">Agendar Aula</a>
+        <!-- Formulário -->
+        <section id="formulario-agendamento" class="formulario">
+            <div class="container">
+                <h2>Faça seu Agendamento</h2>
+                <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para confirmar sua aula.</p>
+
+                <form action="https://formspree.io/f/marinaperetto.dancer@gmail.com"  method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp:</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 98765-4321" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data-hora">Data e Hora desejada:</label>
+                        <input type="datetime-local" id="data-hora" name="data_hora" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-instagram">Enviar Solicitação</button>
+                </form>
+            </div>
         </section>
+
     </div>
 </main>
 
-<!-- Carregar Contato Dinamicamente (se quiser usar fetch) -->
+<!-- Carregar Contato Dinamicamente -->
 <div id="secao-contato"></div>
 
 <script>
@@ -90,10 +118,6 @@
             `;
         });
 </script>
-
-<footer>
-    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
-</footer>
 
 <!-- Botão Fixo WhatsApp -->
 <a href="https://wa.me/5511987654321"  target="_blank" class="whatsapp-fixo">
