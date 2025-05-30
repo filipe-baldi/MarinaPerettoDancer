@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-    background: #8B0000; /* Vermelho escuro */
+    background: #8B0000;
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -75,17 +75,18 @@ header h1 {
     opacity: 0.8;
 }
 
-/* Hero Section */
-.hero {
+/* Hero pequeno para páginas internas */
+.hero-small {
     background: url('imagens/fundao.jpeg') no-repeat center center/cover;
-    height: 100vh;
+    height: 40vh;
     position: relative;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
 }
-.overlay {
+.hero-small .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -94,189 +95,105 @@ header h1 {
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
-.hero-content {
+.hero-small .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
+    width: 90%;
     max-width: 900px;
-    white-space: nowrap;
 }
-.hero h2 {
-    font-size: 2.5rem;
+.hero-small h1 {
+    font-size: 2.2rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
-.hero p {
+.hero-small p {
     font-size: 1.1rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-@media (max-width: 768px) {
-    .hero {
-        height: auto;
-        min-height: 400px;
-        background-attachment: scroll;
-    }
-    .hero-content {
-        white-space: normal;
-        width: 90%;
-        font-size: 0.95rem;
-    }
-    .hero h2 {
-        font-size: 1.6rem;
-    }
-    .hero p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Seção Quem Sou */
-.sobre {
-    padding: 60px 20px;
-    background: #fdf5e6; /* areia */
-}
-.sobre h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #8B0000;
-}
-.sobre-conteudo {
-    display: flex;
-    align-items: stretch;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-.texto-quem-sou {
-    flex: 1;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.texto-quem-sou p {
-    text-align: justify;
-    hyphens: auto;
-    margin-bottom: 1rem;
-}
-.foto-professora {
-    flex: 1;
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    object-fit: cover;
-    align-self: center;
-}
-.foto-professora:hover {
-    transform: scale(1.02);
-}
-
-@media (max-width: 768px) {
-    .foto-professora {
-        order: 1;
-        margin: 20px auto;
-        max-width: 90%;
-    }
-
-    .texto-quem-sou {
-        order: 2;
-        width: 100%;
-    }
-
-    .texto-quem-sou p {
-        text-align: left;
-    }
-
-    .btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
-    }
-}
-
-/* Serviços / Experiências Oferecidas */
-.servicos {
+/* Conteúdo interno das páginas */
+.main-experiencia {
     padding: 60px 20px;
     background: #fff;
 }
-.servicos h2 {
-    text-align: center;
+.descricao,
+.beneficios,
+.chamada-acao {
     margin-bottom: 40px;
-    font-size: 2rem;
-    color: #8B0000;
-}
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-.card-btn {
-    background: #fdf5e6; /* Mesma cor da seção "Quem Sou" */
-    border-radius: 10px;
+    background: #fdf5e6; /* Mesma cor da seção Quem Sou */
     padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.descricao h2,
+.beneficios h2,
+.chamada-acao h2 {
+    color: #8B0000;
+    margin-bottom: 20px;
     text-align: center;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 150px;
-    transition: all 0.3s ease;
+}
+.lista-sem-bolinha {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.lista-sem-bolinha li {
+    padding: 8px 0;
+    text-align: center;
+}
+.lista-sem-bolinha li::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Formulário de agendamento */
+.formulario {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+.formulario .container {
+    max-width: 600px;
+    margin: auto;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.btn-instagram {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.3s ease;
 }
-.card-btn:hover {
-    transform: scale(1.03);
-    background-color: #f5e8ca;
-}
-.card-btn h3 {
-    margin-top: 0;
-    font-size: 1.05rem;
-    color: #8B0000;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-    min-height: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.3;
-    padding: 0 10px;
-}
-.card-btn p {
-    font-size: 0.95rem;
-    color: #333;
-    margin-top: 10px;
+.btn-instagram:hover {
+    background-color: #a30000;
 }
 
-@media (max-width: 768px) {
-    .card-btn h3 {
-        font-size: 1rem;
-        line-height: 1.3;
-    }
-    .card-btn p {
-        font-size: 0.85rem;
-    }
-}
-
-/* Galeria */
-.galeria {
-    padding: 60px 20px;
-    background: #fdf5e6;
-}
-.galeria h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* Contato */
+/* Seção Contato nas páginas internas */
 .contato {
     padding: 60px 20px;
     background: #fff;
@@ -297,6 +214,7 @@ header h1 {
     justify-content: center;
     gap: 20px;
 }
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -311,29 +229,17 @@ header h1 {
     cursor: pointer;
 }
 
-/* Estilos dos botões - não foram modificados */
-.btn-email {
-    background-color: #ffd700;
-    color: #333;
-}
-.btn-email:hover {
-    background-color: gold;
-}
-
 .btn-instagram {
     background-color: #e1306c;
     color: white;
 }
-.btn-instagram:hover {
-    background-color: #c13584;
-}
-
 .btn-whatsapp {
     background-color: #25D366;
     color: white;
 }
-.btn-whatsapp:hover {
-    background-color: #1ebd58;
+.btn-email {
+    background-color: #ffd700;
+    color: #333;
 }
 
 /* Botão Fixo WhatsApp - Mobile */
@@ -364,144 +270,55 @@ header h1 {
     }
 }
 
-/* Footer */
-footer {
-    background: #8B0000;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-footer h3 {
-    margin-bottom: 10px;
-}
-footer p {
-    margin: 5px 0;
-}
+/* Responsivo */
+@media (max-width: 768px) {
+    #main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #8B0000;
+        padding: 10px 0;
+    }
+    #main-nav.active {
+        display: block;
+    }
+    #main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    #main-nav li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
 
-/* Hero pequeno para páginas internas */
-.hero-small {
-    background: url('imagens/fundao.jpeg') no-repeat center center/cover;
-    height: 40vh;
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-}
-.hero-small .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-.hero-small .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 900px;
-    width: 90%;
-}
-.hero-small h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-.hero-small p {
-    font-size: 1.1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
+    .hero-small {
+        height: 30vh;
+    }
+    .hero-small h1 {
+        font-size: 1.8rem;
+    }
+    .hero-small p {
+        font-size: 0.95rem;
+    }
 
-/* Conteúdo interno das páginas de experiência */
-.main-experiencia {
-    padding: 60px 20px;
-    background: #fff;
-}
-.descricao,
-.beneficios,
-.chamada-acao {
-    margin-bottom: 40px;
-    background: #fffacd;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-.descricao h2,
-.beneficios h2,
-.chamada-acao h2 {
-    color: #8B0000;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.descricao p,
-.chamada-acao p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 20px;
-}
+    .texto-quem-sou p {
+        text-align: left;
+    }
 
-.lista-sem-bolinha {
-    list-style-type: none;
-    padding-left: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.lista-sem-bolinha li {
-    padding: 8px 0;
-    text-align: center;
-}
-.lista-sem-bolinha li::before {
-    content: "";
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-/* Botão de chamada para ação */
-.chamada-acao .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    border-radius: 30px;
-    font-size: 1rem;
-    padding: 10px 25px;
-    margin: 20px auto;
-    display: block;
-    max-width: 200px;
-    text-align: center;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-.chamada-acao .btn-instagram {
-    background-color: #8B0000;
-    color: white;
-}
-.chamada-acao .btn-instagram:hover {
-    background-color: #a30000;
-}
-
-/* Centralização do contato em páginas internas */
-.main-experiencia + #secao-contato .contato {
-    margin: 0 auto;
-    max-width: 100%;
-}
-.main-experiencia + #secao-contato .contato .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-.main-experiencia + #secao-contato .contatos-info {
-    width: 100%;
-    max-width: 600px;
-}
-.main-experiencia + #secao-contato .botoes-contato {
-    width: 100%;
-    justify-content: center;
+    .btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
 }
