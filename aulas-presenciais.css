@@ -48,3 +48,22 @@
 .btn-instagram:hover {
     background-color: #a30000;
 }
+.descricao {
+    background: #fdf5e6; /* Mesmo tom bege da seção Quem Sou */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.descricao h2 {
+    color: #8B0000; /* Vermelho escuro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.descricao p {
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 1rem;
+}
