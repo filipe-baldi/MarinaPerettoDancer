@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Agende sua Aula - Marina Peretto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="agendamento.css"> <!-- Estilo específico -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Marina Peretto</h1>
+        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#quem-sou">Quem Sou</a></li> 
+                <li><a href="index.html#servicos">Experiências Oferecidas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Pequeno -->
+<section class="hero-small">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Agende sua Aula</h1>
+        <p>Preencha os dados abaixo e entraremos em contato para confirmar.</p>
+    </div>
+</section>
+
+<main class="formulario-main">
+    <div class="container">
+        <h2>Faça seu Agendamento</h2>
+        <p style="text-align: center;">Preencha os campos abaixo e entraremos em contato para confirmar sua aula.</p>
+
+        <!-- Formulário -->
+        <form action="https://formspree.io/f/marinaperetto.dancer@gmail.com"  method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp:</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 98765-4321" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data-hora">Data e Hora desejada:</label>
+                <input type="datetime-local" id="data-hora" name="data_hora" required>
+            </div>
+
+            <button type="submit" class="btn btn-instagram">Enviar Solicitação</button>
+        </form>
+    </div>
+</main>
+
+<!-- Carregar Contato Dinamicamente -->
+<div id="secao-contato"></div>
+
+<script>
+    fetch('contato.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('secao-contato').innerHTML = data;
+        })
+        .catch(() => {
+            document.getElementById('secao-contato').innerHTML = `
+                <p style="text-align:center; color:#e1306c;">
+                    ⚠️ Erro ao carregar a seção de contato.
+                </p>
+            `;
+        });
+</script>
+
+<footer>
+    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão Fixo WhatsApp -->
+<a href="https://wa.me/5511987654321"  target="_blank" class="whatsapp-fixo">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Script do menu hamburguer -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

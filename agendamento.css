@@ -1,0 +1,49 @@
+/* agendamento.css */
+
+.formulario-main {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.formulario-main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8B0000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-instagram {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+.btn-instagram:hover {
+    background-color: #a30000;
+}
