@@ -4,7 +4,11 @@
     margin-top: 40px;
     text-align: center;
 }
-
+/* Centralizar o botão abaixo da agenda */
+.agenda .btn {
+    display: block;
+    margin: 20px auto;
+}
 .agenda iframe {
     border: 0;
     width: 100%;
