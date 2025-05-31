@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Agende sua Aula - Marina Peretto</title>
+    
+    <!-- Fonte Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="agendamento.css"> <!-- Estilo específico -->
+    
+    <!-- CSS Específico para esta página (opcional) -->
+    <link rel="stylesheet" href="agendamento.css">
+
+    <!-- Font Awesome (para ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+<!-- Header -->
 <header>
     <div class="container">
         <h1>Marina Peretto</h1>
@@ -31,17 +40,18 @@
     <div class="overlay"></div>
     <div class="hero-content">
         <h1>Agende sua Aula</h1>
-        <p>Preencha os dados abaixo e entraremos em contato para confirmar.</p>
+        <p>Preencha os campos abaixo e entraremos em contato para confirmar.</p>
     </div>
 </section>
 
+<!-- Formulário de Agendamento -->
 <main class="formulario-main">
     <div class="container">
         <h2>Faça seu Agendamento</h2>
-        <p style="text-align: center;">Preencha os campos abaixo e entraremos em contato para confirmar sua aula.</p>
+        <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para confirmar sua aula.</p>
 
-        <!-- Formulário -->
-        <form action="https://formspree.io/f/marinaperetto.dancer@gmail.com"  method="POST">
+        <!-- Formulário conectado ao Formspree -->
+        <form action="https://formspree.io/f/xovwalor"  method="POST">
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
@@ -57,7 +67,14 @@
                 <input type="datetime-local" id="data-hora" name="data_hora" required>
             </div>
 
-            <button type="submit" class="btn btn-instagram">Enviar Solicitação</button>
+            <div class="form-group" style="text-align: center;">
+                <small style="color: #888;">Resposta em até 24h</small>
+            </div>
+
+            <!-- Botão de envio -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-instagram">Enviar Solicitação</button>
+            </div>
         </form>
     </div>
 </main>
@@ -80,6 +97,7 @@
         });
 </script>
 
+<!-- Footer -->
 <footer>
     <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
 </footer>
