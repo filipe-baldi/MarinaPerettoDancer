@@ -47,3 +47,19 @@
 .btn-instagram:hover {
     background-color: #a30000;
 }
+/* Centralizar o botão do formulário */
+.formulario-main button[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    width: auto;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background-color: #8B0000;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.formulario-main button[type="submit"]:hover {
+    background-color: #a30000;
+}
