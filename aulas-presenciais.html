@@ -11,13 +11,13 @@
     <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- CSS Específico para a página -->
+    <!-- Estilo específico para esta página -->
     <link rel="stylesheet" href="aulas-presenciais.css">
 
     <!-- Font Awesome (para ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Estilo do botão "Agende Sua Aula" -->
+    <!-- Estilo local do botão Agende Sua Aula -->
     <style>
         .btn-agenda {
             display: inline-block;
@@ -41,6 +41,8 @@
 </head>
 <body>
 
+<!-- Carregar Header Dinamicamente -->
+<div id="secao-header"></div>
 
 <!-- Hero Pequeno -->
 <section class="hero-small">
@@ -89,17 +91,33 @@
 
     </div>
 </main>
-<!-- Carregar Header Dinamicamente -->
-<div id="secao-header"></div>
+
+<!-- Carregar Contato Dinamicamente -->
+<div id="secao-contato"></div>
 
 <script>
-    // Carregar header dinamicamente
+    fetch('contato.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('secao-contato').innerHTML = data;
+        })
+        .catch(() => {
+            document.getElementById('secao-contato').innerHTML = `
+                <p style="text-align:center; color:#e1306c;">  
+                    ⚠️ Erro ao carregar a seção de contato.
+                </p>
+            `;
+        });
+</script>
+
+<!-- Carregar Header Dinamicamente + Ativar Menu Hamburguer -->
+<script>
     fetch('header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('secao-header').innerHTML = data;
 
-            // Agora, inicializar o menu hamburguer somente após o header ser carregado
+            // Ativar menu hamburguer somente após carregar o header
             const menuToggle = document.getElementById('menu-toggle');
             const mainNav = document.getElementById('main-nav');
 
@@ -112,25 +130,8 @@
         })
         .catch(() => {
             document.getElementById('secao-header').innerHTML = `
-                <p style="text-align:center; color:#e1306c;">
+                <p style="text-align:center; color:#e1306c;">  
                     ⚠️ Erro ao carregar o header.
-                </p>
-            `;
-        });
-</script>
-<!-- Carregar Contato Dinamicamente -->
-<div id="secao-contato"></div>
-
-<script>
-    fetch('contato.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('secao-contato').innerHTML = data;
-        })
-        .catch(() => {
-            document.getElementById('secao-contato').innerHTML = `
-                <p style="text-align:center; color:#e1306c;"> 
-                    ⚠️ Erro ao carregar a seção de contato.
                 </p>
             `;
         });
@@ -140,17 +141,6 @@
 <a href="https://wa.me/5511987654321"  target="_blank" class="whatsapp-fixo">
     <i class="fab fa-whatsapp"></i>
 </a>
-
-<!-- Script do menu hamburguer -->
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
-
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        mainNav.classList.toggle('active');
-    });
-</script>
 
 </body>
 </html>
