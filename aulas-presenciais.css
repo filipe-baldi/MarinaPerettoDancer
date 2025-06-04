@@ -39,19 +39,7 @@
     border-radius: 5px;
     font-size: 1rem;
 }
-.btn-instagram {
-    background-color: #8B0000;
-    color: white;
-    padding: 10px 25px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: background 0.3s ease;
-}
-.btn-instagram:hover {
-    background-color: #a30000;
-}
+
 .descricao {
     background: #fdf5e6; /* Mesmo tom bege da seção Quem Sou */
     padding: 30px;
