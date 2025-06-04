@@ -139,13 +139,15 @@ document.getElementById('secao-contato').innerHTML = `
 
 <!-- Script do menu hamburguer -->
 <script>
-const menuToggle = document.getElementById('menu-toggle');
-const mainNav = document.getElementById('main-nav');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
 
-menuToggle.addEventListener('click', () => {
-menuToggle.classList.toggle('active');
-mainNav.classList.toggle('active');
-});
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+    }
 </script>
 
 </body>
