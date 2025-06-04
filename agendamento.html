@@ -19,21 +19,8 @@
 </head>
 <body>
 
-<!-- Header -->
-<header>
-    <div class="container">
-        <h1>Marina Peretto</h1>
-        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#quem-sou">Quem Sou</a></li> 
-                <li><a href="index.html#servicos">Experiências</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<!-- Placeholder para o Header dinâmico -->
+<header id="header-placeholder"></header>
 
 <!-- Hero Pequeno -->
 <section class="hero-small">
@@ -78,36 +65,13 @@
 <!-- Carregar Contato Dinamicamente -->
 <div id="secao-contato"></div>
 
-<script>
-fetch('contato.html')
-.then(response => response.text())
-.then(data => {
-document.getElementById('secao-contato').innerHTML = data;
-})
-.catch(() => {
-document.getElementById('secao-contato').innerHTML = `
-               <p style="text-align:center; color:#e1306c;">
-                   ⚠️ Erro ao carregar a seção de contato.
-               </p>
-           `;
-});
-</script>
-
 <!-- Botão Fixo WhatsApp -->
 <a href="https://wa.me/5551981380686"  target="_blank" class="whatsapp-fixo">
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Script do menu hamburguer -->
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
-
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        mainNav.classList.toggle('active');
-    });
-</script>
+<!-- Script principal para carregar header e contato -->
+<script src="scripts.js"></script>
 
 </body>
 </html>

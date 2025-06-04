@@ -4,45 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aulas Presenciais - Marina Peretto</title>
-
-    <!-- Fonte Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Estilo específico para esta página -->
-    <link rel="stylesheet" href="aulas-presenciais.css">
-
-    <!-- Font Awesome (para ícones) -->
+    <link rel="stylesheet" href="aulas-presenciais.css"> <!-- Estilo específico -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Estilo local do botão Agende Sua Aula -->
     <style>
-        .btn-agenda {
-            display: inline-block;
-            background-color: #8B0000; 
-            color: white;
-            padding: 12px 25px;
-            font-size: 1rem;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-            margin-top: 20px;
-            text-align: center;
-            width: auto;
-            max-width: 250px;
-        }
-
-        .btn-agenda:hover {
-            background-color: #a30000;
-        }
-    </style>
+    .descricao {
+        background: #fdf5e6 !important;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 40px;
+    }
+</style>
 </head>
 <body>
 
-<!-- Carregar Header Dinamicamente -->
-<div id="secao-header"></div>
+<!-- Placeholder para o Header dinâmico -->
+<header id="header-placeholder"></header>
 
 <!-- Hero Pequeno -->
 <section class="hero-small">
@@ -56,7 +35,7 @@
 <main class="main-experiencia">
     <div class="container">
 
-        <!-- Seção Descrição -->
+        <!-- Descrição -->
         <section class="descricao">
             <h2>Como funcionam as aulas presenciais?</h2>
             <p>
@@ -75,72 +54,34 @@
                 <p style="text-align:center;">Confira abaixo os horários disponíveis:</p>
 
                 <!-- Google Agenda Embed -->
-                <iframe 
-                    src="https://calendar.google.com/calendar/embed?src=0aa9d4c594b216f7af77b136f6785d05206280aac628dd7880f2ef346617797e%40group.calendar.google.com&ctz=America%2FSao_Paulo"
-                    style="border: 0; width: 100%; height: 600px;" 
-                    frameborder="0" 
-                    scrolling="no">
-                </iframe>
-
-                <!-- Botão Agende Sua Aula -->
+             <iframe src="https://calendar.google.com/calendar/embed?src=0aa9d4c594b216f7af77b136f6785d05206280aac628dd7880f2ef346617797e%40group.calendar.google.com&ctz=America%2FSao_Paulo" 
+                 style="border: 0" width="800" height="600" 
+                 frameborder="0" scrolling="no">
+             </iframe>
+                
+                <!-- Botão redirecionando para agendamento.html -->
+              <!-- Botão para agendar -->
                 <div style="margin-top: 30px; text-align: center;">
-                    <a href="agendamento.html" class="btn-agenda">Agende Sua Aula</a>
+                    <a href="agendamento.html" class="btn btn-whatsapp">Agende Sua Aula</a>
                 </div>
             </div>
         </section>
 
+        <!-- Formulário (opcional aqui, mas está na nova página) -->
+        
     </div>
 </main>
 
-<!-- Carregar Contato Dinamicamente -->
+<!-- Placeholder para a seção de Contato (será carregada pelo script.js se o ID existir) -->
 <div id="secao-contato"></div>
-
-<script>
-    fetch('contato.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('secao-contato').innerHTML = data;
-        })
-        .catch(() => {
-            document.getElementById('secao-contato').innerHTML = `
-                <p style="text-align:center; color:#e1306c;">  
-                    ⚠️ Erro ao carregar a seção de contato.
-                </p>
-            `;
-        });
-</script>
-
-<!-- Carregar Header Dinamicamente + Ativar Menu Hamburguer -->
-<script>
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('secao-header').innerHTML = data;
-
-            // Ativar menu hamburguer somente após carregar o header
-            const menuToggle = document.getElementById('menu-toggle');
-            const mainNav = document.getElementById('main-nav');
-
-            if (menuToggle && mainNav) {
-                menuToggle.addEventListener('click', () => {
-                    menuToggle.classList.toggle('active');
-                    mainNav.classList.toggle('active');
-                });
-            }
-        })
-        .catch(() => {
-            document.getElementById('secao-header').innerHTML = `
-                <p style="text-align:center; color:#e1306c;">  
-                    ⚠️ Erro ao carregar o header.
-                </p>
-            `;
-        });
-</script>
 
 <!-- Botão Fixo WhatsApp -->
 <a href="https://wa.me/5511987654321"  target="_blank" class="whatsapp-fixo">
     <i class="fab fa-whatsapp"></i>
 </a>
+
+<!-- Script principal para carregar header e contato -->
+<script src="scripts.js"></script>
 
 </body>
 </html>

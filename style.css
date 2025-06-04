@@ -16,12 +16,12 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: auto;
-    padding-top: 80px; /* Evita sobreposição do header fixo */
+    padding-top: 80px;
 }
 
 /* Header */
 header {
-    background: #8B0000; /* Vermelho escuro */
+    background: #8B0000;
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -35,7 +35,7 @@ header h1 {
     margin-left: 20px;
 }
 
-/* Botão Hamburguer */
+/* Menu Hamburguer */
 .menu-toggle {
     display: none;
     background: none;
@@ -133,7 +133,7 @@ header h1 {
 /* Seção Quem Sou */
 .sobre {
     padding: 60px 20px;
-    background: #fdf5e6; /* areia */
+    background: #fdf5e6;
 }
 .sobre h2 {
     text-align: center;
@@ -168,8 +168,6 @@ header h1 {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    object-fit: cover;
-    align-self: center;
 }
 .foto-professora:hover {
     transform: scale(1.02);
@@ -215,7 +213,7 @@ header h1 {
     gap: 20px;
 }
 .card-btn {
-    background: #fdf5e6; /* Mesma cor da seção Quem Sou */
+    background: #fdf5e6;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -266,27 +264,6 @@ header h1 {
 
     .card-btn p {
         font-size: 0.85rem;
-    }
-
-    .foto-professora {
-        order: 1;
-        margin: 20px auto;
-        max-width: 90%;
-    }
-
-    .texto-quem-sou {
-        order: 2;
-        width: 100%;
-    }
-
-    .texto-quem-sou p {
-        text-align: left;
-    }
-
-    .btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
     }
 }
 
@@ -426,8 +403,8 @@ footer p {
     position: relative;
     z-index: 2;
     text-align: center;
-    width: 90%;
     max-width: 900px;
+    width: 90%;
 }
 .hero-small h1 {
     font-size: 2.2rem;
@@ -439,7 +416,7 @@ footer p {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Conteúdo interno das páginas */
+/* Conteúdo interno das páginas de experiência */
 .main-experiencia {
     padding: 60px 20px;
     background: #fff;
@@ -449,10 +426,9 @@ footer p {
 .chamada-acao {
     margin-bottom: 40px;
     background: #fffacd;
-    border-radius: 10px;
     padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
 }
 .descricao h2,
 .beneficios h2,
@@ -462,14 +438,8 @@ footer p {
     text-align: center;
 }
 .lista-sem-bolinha {
-    list-style-type: none;
+    list-style: none;
     padding-left: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.lista-sem-bolinha li {
-    padding: 8px 0;
-    text-align: center;
 }
 .lista-sem-bolinha li::before {
     content: "";
@@ -477,30 +447,12 @@ footer p {
     width: 1em;
     margin-left: -1em;
 }
-
-/* Botão de chamada para ação */
-.chamada-acao .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    border-radius: 30px;
-    font-size: 1rem;
-    padding: 10px 25px;
-    margin: 20px auto;
-    display: block;
-    max-width: 200px;
+.chamada-acao {
+    background: #FFD700;
     text-align: center;
-    text-decoration: none;
-    transition: background 0.3s ease;
 }
-.chamada-acao .btn-instagram {
-    background-color: #8B0000;
-    color: white;
-}
-.chamada-acao .btn-instagram:hover {
-    background-color: #a30000;
+.chamada-acao .btn {
+    margin-top: 15px;
 }
 
 /* Centralização do contato em páginas internas */
@@ -522,41 +474,3 @@ footer p {
     width: 100%;
     justify-content: center;
 }
-/* === MENU HAMBURGUER - MOBILE === */
-
-#main-nav {
-    display: none; /* Escondido por padrão */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #8B0000;
-    z-index: 999;
-    flex-direction: column;
-}
-
-#main-nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-#main-nav li {
-    margin-left: 0;
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-#main-nav a {
-    font-size: 1rem;
-    padding: 10px 0;
-    display: block;
-    width: 100%;
-}
-
-#main-nav.active {
-    display: block;
-}
-

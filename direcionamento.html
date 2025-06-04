@@ -9,21 +9,8 @@
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>Marina Peretto</h1>
-        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#quem-sou">Quem Sou</a></li>
-                <li><a href="index.html#servicos">Experiências Oferecidas</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<!-- Placeholder para o Header dinâmico -->
+<header id="header-placeholder"></header>
 
 <section class="hero-small">
     <div class="overlay"></div>
@@ -65,51 +52,23 @@
         <section class="chamada-acao">
             <h2>Vamos Conversar?</h2>
             <p>Agende uma consulta gratuita para discutir suas metas artísticas e como posso te ajudar nesse caminho.</p>
+            <!-- Link ajustado para apontar para a seção de contato que será carregada -->
             <a href="#contato" class="btn btn-instagram">Agendar Consulta</a>
         </section>
     </div>
 </main>
 
-<section id="contato" class="contato">
-    <div class="container">
-        <h2>Entre em Contato</h2>
-        <div class="contatos-info">
-            <p><strong>Email:</strong> samira@raizesdoriente.com.br</p>
-            <p><strong>Instagram:</strong> @RaizesDoOriente</p>
-            <p><strong>WhatsApp:</strong> (11) 98765-4321</p>
-        </div>
-        <div class="botoes-contato">
-            <a href="mailto:samira@raizesdoriente.com.br" class="btn btn-email" aria-label="Enviar Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.instagram.com/RaizesDoOriente/ " target="_blank" class="btn btn-instagram" aria-label="Acessar Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/5511987654321 " target="_blank" class="btn btn-whatsapp" aria-label="Fale no WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
-</footer>
+<!-- Placeholder para a seção de Contato -->
+<div id="secao-contato"></div>
 
 <!-- Botão Fixo WhatsApp -->
-<a href="https://wa.me/5511987654321 " target="_blank" class="whatsapp-fixo">
+<!-- Corrigido número do WhatsApp -->
+<a href="https://wa.me/5551981380686" target="_blank" class="whatsapp-fixo">
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
-
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        mainNav.classList.toggle('active');
-    });
-</script>
+<!-- Script principal para carregar header e contato -->
+<script src="scripts.js"></script>
 
 </body>
 </html>
