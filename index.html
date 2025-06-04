@@ -10,21 +10,23 @@
 </head>
 <body>
 
-<header>
-<div class="container">
-<h1>Marina Peretto</h1>
-<button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
-<nav id="main-nav">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="#quem-sou">Quem Sou</a></li> 
-<li><a href="#servicos">Experiências</a></li>
-<li><a href="portfolio.html">Portfólio</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-</nav>
-</div>
-</header>
+<!-- Carregar Header Dinamicamente -->
+<div id="secao-header"></div>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('secao-header').innerHTML = data;
+        })
+        .catch(() => {
+            document.getElementById('secao-header').innerHTML = `
+                <p style="text-align:center; color:#e1306c;">
+                    ⚠️ Erro ao carregar o header.
+                </p>
+            `;
+        });
+</script>>
 
 <section class="hero">
 <div class="overlay"></div>
