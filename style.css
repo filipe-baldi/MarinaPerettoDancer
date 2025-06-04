@@ -522,3 +522,41 @@ footer p {
     width: 100%;
     justify-content: center;
 }
+/* === MENU HAMBURGUER - MOBILE === */
+
+#main-nav {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #8B0000;
+    z-index: 999;
+    flex-direction: column;
+}
+
+#main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#main-nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#main-nav a {
+    font-size: 1rem;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+}
+
+#main-nav.active {
+    display: block;
+}
+
