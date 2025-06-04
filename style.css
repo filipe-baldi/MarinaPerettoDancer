@@ -568,8 +568,16 @@ footer p {
 .formulario-main + #secao-contato .botoes-contato {
     width: 100%;
     justify-content: center;
-    gap: 20px; /* Ensure standard gap */
+    gap: 20px !important; /* Force standard gap */
+    padding-bottom: 40px; /* Add some padding below buttons */
 }
+
+/* Force correct Instagram button style in agendamento.html */
+.formulario-main + #secao-contato .botoes-contato .btn-instagram {
+    background-color: #e1306c !important; /* Force pink color */
+    color: white !important;
+}
+
 
 /* Estilo para o botão de Submissão de Formulário (e Agendar Aula) */
 .btn-submit {
