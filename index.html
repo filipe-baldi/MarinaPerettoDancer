@@ -10,14 +10,27 @@
 </head>
 <body>
 
+
 <!-- Carregar Header Dinamicamente -->
 <div id="secao-header"></div>
 
 <script>
+    // Carregar header dinamicamente
     fetch('header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('secao-header').innerHTML = data;
+
+            // Agora, inicializar o menu hamburguer somente após o header ser carregado
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                });
+            }
         })
         .catch(() => {
             document.getElementById('secao-header').innerHTML = `
@@ -26,7 +39,7 @@
                 </p>
             `;
         });
-</script>>
+</script>
 
 <section class="hero">
 <div class="overlay"></div>
