@@ -4,28 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Marina Peretto | Danças Árabes</title>
+    
+    <!-- Fonte Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome (para ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>Marina Peretto</h1>
-        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#quem-sou">Quem Sou</a></li> 
-                <li><a href="#servicos">Experiências Oferecidas</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<!-- Carregar Header Dinamicamente -->
+<div id="secao-header"></div>
 
+<!-- Hero Section -->
 <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
@@ -34,6 +28,7 @@
     </div>
 </section>
 
+<!-- Seção Quem Sou -->
 <section id="quem-sou" class="sobre">
     <div class="container">
         <h2>Quem Sou</h2>
@@ -41,14 +36,14 @@
             <div class="texto-quem-sou">
                 <p>
                     Marina Peretto é bailarina, professora, coreógrafa e pesquisadora especializada em Dança Oriental Egípcia.
-                    Iniciou seus estudos em 2007 e se formou professora em 2016 no curso da bailarina Lucy Linck.
+                    Iniciou seus estudos em 2007 e se formou em 2016 no curso da bailarina Lucy Linck.
                     Possui formação avançada em “Oriental Dance Technique” pelo professor egípcio Dr. Tamer Aziz,
-                    além de ser membro da prestigiada Kazafy Troupe Brasil, coreografada por Mohamed Kazafy.
+                    além de ser membro da prestigiada Kazafy Troupe Brasil, coreografada pelo renomado Mohamed Kazafy.
                 </p>
                 <p>
                     Em constante aprimoramento, estudou com mais de 20 mestres nativos (egípcios, libaneses e iraquianos),
-                    como Dina Talaat, Khariya Mazin, Tito Seif, Tommy King e Aziza of Cairo. Em 2023, realizou uma imersão de um mês no Egito,
-                    onde participou de apresentações, treinos e vivenciou a cultura local.
+                    como Dina Talaat, Khariya Mazin, Tito Seif, Tommy King e Aziza of Cairo.
+                    Em 2023, realizou uma imersão de um mês no Egito, onde participou de apresentações, treinos e vivenciou a cultura local.
                 </p>
                 <p>
                     Desde 2012 atua como coreógrafa e produtora cultural do Shoarma Canoas, selecionando artistas para shows no restaurante.
@@ -59,56 +54,65 @@
     </div>
 </section>
 
-<section class="servicos" id="servicos">
-  <div class="container">
-    <h2>Experiências Oferecidas</h2>
-    <div class="cards">
+<!-- Experiências Oferecidas -->
+<section id="servicos" class="servicos">
+    <div class="container">
+        <h2>Experiências Oferecidas</h2>
+        <div class="cards">
 
-      <a class="card-btn" href="aulas-presenciais.html">
-        <h3>Aulas Presenciais</h3>
-        <p>Aulas em grupo ou individuais para você aprender a dançar</p>
-      </a>
+            <!-- Aulas Presenciais -->
+            <a href="aulas-presenciais.html" class="card-btn">
+                <h3>Aulas Presenciais</h3>
+                <p>Para você aprender a dançar com acompanhamento direto e personalizado.</p>
+            </a>
 
-      <a class="card-btn" href="aulas-online.html">
-        <h3>Aulas Online</h3>
-        <p>Aulas particulares em tempo real para você aprender no conforto da sua casa sobre o tema que desejar</p>
-      </a>
+            <!-- Aulas Online -->
+            <a href="aulas-online.html" class="card-btn">
+                <h3>Aulas Online</h3>
+                <p>Flexibilidade para aprender dança árabe no conforto de sua casa.</p>
+            </a>
 
-      <a class="card-btn" href="workshops.html">
-        <h3>Workshops Temáticos</h3>
-        <p>Oficinas práticas ou teóricas focadas em um tema específico com curta duração e abordagem intensiva</p>
-      </a>
+            <!-- Workshops Temáticos -->
+            <a href="workshops.html" class="card-btn">
+                <h3>Workshops Temáticos</h3>
+                <p>Aprofunde-se em temas específicos como técnica, expressão corporal e história.</p>
+            </a>
 
-      <a class="card-btn" href="cursos-formacao.html">
-        <h3>Cursos de Formação</h3>
-        <p>Formação completa para futuras bailarinas e professoras de danças árabes.</p>
-      </a>
+            <!-- Cursos de Formação -->
+            <a href="cursos-formacao.html" class="card-btn">
+                <h3>Cursos de Formação</h3>
+                <p>Formação completa para futuras bailarinas e professoras de danças árabes.</p>
+            </a>
 
-      <a class="card-btn" href="shows.html">
-        <h3>Shows</h3>
-        <p>Encante seu evento com apresentações exclusivas de danças árabes, feitas sob medida especialmente para você.</p>
-      </a>
+            <!-- Shows -->
+            <a href="shows.html" class="card-btn">
+                <h3>Shows</h3>
+                <p>Encante seu evento com apresentações exclusivas de danças árabes, feitas sob medida especialmente para você.</p>
+            </a>
 
-      <a class="card-btn" href="coreografia.html">
-        <h3>Coreografia</h3>
-        <p>Criação personalizada de coreografias de dança oriental ou folclore árabe para shows, espetáculos e festivais.</p>
-      </a>
+            <!-- Coreografia -->
+            <a href="coreografia.html" class="card-btn">
+                <h3>Coreografia</h3>
+                <p>Criação personalizada de coreografias de dança oriental ou folclore árabe para shows, espetáculos e festivais.</p>
+            </a>
 
-      <a class="card-btn" href="direcionamento.html">
-        <h3>Direcionamento Artístico</h3>
-        <p>Preparação para solistas voltada a bailarinas que buscam profissionalização nas danças árabes</p>
-      </a>
+            <!-- Direcionamento Artístico -->
+            <a href="direcionamento.html" class="card-btn">
+                <h3>Direcionamento Artístico</h3>
+                <p>Preparação para solistas voltada a bailarinas que buscam profissionalização nas danças árabes.</p>
+            </a>
 
-      <a class="card-btn" href="troupe-folclore.html">
-        <h3>Troupe de Folclore</h3>
-        <p>Ensaios de trabalhos coreográficos que respeitam as raízes e autenticidade de cada folclore árabe.</p>
-      </a>
+            <!-- Troupe de Folclore -->
+            <a href="troupe-folclore.html" class="card-btn">
+                <h3>Troupe de Folclore</h3>
+                <p>Ensaios de trabalhos coreográficos que respeitam as raízes e autenticidade de cada folclore árabe.</p>
+            </a>
 
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- Carregar contato dinamicamente -->
+<!-- Carregar Contato Dinamicamente -->
 <div id="secao-contato"></div>
 
 <script>
@@ -119,27 +123,46 @@
         })
         .catch(() => {
             document.getElementById('secao-contato').innerHTML = `
-                <p style="text-align:center; color:#e1306c;">
+                <p style="text-align:center; color:#e1306c;"> 
                     ⚠️ Erro ao carregar a seção de contato.
                 </p>
             `;
         });
 </script>
 
+<!-- Rodapé -->
+<footer>
+    <p>&copy; 2025 Raízes do Oriente. Todos os direitos reservados.</p>
+</footer>
+
 <!-- Botão Fixo WhatsApp -->
 <a href="https://wa.me/5511987654321"  target="_blank" class="whatsapp-fixo">
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Script do menu hamburguer -->
+<!-- Carregar Header + Ativar Menu Hamburguer -->
 <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('secao-header').innerHTML = data;
 
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        mainNav.classList.toggle('active');
-    });
+            // Agora que o header foi inserido, ativar o hamburguer
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                });
+            }
+        })
+        .catch(() => {
+            document.getElementById('secao-header').innerHTML = `
+                <p style="text-align:center; color:#e1306c;">⚠️ Erro ao carregar o header.</p>
+            `;
+        });
 </script>
 
 </body>
