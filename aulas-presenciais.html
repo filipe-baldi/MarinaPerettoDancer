@@ -41,21 +41,6 @@
 </head>
 <body>
 
-<!-- Header -->
-<header>
-    <div class="container">
-        <h1>Marina Peretto</h1>
-        <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#quem-sou">Quem Sou</a></li>
-                <li><a href="index.html#servicos">Experiências</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
 <!-- Hero Pequeno -->
 <section class="hero-small">
@@ -104,7 +89,35 @@
 
     </div>
 </main>
+<!-- Carregar Header Dinamicamente -->
+<div id="secao-header"></div>
 
+<script>
+    // Carregar header dinamicamente
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('secao-header').innerHTML = data;
+
+            // Agora, inicializar o menu hamburguer somente após o header ser carregado
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                });
+            }
+        })
+        .catch(() => {
+            document.getElementById('secao-header').innerHTML = `
+                <p style="text-align:center; color:#e1306c;">
+                    ⚠️ Erro ao carregar o header.
+                </p>
+            `;
+        });
+</script>
 <!-- Carregar Contato Dinamicamente -->
 <div id="secao-contato"></div>
 
