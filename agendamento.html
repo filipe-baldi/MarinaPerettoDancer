@@ -79,18 +79,18 @@
 <div id="secao-contato"></div>
 
 <script>
-    fetch('contato.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('secao-contato').innerHTML = data;
-        })
-        .catch(() => {
-            document.getElementById('secao-contato').innerHTML = `
-                <p style="text-align:center; color:#e1306c;">
-                    ⚠️ Erro ao carregar a seção de contato.
-                </p>
-            `;
-        });
+fetch('contato.html')
+.then(response => response.text())
+.then(data => {
+document.getElementById('secao-contato').innerHTML = data;
+})
+.catch(() => {
+document.getElementById('secao-contato').innerHTML = `
+               <p style="text-align:center; color:#e1306c;">
+                   ⚠️ Erro ao carregar a seção de contato.
+               </p>
+           `;
+});
 </script>
 
 <!-- Botão Fixo WhatsApp -->
