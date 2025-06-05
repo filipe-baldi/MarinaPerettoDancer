@@ -192,7 +192,7 @@ header h1 {
     .btn {
         width: 45px;
         height: 45px;
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Default icon size for mobile */
     }
 
      .card-btn h3 {
@@ -405,7 +405,7 @@ header h1 {
     width: 60px;
     height: 60px;
     border-radius: 50%; /* Keep contact buttons circular */
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Default icon size */
     text-decoration: none;
     transition: background 0.3s ease;
     border: none;
@@ -548,7 +548,7 @@ footer p {
     gap: 20px; /* Ensure standard gap */
 }
 
-/* Centralização do contato em páginas internas (Formulário) */
+/* Centralização e Estilo do contato em páginas internas (Formulário) */
 .formulario-main + #secao-contato .contato {
     margin: 0 auto;
     max-width: 100%;
@@ -568,14 +568,17 @@ footer p {
 .formulario-main + #secao-contato .botoes-contato {
     width: 100%;
     justify-content: center;
-    gap: 20px !important; /* Force standard gap */
+    gap: 15px !important; /* Force SMALLER gap specifically for this page */
     padding-bottom: 40px; /* Add some padding below buttons */
 }
 
-/* Force correct Instagram button style in agendamento.html */
+/* Force correct Instagram button style AND ICON SIZE in agendamento.html */
 .formulario-main + #secao-contato .botoes-contato .btn-instagram {
     background-color: #e1306c !important; /* Force pink color */
     color: white !important;
+}
+.formulario-main + #secao-contato .botoes-contato .btn i {
+    font-size: 1.8rem !important; /* Force LARGER icon size specifically for this page */
 }
 
 
@@ -611,5 +614,6 @@ footer p {
      display: block;
      margin: 20px auto;
 }
+
 
 
