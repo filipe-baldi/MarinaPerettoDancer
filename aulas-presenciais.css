@@ -93,3 +93,22 @@
     margin-bottom: 10px; /* Espaçamento entre os itens da lista */
     text-align: center; /* Centraliza o texto de cada item da lista */
 }
+/* ========================================= */
+/* Novos estilos para a seção de Observação */
+/* ========================================= */
+.observacao {
+    background: #f9f9f9; /* Um fundo cinza bem clarinho para a observação */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra mais leve */
+    margin-top: 30px; /* Espaçamento da seção anterior */
+    margin-bottom: 30px; /* Espaçamento para a próxima seção */
+    text-align: center; /* Centraliza o texto da observação */
+    color: #666; /* Cor do texto em cinza */
+    font-size: 0.95rem; /* Um pouco menor que o texto normal */
+    font-style: italic; /* Texto em itálico para indicar uma observação */
+}
+
+.observacao p {
+    margin: 0; /* Remove margem padrão de parágrafos dentro da observação */
+}
