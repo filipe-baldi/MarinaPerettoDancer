@@ -32,31 +32,18 @@
     font-size: 1rem;
 }
 
-.btn-instagram {
-    background-color: #8B0000;
-    color: white;
-    padding: 10px 25px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: background 0.3s ease;
-    display: block;
-    margin: 20px auto;
-}
-.btn-instagram:hover {
-    background-color: #a30000;
-}
-/* Centralizar o botão do formulário */
+/* Centralizar o botão de envio do formulário */
 .formulario-main button[type="submit"] {
     display: block;
-    margin: 20px auto;
+    margin: 20px auto; /* Centraliza horizontalmente */
     width: auto;
     padding: 10px 25px;
     font-size: 1rem;
     border-radius: 30px;
     background-color: #8B0000;
     color: white;
+    border: none; /* Adicionado para consistência */
+    cursor: pointer; /* Adicionado para indicar clicável */
     transition: background 0.3s ease;
 }
 
