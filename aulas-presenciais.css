@@ -16,21 +16,32 @@
     margin: 20px 0;
 }
 
-.formulario {
-    padding: 40px 20px;
-    background: #fff;
-    text-align: center;
+/* ========================================= */
+/* Estilos do Formulário de Agendamento (Movido de agendamento.css) */
+/* ========================================= */
+.agendamento-form-section { /* Nova classe para a seção do formulário */
+    padding: 60px 20px;
+    background: #fff; /* Fundo branco para o formulário */
 }
+
+.agendamento-form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8B0000;
+}
+
 .form-group {
     margin-bottom: 20px;
-    text-align: left;
+    text-align: left; /* Mantém labels e inputs alinhados à esquerda */
 }
+
 .form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: #333;
 }
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -40,6 +51,29 @@
     font-size: 1rem;
 }
 
+/* Centralização e estilo do botão de envio do formulário */
+.agendamento-form-section button[type="submit"] {
+    display: block;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    width: auto;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background-color: #8B0000; /* Fundo vermelho escuro */
+    color: white; /* Cor do texto branca */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.agendamento-form-section button[type="submit"]:hover {
+    background-color: #a30000; /* Tom mais escuro no hover */
+}
+
+
+/* ========================================= */
+/* Estilos existentes para a seção de Descrição */
+/* ========================================= */
 .descricao {
     background: #fdf5e6; /* Mesmo tom bege da seção Quem Sou */
     padding: 30px;
@@ -59,56 +93,57 @@
     hyphens: auto;
     margin-bottom: 1rem;
 }
+
 /* ========================================= */
-/* Novos estilos para a seção de Benefícios */
+/* Estilos existentes para a seção de Benefícios */
 /* ========================================= */
 .beneficios {
     background: #fdf5e6; /* Cor de fundo igual à seção .descricao */
-    padding: 30px; /* Padding similar ao da seção .descricao */
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px; /* Margem superior para separar de outras seções */
-    text-align: center; /* Centraliza todo o texto dentro da seção */
+    margin-top: 40px;
+    text-align: center;
 }
 
 .beneficios h2 {
-    color: #8B0000; /* Título em vermelho, mesma cor de 'Como funcionam as aulas presenciais?' */
-    text-align: center; /* Garante que o título esteja centralizado */
+    color: #8B0000;
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .beneficios p {
-    text-align: center; /* Garante que os parágrafos dentro da seção também estejam centralizados */
+    text-align: center;
     margin-bottom: 1rem;
 }
 
-/* Se você tiver uma lista de benefícios (ul/li), ajuste também */
 .beneficios ul {
-    list-style: none; /* Remove marcadores de lista */
+    list-style: none;
     padding: 0;
-    text-align: center; /* Centraliza os itens da lista */
+    text-align: center;
 }
 
 .beneficios li {
-    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
-    text-align: center; /* Centraliza o texto de cada item da lista */
+    margin-bottom: 10px;
+    text-align: center;
 }
+
 /* ========================================= */
-/* Novos estilos para a seção de Observação */
+/* Estilos existentes para a seção de Observação */
 /* ========================================= */
 .observacao {
-    background: #f9f9f9; /* Um fundo cinza bem clarinho para a observação */
+    background: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra mais leve */
-    margin-top: 30px; /* Espaçamento da seção anterior */
-    margin-bottom: 30px; /* Espaçamento para a próxima seção */
-    text-align: center; /* Centraliza o texto da observação */
-    color: #666; /* Cor do texto em cinza */
-    font-size: 0.95rem; /* Um pouco menor que o texto normal */
-    font-style: italic; /* Texto em itálico para indicar uma observação */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    font-style: italic;
 }
 
 .observacao p {
-    margin: 0; /* Remove margem padrão de parágrafos dentro da observação */
+    margin: 0;
 }
