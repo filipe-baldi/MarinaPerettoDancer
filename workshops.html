@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome para ícones oficiais -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -18,30 +18,44 @@
     <div class="overlay"></div>
     <div class="hero-content">
         <h1>Workshops Temáticos</h1>
-        <p>Aprofunde-se em temas específicos como técnica, expressão corporal e história.</p>
+        <p>Oficinas práticas ou teóricas focadas em um tema específico com curta duração e abordagem intensiva</p>
     </div>
 </section>
 
 <main class="main-experiencia">
     <div class="container">
         <section class="descricao">
-            <h2>O que são os Workshops Temáticos?</h2>
-            <p>Os workshops são encontros intensivos dedicados a temas específicos da dança árabe, como técnica de movimento, história cultural, expressão corporal, ritmos tradicionais e preparação artística. São ideais para quem deseja se aprofundar em um aspecto específico da arte.</p>
+            <h2>Como funcionam os workshops temáticos</h2>
+            <p>Os workshops temáticos são aulas intensivas de curta duração, voltadas para o aprofundamento em um tema específico. Estes encontros proporcionam uma vivencia prática e/ou teórica do tema abordado.</p>
+            <p>Você pode levar estes workshops para o seu evento. Uma maneira dinâmica e enriquecedora de levar arte e cultura árabe para sua programação.</p>
         </section>
 
+        <!-- Seção de "Temas oferecidos" com conteúdo colapsável -->
         <section class="beneficios">
-            <h2>Benefícios</h2>
-            <ul class="lista-sem-bolinha">
-                <li>Imersão em temas específicos</li>
-                <li>Maior liberdade criativa e técnica</li>
-                <li>Interação direta com a professora e outras alunas</li>
-                <li>Materiais exclusivos e apostilas digitais</li>
-                <li>Flexibilidade: presencial ou online</li>
-            </ul>
+            <h2>Temas oferecidos</h2> <!-- Título principal da seção -->
+
+            <!-- Início do item colapsável "Ritmos e musicalidade" -->
+            <div class="collapsible-item">
+                <h3 class="collapsible-header">Ritmos e musicalidade <i class="fas fa-chevron-down"></i></h3>
+                <div class="collapsible-content">
+                    <ul class="lista-sem-bolinha">
+                        <li>Ritmos Árabes - do básico ao avançado</li>
+                        <li>Instrumentos árabes e Taksim</li>
+                        <li>Expressividade árabe através dos Maqamat</li>
+                        <li>Leitura musical através de grandes obras</li>
+                        <li>Musicalidade aplicada a improvisação</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Fim do item colapsável -->
+
+            <!-- Se houver outros temas colapsáveis, você pode adicioná-los aqui, seguindo a mesma estrutura .collapsible-item -->
+
         </section>
 
         <section class="detalhes">
             <h2>Temas Comuns Abordados</h2>
+            <!-- Estes são os temas que você já tinha, mantidos como lista normal ou podem ser adaptados para mais colapsáveis se quiser -->
             <ul>
                 <li>Técnica de Movimento e Postura</li>
                 <li>Ritmos Árabes (Maqsoum, Masmoudi, Saidi, etc)</li>
@@ -54,7 +68,6 @@
         <section class="chamada-acao">
             <h2>Participe!</h2>
             <p>Nossos workshops acontecem regularmente e são abertos tanto para iniciantes quanto para bailarinas experientes. Garanta sua vaga com antecedência!</p>
-             <!-- Link ajustado para apontar para a seção de contato que será carregada -->
             <a href="#contato" class="btn btn-instagram">Ver Agenda</a>
         </section>
     </div>
@@ -64,13 +77,55 @@
 <div id="secao-contato"></div>
 
 <!-- Botão Fixo WhatsApp -->
-<!-- Corrigido número do WhatsApp -->
 <a href="https://wa.me/5551981380686" target="_blank" class="whatsapp-fixo">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <!-- Script principal para carregar header e contato -->
 <script src="scripts.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+
+        collapsibleHeaders.forEach(header => {
+            const collapsibleContent = header.nextElementSibling; // Pega o próximo elemento irmão, que é a div de conteúdo
+
+            if (collapsibleContent) { // Garante que o conteúdo exista
+                collapsibleContent.style.maxHeight = '0';
+                collapsibleContent.style.paddingTop = '0';
+
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active'); // Alterna a classe 'active' para rotação do ícone
+
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.classList.remove('expanded');
+                        collapsibleContent.style.maxHeight = '0'; // Colapsa
+                        collapsibleContent.style.paddingTop = '0';
+                    } else {
+                        collapsibleContent.classList.add('expanded');
+                        // Define o max-height para a altura total do conteúdo para transição suave
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                        collapsibleContent.style.paddingTop = '20px'; // Adiciona padding quando expandido
+                    }
+                });
+
+                // Opcional: Ajusta max-height se a janela for redimensionada enquanto o conteúdo está expandido
+                collapsibleContent.addEventListener('transitionend', () => {
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.style.maxHeight = 'none'; // Remove max-height fixo após expansão completa para responsividade
+                    }
+                });
+
+                window.addEventListener('resize', () => {
+                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
