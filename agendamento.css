@@ -31,7 +31,7 @@
     border-radius: 5px;
     font-size: 1rem;
 }
-<--
+/*
 .btn-instagram {
     background-color: #8B0000;
     color: white;
@@ -47,7 +47,8 @@
 .btn-instagram:hover {
     background-color: #a30000;
 } 
---!>
+*/
+
 /* Centralizar o botão do formulário */
 .formulario-main button[type="submit"] {
     display: block;
