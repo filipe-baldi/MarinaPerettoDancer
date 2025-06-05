@@ -59,3 +59,37 @@
     hyphens: auto;
     margin-bottom: 1rem;
 }
+/* ========================================= */
+/* Novos estilos para a seção de Benefícios */
+/* ========================================= */
+.beneficios {
+    background: #fdf5e6; /* Cor de fundo igual à seção .descricao */
+    padding: 30px; /* Padding similar ao da seção .descricao */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Margem superior para separar de outras seções */
+    text-align: center; /* Centraliza todo o texto dentro da seção */
+}
+
+.beneficios h2 {
+    color: #8B0000; /* Título em vermelho, mesma cor de 'Como funcionam as aulas presenciais?' */
+    text-align: center; /* Garante que o título esteja centralizado */
+    margin-bottom: 20px;
+}
+
+.beneficios p {
+    text-align: center; /* Garante que os parágrafos dentro da seção também estejam centralizados */
+    margin-bottom: 1rem;
+}
+
+/* Se você tiver uma lista de benefícios (ul/li), ajuste também */
+.beneficios ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0;
+    text-align: center; /* Centraliza os itens da lista */
+}
+
+.beneficios li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+    text-align: center; /* Centraliza o texto de cada item da lista */
+}
