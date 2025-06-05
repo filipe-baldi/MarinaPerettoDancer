@@ -106,7 +106,7 @@
     text-align: center;
 }
 
-.beneficios h2 {
+.beneficios h2 { /* Este é o título principal da seção "Temas Oferecidos" */
     color: #8B0000;
     text-align: center;
     margin-bottom: 20px;
@@ -147,3 +147,43 @@
 .observacao p {
     margin: 0;
 }
+
+/* ========================================= */
+/* Estilos para Seções Colapsáveis (Aplicado em Aulas-Presenciais e Workshops Temáticos) */
+/* ========================================= */
+.collapsible-header {
+    cursor: pointer; /* Indica que é clicável */
+    display: flex;
+    justify-content: center; /* Centraliza o texto e o ícone */
+    align-items: center;
+    gap: 10px; /* Espaço entre o texto e o ícone */
+    user-select: none; /* Evita seleção de texto ao clicar */
+    color: #8B0000; /* Cor vermelha para o título */
+    font-size: 1.8rem; /* <--- Ajustado para um tamanho adequado para H3 clicável */
+    margin-top: 20px; /* Adiciona um espaço acima do cabeçalho colapsável */
+    margin-bottom: 15px; /* Margem inferior para separar do conteúdo */
+}
+
+/* Para garantir que o h3 dentro de .collapsible-item tenha o estilo correto se não for o collapsible-header */
+.collapsible-item h3 {
+    margin: 0; /* Remove margem padrão para melhor controle com o collapsible-header */
+    padding: 0;
+}
+
+
+.collapsible-header i {
+    transition: transform 0.3s ease; /* Rotação suave do ícone */
+}
+
+.collapsible-header.active i {
+    transform: rotate(180deg); /* Gira o ícone quando a seção está ativa/expandida */
+}
+
+.collapsible-content {
+    max-height: 0; /* Inicialmente oculta */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding-top 0.5s ease-out; /* Transição suave para altura e padding */
+    padding-top: 0; /* Garante que não há padding quando colapsado */
+    text-align: center; /* Centraliza o conteúdo da lista, se houver */
+}
+/* A classe .expanded será adicionada/removida via JavaScript para controlar a altura e padding-top */
