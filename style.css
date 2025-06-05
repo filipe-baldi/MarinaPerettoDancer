@@ -206,6 +206,7 @@ header h1 {
 
     /* WhatsApp Fixo - Regras específicas para mobile */
     .whatsapp-fixo {
+        display: flex; /* Faz o botão aparecer no mobile */
         width: 60px; /* Mantém o tamanho para mobile */
         height: 60px;
         font-size: 2rem; /* Usa o tamanho que você já tinha para mobile */
@@ -566,9 +567,9 @@ footer p {
     background-color: #a30000; /* Tom mais escuro no hover */
 }
 
-/* WhatsApp Fixo - Estilo base para desktop e mobile */
-/* As regras dentro da media query para mobile sobrescreverão se necessário */
+/* WhatsApp Fixo - Estilo para Desktop (oculto) */
 .whatsapp-fixo {
+    display: none; /* OCULTA O BOTÃO POR PADRÃO EM TELAS MAIORES */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -577,10 +578,9 @@ footer p {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.2em; /* Um pouco maior para ser mais visível */
+    align-items: center; /* Manter para centralizar conteúdo quando visível */
+    justify-content: center; /* Manter para centralizar conteúdo quando visível */
+    font-size: 2.2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     z-index: 1000;
@@ -588,5 +588,13 @@ footer p {
 
 .whatsapp-fixo:hover {
     transform: scale(1.1);
-    background-color: #1ebd58; /* Um pouco mais escuro no hover */
+    background-color: #1ebd58;
+}
+
+/* WhatsApp Fixo - Estilo para Mobile (visível) */
+@media (max-width: 768px) {
+    .whatsapp-fixo {
+        display: flex; /* EXIBE O BOTÃO SOMENTE EM TELAS DE ATÉ 768px */
+        /* As outras propriedades de tamanho e fonte já estão definidas acima ou no mobile media query global */
+    }
 }
