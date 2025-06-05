@@ -35,11 +35,11 @@
     <div class="container">
         <section class="descricao">
             <h2>Como funcionam as aulas online</h2>
-            <p>As aulas online são realizadas via Google Meet, com duração de 1 hora, podendo ser particulares ou em pequenos grupos.
+            <p>As aulas online são realizadas via Google Meet, com duração de 1 hora, podendo ser particulares ou em pequenos grupos.</p>
 
-O tema da aula é escolhido de forma personalizada, de acordo com o interesse e objetivo da aluna. É possível agendar aulas avulsas ou optar por pacotes com temas específicos, como técnica, aprofundamento teórico, revisão coreográfica, musicalidade, entre outros.
+<p>O tema da aula é escolhido de forma personalizada, de acordo com o interesse e objetivo da aluna. É possível agendar aulas avulsas ou optar por pacotes com temas específicos, como técnica, aprofundamento teórico, revisão coreográfica, musicalidade, entre outros.</p>
 
-Essa modalidade oferece flexibilidade de horários e a comodidade de praticar onde você estiver, sem abrir mão da atenção individual e da qualidade do ensino.</p>
+<p>Essa modalidade oferece flexibilidade de horários e a comodidade de praticar onde você estiver, sem abrir mão da atenção individual e da qualidade do ensino.</p>
         </section>
 
         <section class="beneficios">
@@ -52,9 +52,38 @@ Essa modalidade oferece flexibilidade de horários e a comodidade de praticar on
                 <li>Contato continuado para tirar dúvidas específicas</li>
             </ul>
         </section>
-        <section class="observacao">
-    <p>Valores: R$150 aula avulsa de 1h30 ou R$360 pacote com 4 aulas de 1h</p>
+        <section class="agendamento-form-section">
+            <div class="container"> <!-- Mantido o container para alinhamento -->
+                <h2>Agende sua aula</h2>
+                <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para confirmar sua aula conforme disponibilidade.</p>
+
+                <!-- Formulário conectado ao Formspree -->
+                <form action="https://formspree.io/f/xdkzkrya" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp:</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(xx) 9 xxxx-xxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data-hora">Data e Hora desejada:</label>
+                        <input type="datetime-local" id="data-hora" name="data_hora" required>
+                    </div>
+                    <section class="observacao">
+                        <p>Valores: R$150 aula avulsa de 1h30 ou R$360 pacote com 4 aulas de 1h</p>
+                    </section>
+                    <!-- Botão de envio -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-submit">Agendar aula</button>
+                    </div>
+                </form>
+            </div>
         </section>
+        
     </div>
 </main>
 
