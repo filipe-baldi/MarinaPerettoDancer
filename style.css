@@ -192,7 +192,7 @@ header h1 {
     .btn {
         width: 45px;
         height: 45px;
-        font-size: 1.2rem; /* Default icon size for mobile */
+        font-size: 1.2rem;
     }
 
      .card-btn h3 {
@@ -396,7 +396,7 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Standard gap */
+    gap: 20px;
 }
 .btn {
     display: inline-flex;
@@ -405,7 +405,7 @@ header h1 {
     width: 60px;
     height: 60px;
     border-radius: 50%; /* Keep contact buttons circular */
-    font-size: 1.5rem; /* Default icon size */
+    font-size: 1.5rem;
     text-decoration: none;
     transition: background 0.3s ease;
     border: none;
@@ -527,7 +527,7 @@ footer p {
     margin-top: 15px;
 }
 
-/* Centralização do contato em páginas internas (Experiência) */
+/* Centralização do contato em páginas internas */
 .main-experiencia + #secao-contato .contato {
     margin: 0 auto;
     max-width: 100%;
@@ -545,72 +545,26 @@ footer p {
 .main-experiencia + #secao-contato .botoes-contato {
     width: 100%;
     justify-content: center;
-    gap: 20px; /* Ensure standard gap */
 }
 
-/* Centralização e Estilo do contato em páginas internas (Formulário) */
-.formulario-main + #secao-contato .contato {
-    margin: 0 auto;
-    max-width: 100%;
-    padding-top: 0; /* Remove extra padding if any */
-}
-.formulario-main + #secao-contato .contato .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 1100px;
-    padding-top: 0; /* Remove extra padding if any */
-}
-.formulario-main + #secao-contato .contatos-info {
-    max-width: 600px;
-}
-.formulario-main + #secao-contato .botoes-contato {
-    width: 100%;
-    justify-content: center;
-    gap: 15px !important; /* Force SMALLER gap specifically for this page */
-    padding-bottom: 40px; /* Add some padding below buttons */
-}
-
-/* Force correct Instagram button style AND ICON SIZE in agendamento.html */
-.formulario-main + #secao-contato .botoes-contato .btn-instagram {
-    background-color: #e1306c !important; /* Force pink color */
-    color: white !important;
-}
-.formulario-main + #secao-contato .botoes-contato .btn i {
-    font-size: 1.8rem !important; /* Force LARGER icon size specifically for this page */
-}
-
-
-/* Estilo para o botão de Submissão de Formulário (e Agendar Aula) */
-.btn-submit {
-    background-color: #8B0000; /* Vermelho escuro */
+/* Estilo para o botão Agende Sua Aula */
+.btn-agendar {
+    background-color: #8B0000; /* Vermelho escuro, consistente com a identidade */
     color: white;
-    padding: 10px 25px;
+    padding: 12px 25px; /* Ajuste de padding para texto */
     font-size: 1rem;
     border: none;
     cursor: pointer;
-    border-radius: 30px; /* Rounded as requested */
+    border-radius: 5px; /* Bordas levemente arredondadas, não circular */
     text-decoration: none;
-    display: inline-block;
+    display: inline-block; /* Para que o padding funcione corretamente */
     transition: background 0.3s ease;
     text-align: center;
-    width: auto; /* Reset width */
-    height: auto; /* Reset height */
+    width: auto; /* Override specific width if needed */
+    height: auto; /* Override specific height if needed */
 }
 
-.btn-submit:hover {
+.btn-agendar:hover {
     background-color: #a30000; /* Tom mais escuro no hover */
 }
 
-/* Specific centering for the submit button in the form */
-.form-group .btn-submit {
-    display: block;
-    margin: 20px auto;
-}
-
-/* Specific centering for the submit button link in aulas-presenciais */
-.agenda .btn-submit {
-     display: block;
-     margin: 20px auto;
-}

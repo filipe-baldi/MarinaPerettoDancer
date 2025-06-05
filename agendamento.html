@@ -11,7 +11,7 @@
     <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- CSS Específico para esta página -->
+    <!-- CSS Específico para esta página (opcional) -->
     <link rel="stylesheet" href="agendamento.css">
 
     <!-- Font Awesome (para ícones) -->
@@ -27,6 +27,7 @@
     <div class="overlay"></div>
     <div class="hero-content">
         <h1>Agende sua Aula</h1>
+        
     </div>
 </section>
 
@@ -37,7 +38,7 @@
         <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para confirmar sua aula conforme disponibilidade.</p>
 
         <!-- Formulário conectado ao Formspree -->
-        <form action="https://formspree.io/f/manjwvkv" method="POST">
+        <form action="https://formspree.io/f/manjwvkv"  method="POST">
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
@@ -53,47 +54,23 @@
                 <input type="datetime-local" id="data-hora" name="data_hora" required>
             </div>
 
-            <!-- Botão de envio -->
+             <!-- Botão de envio -->
             <div class="form-group">
-                <button type="submit" class="btn btn-submit">Enviar Solicitação</button>
+                <button type="submit" class="btn btn-instagram">Enviar Solicitação</button>
             </div>
         </form>
     </div>
 </main>
 
-<!-- Seção de Contato -->
-<section id="contato" class="contato">
-    <div class="container">
-        <h2>Entre em Contato</h2>
-        <div class="contatos-info">
-            <p><strong>Email:</strong> marinaperetto.dancer@gmail.com</p>
-            <p><strong>Instagram:</strong> @marina.peretto</p>
-            <p><strong>WhatsApp:</strong> (51) 9 8138-0686</p>
-        </div>
-        <div class="botoes-contato">
-            <a href="mailto:marinaperetto.dancer@gmail.com" class="btn btn-email" aria-label="Enviar Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.instagram.com/marina.peretto/" target="_blank" class="btn btn-instagram" aria-label="Acessar Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/555181380686" target="_blank" class="btn btn-whatsapp" aria-label="Fale no WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2025 Marina Peretto. Todos os direitos reservados.</p>
-</footer>
+<!-- Carregar Contato Dinamicamente -->
+<div id="secao-contato"></div>
 
 <!-- Botão Fixo WhatsApp -->
-<a href="https://wa.me/5551981380686" target="_blank" class="whatsapp-fixo">
+<a href="https://wa.me/5551981380686"  target="_blank" class="whatsapp-fixo">
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Script principal para carregar header e contato (mantenha se você realmente usa) -->
+<!-- Script principal para carregar header e contato -->
 <script src="scripts.js"></script>
 
 </body>
