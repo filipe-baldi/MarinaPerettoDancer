@@ -92,38 +92,46 @@
             const collapsibleContent = header.nextElementSibling; // Pega o próximo elemento irmão, que é a div de conteúdo
 
             if (collapsibleContent) { // Garante que o conteúdo exista
+                // Estado inicial: colapsado
                 collapsibleContent.style.maxHeight = '0';
                 collapsibleContent.style.paddingTop = '0';
-                collapsibleContent.style.paddingBottom = '0'; // Adicionado para garantir que o padding inferior também seja 0 ao iniciar
+                collapsibleContent.style.paddingBottom = '0';
 
                 header.addEventListener('click', function() {
                     this.classList.toggle('active'); // Alterna a classe 'active' para rotação do ícone
 
                     if (collapsibleContent.classList.contains('expanded')) {
+                        // Se está expandido, recolhe
                         collapsibleContent.classList.remove('expanded');
                         collapsibleContent.style.maxHeight = '0'; // Colapsa
                         collapsibleContent.style.paddingTop = '0';
-                        collapsibleContent.style.paddingBottom = '0'; // Adicionado para garantir o colapso completo
+                        collapsibleContent.style.paddingBottom = '0';
                     } else {
+                        // Se está recolhido, expande
                         collapsibleContent.classList.add('expanded');
-                        // Define o max-height para a altura total do conteúdo para transição suave
-                        // Inclui padding-top e padding-bottom para a altura total calculada
-                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                        // Define os paddings *antes* de calcular scrollHeight
                         collapsibleContent.style.paddingTop = '20px'; // Adiciona padding quando expandido
                         collapsibleContent.style.paddingBottom = '20px'; // Adicionado para padding inferior ao expandir
+                        
+                        // Define max-height para a altura total do conteúdo (incluindo paddings)
+                        // Para uma transição suave, setamos a altura calculada
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
                 // Opcional: Ajusta max-height se a janela for redimensionada enquanto o conteúdo está expandido
-                collapsibleContent.addEventListener('transitionend', () => {
-                    if (collapsibleContent.classList.contains('expanded')) {
-                        collapsibleContent.style.maxHeight = 'none'; // Remove max-height fixo após expansão completa para responsividade
-                    }
-                });
-
+                // Isso garante que o conteúdo se ajuste se o tamanho da janela mudar e o maxHeight não for 'none'
                 window.addEventListener('resize', () => {
                     if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
+
+                // Remover max-height fixo após a transição de expansão completa
+                // Isso é importante para que o conteúdo possa se adaptar responsivamente após ser aberto.
+                collapsibleContent.addEventListener('transitionend', () => {
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.style.maxHeight = 'none'; // Remove max-height fixo após expansão completa
                     }
                 });
             }
