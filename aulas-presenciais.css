@@ -15,55 +15,46 @@
     margin: 20px 0;
 }
 
-/* Estilos para seções de conteúdo como Descrição, Benefícios, Observação */
-.descricao, .beneficios { /* Observação removida pois não está no HTML fornecido */
-    background: #fdf5e6; /* Cor de fundo para seções de conteúdo */
+/* As regras para .descricao e .beneficios foram movidas para components.css para evitar conflitos e garantir consistência. */
+/* Se precisar de estilos diferentes para .descricao ou .beneficios ESPECIFICAMENTE nesta página,
+   você pode adicioná-los aqui, mas eles sobrescreverão os do components.css. */
+/*
+.descricao {
+    background: #fdf5e6;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
-    margin-bottom: 40px; /* Garante espaçamento entre seções */
+    margin-bottom: 40px;
     text-align: center;
 }
-
+.beneficios {
+    background: #fdf5e6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
 .descricao h2, .beneficios h2 {
     color: #8B0000;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2rem; /* Tamanho padrão para títulos h2 */
+    font-size: 2rem;
 }
-
 .descricao p, .beneficios p {
     text-align: justify;
     hyphens: auto;
     margin-bottom: 1rem;
 }
-
 .beneficios ul {
     list-style: none;
     padding: 0;
     text-align: center;
 }
-
 .beneficios li {
     margin-bottom: 10px;
     text-align: center;
 }
-
-/* Se houver uma seção de observação específica para aulas-presenciais, manteria aqui.
-   Considerando o HTML atual, não há mais essa seção. */
-/*
-.observacao {
-    background: #f9f9f9;
-    font-style: italic;
-    color: #666;
-    font-size: 0.95rem;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-.observacao p { margin: 0; }
 */
