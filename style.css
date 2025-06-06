@@ -259,7 +259,6 @@ footer p {
 
 /* Botão Fixo WhatsApp - Global Visibility/Positioning */
 .whatsapp-fixo {
-    display: none; /* Oculto por padrão em telas maiores */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -268,13 +267,13 @@ footer p {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    display: flex; /* Garante que é um flex container para centralizar o ícone */
     align-items: center;
     justify-content: center;
     font-size: 2.2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     z-index: 1000;
+    display: none; /* CORRIGIDO: Oculta por padrão em telas maiores */
 }
 
 .whatsapp-fixo:hover {
@@ -346,7 +345,7 @@ footer p {
 
     /* WhatsApp Fixo - Visível em mobile */
     .whatsapp-fixo {
-        display: flex;
+        display: flex; /* Exibe o botão somente em telas de até 768px */
     }
 
     /* Ajustes para a seção Quem Sou em mobile */
