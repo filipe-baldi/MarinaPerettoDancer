@@ -111,7 +111,7 @@
     color: #8B0000;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2.2rem; /* <--- AUMENTADO O TAMANHO DA FONTE AQUI */
+    font-size: 2rem; /* <--- AJUSTADO DE VOLTA PARA O TAMANHO ORIGINAL */
 }
 
 .beneficios p {
@@ -161,7 +161,7 @@
     gap: 10px; /* Espaço entre o texto e o ícone */
     user-select: none; /* Evita seleção de texto ao clicar */
     color: #8B0000; /* Cor vermelha para o título */
-    font-size: 1.5rem; /* <--- DIMINUÍDO O TAMANHO DA FONTE AQUI */
+    font-size: 1.5rem; /* <--- MANTIDO MENOR QUE O TÍTULO PRINCIPAL */
     font-weight: bold; /* <--- GARANTE QUE O TEXTO FIQUE EM NEGRITO */
     margin-top: 20px; /* Adiciona um espaço acima do cabeçalho colapsável */
     margin-bottom: 15px; /* Margem inferior para separar do conteúdo */
