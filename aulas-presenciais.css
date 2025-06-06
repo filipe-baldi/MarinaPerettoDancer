@@ -79,7 +79,8 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
+    /* Removido margin-top para evitar espaçamento duplicado */
+    margin-top: 0; /* AJUSTADO AQUI */
 }
 
 .descricao h2 {
@@ -104,6 +105,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
     text-align: center;
+    margin-bottom: 40px; /* ADICIONADO PARA CONTROLAR O ESPAÇAMENTO EXTERNO DA SEÇÃO */
 }
 
 /* Ajustado o tamanho da fonte para o título principal da seção 'Temas Oferecidos' */
@@ -111,7 +113,7 @@
     color: #8B0000;
     text-align: center;
     margin-bottom: 20px;
-    /*font-size: 2rem;  <--- AJUSTADO DE VOLTA PARA O TAMANHO ORIGINAL */
+    font-size: 2rem; /* MANTIDO O TAMANHO ORIGINAL */
 }
 
 .beneficios p {
@@ -153,6 +155,16 @@
 /* ========================================= */
 /* Estilos para Seções Colapsáveis (Aplicado em Aulas-Presenciais e Workshops Temáticos) */
 /* ========================================= */
+.collapsible-item {
+    /* Removida a margem inferior para aplicar a margem superior de forma consistente */
+    margin-bottom: 0; /* <--- REMOVIDO PARA MAIOR CONTROLE */
+}
+
+.collapsible-item + .collapsible-item { /* Aplica margem superior a todos os itens EXCETO o primeiro */
+    margin-top: 20px; /* <--- NOVO: Espaçamento entre os itens colapsáveis */
+}
+
+
 .collapsible-header {
     cursor: pointer; /* Indica que é clicável */
     display: flex;
@@ -161,10 +173,10 @@
     gap: 10px; /* Espaço entre o texto e o ícone */
     user-select: none; /* Evita seleção de texto ao clicar */
     color: #8B0000; /* Cor vermelha para o título */
-   /* font-size: 1.5rem;  <--- MANTIDO MENOR QUE O TÍTULO PRINCIPAL */
-    font-weight: bold; /* <--- GARANTE QUE O TEXTO FIQUE EM NEGRITO */
-    margin-top: 20px; /* Adiciona um espaço acima do cabeçalho colapsável */
-    margin-bottom: 15px; /* Margem inferior para separar do conteúdo */
+    /* Removido o font-size explícito para usar o tamanho padrão do h3 do navegador */
+    font-weight: bold; /* Garante que o texto fique em negrito */
+    margin-top: 0; /* REMOVIDA MARGEM SUPERIOR PARA MAIOR CONTROLE */
+    margin-bottom: 0; /* REMOVIDA MARGEM INFERIOR PARA MAIOR CONTROLE PELO .collapsible-item */
 }
 
 /* Para garantir que o h3 dentro de .collapsible-item tenha o estilo correto se não for o collapsible-header */
