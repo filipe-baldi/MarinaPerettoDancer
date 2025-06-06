@@ -97,14 +97,77 @@
 }
 
 /* ========================================= */
-/* Estilos para as Seções de Cards (Próximos Workshops e Cursos de Formação) - Reutilizado */
+/* Estilos para a Seção de Serviços (Cards da Home - Experiências Oferecidas) - Reutilizado */
+/* ========================================= */
+.servicos { /* Usado na index.html para "Experiências Oferecidas" */
+    padding: 60px 20px;
+    background: #fff; /* Fundo branco para a seção de serviços */
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.servicos h2 {
+    color: #8B0000;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+.cards { /* Grid para os cards de serviço */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.card-btn { /* Estilo base do card-botão */
+    background: #fdf5e6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.card-btn:hover {
+    transform: scale(1.03);
+    background-color: #f5e8ca;
+}
+.card-btn h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #8B0000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    line-height: 1.2;
+}
+.card-btn p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+/* ========================================= */
+/* Estilos para as Seções de Cards de Workshops/Cursos */
 /* ========================================= */
 .proximos-workshops, .cursos-formacao-cards {
     padding: 60px 20px;
-    background: #fff; /* Fundo branco padrão para seções de cards */
+    background: #fff;
     text-align: center;
-    margin-top: 40px; /* Espaçamento da seção anterior */
-    margin-bottom: 40px; /* Espaçamento da próxima seção */
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .proximos-workshops h2, .cursos-formacao-cards h2 {
@@ -307,4 +370,75 @@
     text-align: center;
     color: #333;
     margin-bottom: 0;
+}
+
+/* ========================================= */
+/* Estilos para os Botões de Contato (usados na seção de Contato) - Reutilizado */
+/* ========================================= */
+.botoes-contato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn { /* Estilo base para todos os botões de ícone social */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.8rem; /* Tamanho do ícone */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-email {
+    background-color: #8B0000;
+}
+.btn-email:hover {
+    background-color: #a30000;
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.btn-instagram:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+}
+.btn-whatsapp:hover {
+    background-color: #1ebd58;
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Estilo para o botão "Agende Sua Aula" (se reutilizável) */
+.btn-agendar {
+    background-color: #8B0000;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+.btn-agendar:hover {
+    background-color: #a30000;
 }
