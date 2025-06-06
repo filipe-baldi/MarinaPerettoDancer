@@ -156,14 +156,12 @@
 /* Estilos para Seções Colapsáveis (Aplicado em Aulas-Presenciais e Workshops Temáticos) */
 /* ========================================= */
 .collapsible-item {
-    /* Removida a margem inferior para aplicar a margem superior de forma consistente */
-    margin-bottom: 0; /* <--- REMOVIDO PARA MAIOR CONTROLE */
+    margin-bottom: 20px; /* <--- NOVO: Aplica espaçamento abaixo de cada item colapsável */
 }
 
-.collapsible-item + .collapsible-item { /* Aplica margem superior a todos os itens EXCETO o primeiro */
-    margin-top: 20px; /* <--- NOVO: Espaçamento entre os itens colapsáveis */
+.collapsible-item:last-child {
+    margin-bottom: 0; /* <--- NOVO: Remove a margem do último item colapsável */
 }
-
 
 .collapsible-header {
     cursor: pointer; /* Indica que é clicável */
