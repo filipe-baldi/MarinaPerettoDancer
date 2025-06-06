@@ -43,7 +43,8 @@
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select { /* Adicionado 'select' para estilização consistente */
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -239,22 +240,22 @@
 }
 
 /* ========================================= */
-/* Estilos para a nova seção "Próximos Workshops" */
+/* Estilos para a seção "Próximos Workshops" (reutilizado para cards de cursos) */
 /* ========================================= */
-.proximos-workshops {
+.proximos-workshops, .cursos-formacao-cards { /* Adicionado .cursos-formacao-cards aqui */
     padding: 60px 20px; /* Padding padrão para seções */
     background: #fff; /* FUNDO BRANCO AGORA */
     text-align: center;
     margin-top: 40px; /* Espaçamento da seção anterior */
 }
 
-.proximos-workshops h2 {
+.proximos-workshops h2, .cursos-formacao-cards h2 { /* Títulos das seções de cards */
     color: #8B0000; /* Título em vermelho */
     margin-bottom: 40px; /* Espaço abaixo do título */
     font-size: 2rem;
 }
 
-.workshops-grid {
+.workshops-grid { /* Usado tanto para workshops quanto para cursos */
     display: grid;
     /* Colunas responsivas: 1 coluna em telas pequenas, 2 em médias, 3 em grandes */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -263,7 +264,7 @@
     margin: 0 auto; /* Centraliza o grid */
 }
 
-.workshop-item {
+.workshop-item { /* Usado tanto para workshops quanto para cursos */
     background: #fdf5e6; /* Fundo para cada item do workshop */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para o item */
@@ -285,7 +286,7 @@
 }
 
 .workshop-item h3 {
-    color: #8B0000; /* Título do workshop em vermelho */
+    color: #8B0000; /* Título do item em vermelho */
     font-size: 1.3rem;
     margin: 15px 10px 10px; /* Margem interna para o título */
 }
@@ -323,7 +324,6 @@
 
 .modal-content {
     position: relative;
-    /* Removidos max-width e max-height daqui para que a imagem controle as dimensões */
     background: #fff;
     padding: 0; /* Padding removido do modal-content para evitar cortes */
     border-radius: 10px;
@@ -341,7 +341,7 @@
     display: block;
     border-radius: 5px;
     object-fit: contain; /* Garante que a imagem se ajuste completamente sem cortes, mantendo proporção */
-    padding: 20px; /* <--- Adiciona padding diretamente à imagem para que não fique colada nas bordas do modal */
+    padding: 20px; /* Adiciona padding diretamente à imagem para que não fique colada nas bordas do modal */
     box-sizing: border-box; /* Inclui o padding no cálculo total da largura/altura do elemento */
 }
 
@@ -373,4 +373,13 @@
     .modal-content img {
         padding: 10px; /* Reduced padding for smaller screens */
     }
+}
+
+/* ========================================= */
+/* Estilos Específicos para o Formulário de Cursos */
+/* (Reutiliza .agendamento-form-section e .form-group) */
+/* ========================================= */
+.formulario-cursos {
+    margin-top: 40px; /* Espaçamento da seção anterior */
+    margin-bottom: 40px; /* Espaçamento da próxima seção */
 }
