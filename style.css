@@ -19,7 +19,7 @@ body {
 .container {
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto; /* Centraliza o container */
+    margin: auto; /* Centraliza o container */
 }
 
 /* Header */
@@ -42,12 +42,12 @@ header .container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-top: 0;
+    padding-top: 0; /* Reseta padding superior do container dentro do header */
 }
 
 header h1 {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 20px; /* Mantido padding-left para o título */
     font-size: 1.5rem;
 }
 
@@ -69,10 +69,6 @@ header h1 {
 }
 
 /* Navegação principal */
-#main-nav {
-    /* Estilos para desktop */
-}
-
 #main-nav ul {
     list-style: none;
     display: flex;
@@ -94,7 +90,7 @@ header h1 {
     opacity: 0.8;
 }
 
-/* Hero Section (Home Page) */
+/* Hero Section (Página Inicial) */
 .hero {
     background: url('imagens/fundao.jpeg') no-repeat center center/cover;
     height: 100vh;
@@ -166,11 +162,86 @@ header h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Main Content Wrapper for internal pages */
+/* Main Content Wrapper para páginas internas */
 .main-experiencia {
     padding: 60px 20px;
     background: #fff; /* Fundo branco para a área principal de conteúdo */
 }
+
+/* Seção Quem Sou (Específica da Página Inicial/Quem-Sou) */
+.sobre {
+    padding: 60px 20px;
+    background: #fdf5e6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Adiciona margem superior para consistência */
+    margin-bottom: 40px; /* Adiciona margem inferior para consistência */
+}
+.sobre h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #8B0000;
+}
+.sobre-conteudo {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.texto-quem-sou {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.texto-quem-sou p {
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 1rem;
+}
+.foto-professora {
+    flex: 1;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 0 auto; /* Centraliza a imagem se o flex permitir */
+}
+.foto-professora:hover {
+    transform: scale(1.02);
+}
+
+
+/* Contato (Estilos Gerais da Seção de Contato) */
+.contato {
+    padding: 60px 20px;
+    background: #f9f9f9; /* Fundo leve para a seção de contato */
+    text-align: center;
+    margin-top: 40px; /* Espaçamento consistente */
+    margin-bottom: 40px; /* Espaçamento consistente */
+    border-radius: 10px; /* Arredonda bordas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.contato h2 {
+    color: #8B0000;
+    margin-bottom: 30px;
+    font-size: 2rem; /* Tamanho consistente com outros h2 */
+}
+.contatos-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    color: #333;
+}
+
 
 /* Footer */
 footer {
@@ -186,8 +257,9 @@ footer p {
     margin: 5px 0;
 }
 
-/* Botão Fixo WhatsApp */
+/* Botão Fixo WhatsApp - Global Visibility/Positioning */
 .whatsapp-fixo {
+    display: none; /* Oculto por padrão em telas maiores */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -210,7 +282,7 @@ footer p {
     background-color: #1ebd58;
 }
 
-/* --- Mobile Styles --- */
+/* --- Estilos Mobile --- */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.3rem;
@@ -274,6 +346,21 @@ footer p {
 
     /* WhatsApp Fixo - Visível em mobile */
     .whatsapp-fixo {
-        display: flex; /* Exibe o botão somente em telas de até 768px */
+        display: flex;
+    }
+
+    /* Ajustes para a seção Quem Sou em mobile */
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+    .foto-professora {
+        order: 1;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+    .texto-quem-sou {
+        order: 2;
+        width: 100%;
+        text-align: left;
     }
 }
