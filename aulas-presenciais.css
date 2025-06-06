@@ -154,8 +154,8 @@
 .collapsible-header {
     cursor: pointer; /* Indica que é clicável */
     display: flex;
-    justify-content: center; /* Centraliza o texto e o ícone */
-    align-items: center;
+    justify-content: left; /* Centraliza o texto e o ícone */
+    align-items: left;
     gap: 10px; /* Espaço entre o texto e o ícone */
     user-select: none; /* Evita seleção de texto ao clicar */
     color: #8B0000; /* Cor vermelha para o título */
