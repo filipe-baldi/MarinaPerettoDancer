@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshops Temáticos - Marina Peretto | Danças Árabes</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="aulas-presenciais.css">
+
     <!-- Font Awesome para ícones oficiais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -94,6 +94,7 @@
             if (collapsibleContent) { // Garante que o conteúdo exista
                 collapsibleContent.style.maxHeight = '0';
                 collapsibleContent.style.paddingTop = '0';
+                collapsibleContent.style.paddingBottom = '0'; // Adicionado para garantir que o padding inferior também seja 0 ao iniciar
 
                 header.addEventListener('click', function() {
                     this.classList.toggle('active'); // Alterna a classe 'active' para rotação do ícone
@@ -102,11 +103,14 @@
                         collapsibleContent.classList.remove('expanded');
                         collapsibleContent.style.maxHeight = '0'; // Colapsa
                         collapsibleContent.style.paddingTop = '0';
+                        collapsibleContent.style.paddingBottom = '0'; // Adicionado para garantir o colapso completo
                     } else {
                         collapsibleContent.classList.add('expanded');
                         // Define o max-height para a altura total do conteúdo para transição suave
+                        // Inclui padding-top e padding-bottom para a altura total calculada
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                         collapsibleContent.style.paddingTop = '20px'; // Adiciona padding quando expandido
+                        collapsibleContent.style.paddingBottom = '20px'; // Adicionado para padding inferior ao expandir
                     }
                 });
 
