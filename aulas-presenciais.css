@@ -279,7 +279,6 @@
 .workshop-item img {
     width: 100%;
     /* Removido altura fixa para evitar zoom indesejado */
-    /* height: 300px; */ /* ALTURA REMOVIDA */
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer no grid */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Linha para separar imagem do texto */
     cursor: zoom-in; /* CURSOR INDICANDO QUE A IMAGEM É CLICÁVEL */
@@ -324,23 +323,26 @@
 
 .modal-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    /* Removidos max-width e max-height daqui para que a imagem controle as dimensões */
     background: #fff;
-    padding: 20px;
+    padding: 0; /* Padding removido do modal-content para evitar cortes */
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    display: flex;
+    display: flex; /* Flexbox para centralizar a imagem */
     justify-content: center;
     align-items: center;
 }
 
 .modal-content img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90vw;   /* Limita a largura máxima da imagem a 90% da largura da viewport */
+    max-height: 90vh;  /* Limita a altura máxima da imagem a 90% da altura da viewport */
+    width: auto;       /* Permite que a largura se ajuste automaticamente */
+    height: auto;      /* Permite que a altura se ajuste automaticamente */
     display: block;
     border-radius: 5px;
-    object-fit: contain; /* <--- AJUSTADO PARA GARANTIR QUE A IMAGEM INTEIRA SE ENCAIXE */
+    object-fit: contain; /* Garante que a imagem se ajuste completamente sem cortes, mantendo proporção */
+    padding: 20px; /* <--- Adiciona padding diretamente à imagem para que não fique colada nas bordas do modal */
+    box-sizing: border-box; /* Inclui o padding no cálculo total da largura/altura do elemento */
 }
 
 .modal-close-btn {
@@ -368,11 +370,7 @@
 
 /* Estilo para telas muito pequenas, para que a imagem não fique muito grande */
 @media (max-width: 600px) {
-    .modal-content {
-        padding: 10px;
-    }
     .modal-content img {
-        height: auto; /* Permite que a altura se ajuste à largura máxima */
-        /* object-fit: contain; já definido acima */
+        padding: 10px; /* Reduced padding for smaller screens */
     }
 }
