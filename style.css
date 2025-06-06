@@ -492,18 +492,18 @@ footer p {
     padding: 60px 20px;
     background: #fff;
 }
+
 .descricao,
-.beneficios,
-.chamada-acao {
+.beneficios {
     margin-bottom: 40px;
-    background: #fffacd;
+    background: #fdf5e6;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .descricao h2,
 .beneficios h2,
-.chamada-acao h2 {
+ {
     color: #8B0000;
     margin-bottom: 20px;
     text-align: center;
