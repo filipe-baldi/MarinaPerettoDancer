@@ -106,10 +106,12 @@
     text-align: center;
 }
 
-.beneficios h2 { /* Este é o título principal da seção "Temas Oferecidos" */
+/* Ajustado o tamanho da fonte para o título principal da seção 'Temas Oferecidos' */
+.beneficios h2 {
     color: #8B0000;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 1.8rem; /* <--- REDUZIDO O TAMANHO DA FONTE AQUI */
 }
 
 .beneficios p {
@@ -154,12 +156,12 @@
 .collapsible-header {
     cursor: pointer; /* Indica que é clicável */
     display: flex;
-    justify-content: left; /* Centraliza o texto e o ícone */
-    align-items: left;
+    justify-content: center; /* Centraliza o texto e o ícone */
+    align-items: center;
     gap: 10px; /* Espaço entre o texto e o ícone */
     user-select: none; /* Evita seleção de texto ao clicar */
     color: #8B0000; /* Cor vermelha para o título */
-    font-size: 1.8rem; /* Ajustado para um tamanho adequado para H3 clicável */
+    font-size: 2.2rem; /* <--- AUMENTADO O TAMANHO DA FONTE AQUI */
     margin-top: 20px; /* Adiciona um espaço acima do cabeçalho colapsável */
     margin-bottom: 15px; /* Margem inferior para separar do conteúdo */
 }
