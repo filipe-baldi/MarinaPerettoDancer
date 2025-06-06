@@ -122,24 +122,45 @@
         </section>
         
         <!-- A seção "detalhes" foi mantida na ordem original, após a seção "beneficios". -->
-        
+        <section class="detalhes">
+            <h2>Temas Comuns Abordados</h2>
+            <ul>
+                <li>Técnica de Movimento e Postura</li>
+                <li>Ritmos Árabes (Maqsoum, Masmoudi, Saidi, etc)</li>
+                <li>Expressão Corporal e Performance</li>
+                <li>Figurino e Estética Oriental</li>
+                <li>História e Cultura das Danças Árabes</li>
+            </ul>
+        </section>
 
-         <!-- NOVA SEÇÃO: PRÓXIMOS WORKSHOPS -->
+        <section class="chamada-acao">
+            <h2>Participe!</h2>
+            <p>Nossos workshops acontecem regularmente e são abertos tanto para iniciantes quanto para bailarinas experientes. Garanta sua vaga com antecedência!</p>
+            <a href="#contato" class="btn btn-instagram">Ver Agenda</a>
+        </section>
+
+        <!-- NOVA SEÇÃO: PRÓXIMOS WORKSHOPS -->
         <section class="proximos-workshops">
             <div class="container">
                 <h2>Próximos Workshops</h2>
                 <div class="workshops-grid">
                     <div class="workshop-item">
-                        <img src="CardsWorkshops/27junho.jpeg" alt="Workshop Futuro 1" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Imagem+N%C3%A3o+Dispon%C3%ADvel';">
-                       
+                        <!-- Adicionado a classe 'enlarge-image' para o JS e removido a altura fixa -->
+                        <img src="imagens/CardsWorkshops/workshop1.jpg" alt="Workshop Futuro 1" class="enlarge-image" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Imagem+N%C3%A3o+Dispon%C3%ADvel';">
+                        <h3>Nome do Workshop 1</h3>
+                        <p>Breve descrição do workshop, data e local.</p>
                     </div>
                     <div class="workshop-item">
-                        <img src="CardsWorkshops/25julho.jpeg" alt="Workshop Futuro 2" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Imagem+N%C3%A3o+Dispon%C3%ADvel';">
-                       
+                        <!-- Adicionado a classe 'enlarge-image' para o JS e removido a altura fixa -->
+                        <img src="imagens/CardsWorkshops/workshop2.jpg" alt="Workshop Futuro 2" class="enlarge-image" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Imagem+N%C3%A3o+Dispon%C3%ADvel';">
+                        <h3>Nome do Workshop 2</h3>
+                        <p>Breve descrição do workshop, data e local.</p>
                     </div>
                     <div class="workshop-item">
-                        <img src="CardsWorkshops/22agosto.jpeg" alt="Workshop Futuro 3" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Imagem+N%C3%A3o+Dispon%C3%ADvel';">
-                      
+                        <!-- Adicionado a classe 'enlarge-image' para o JS e removido a altura fixa -->
+                        <img src="imagens/CardsWorkshops/workshop3.jpg" alt="Workshop Futuro 3" class="enlarge-image" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Imagem+N%C3%A3o+Dispon%C3%ADvel';">
+                        <h3>Nome do Workshop 3</h3>
+                        <p>Breve descrição do workshop, data e local.</p>
                     </div>
                     <!-- Adicione mais itens de workshop conforme necessário, seguindo o padrão -->
                 </div>
@@ -158,59 +179,89 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- ESTRUTURA DO MODAL (LIGHTBOX) -->
+<div id="imageModal" class="modal-overlay">
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem Ampliada">
+        <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
+    </div>
+</div>
+<!-- FIM DA ESTRUTURA DO MODAL -->
+
 <!-- Script principal para carregar header e contato -->
 <script src="scripts.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Lógica dos cabeçalhos colapsáveis
         const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
 
         collapsibleHeaders.forEach(header => {
-            const collapsibleContent = header.nextElementSibling; // Pega o próximo elemento irmão, que é a div de conteúdo
+            const collapsibleContent = header.nextElementSibling;
 
-            if (collapsibleContent) { // Garante que o conteúdo exista
-                // Estado inicial: colapsado
+            if (collapsibleContent) {
                 collapsibleContent.style.maxHeight = '0';
                 collapsibleContent.style.paddingTop = '0';
                 collapsibleContent.style.paddingBottom = '0';
 
                 header.addEventListener('click', function() {
-                    this.classList.toggle('active'); // Alterna a classe 'active' para rotação do ícone
+                    this.classList.toggle('active');
 
                     if (collapsibleContent.classList.contains('expanded')) {
-                        // Se está expandido, recolhe
                         collapsibleContent.classList.remove('expanded');
-                        collapsibleContent.style.maxHeight = '0'; // Colapsa
+                        collapsibleContent.style.maxHeight = '0';
                         collapsibleContent.style.paddingTop = '0';
                         collapsibleContent.style.paddingBottom = '0';
                     } else {
-                        // Se está recolhido, expande
                         collapsibleContent.classList.add('expanded');
-                        // Define os paddings *antes* de calcular scrollHeight
-                        collapsibleContent.style.paddingTop = '20px'; // Adiciona padding quando expandido
-                        collapsibleContent.style.paddingBottom = '20px'; // Adicionado para padding inferior ao expandir
-                        
-                        // Define max-height para a altura total do conteúdo (incluindo paddings)
-                        // Para uma transição suave, setamos a altura calculada
+                        collapsibleContent.style.paddingTop = '20px';
+                        collapsibleContent.style.paddingBottom = '20px';
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
-                // Opcional: Ajusta max-height se a janela for redimensionada enquanto o conteúdo está expandido
-                // Isso garante que o conteúdo se ajuste se o tamanho da janela mudar e o maxHeight não for 'none'
                 window.addEventListener('resize', () => {
                     if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
-                // Remover max-height fixo após a transição de expansão completa
-                // Isso é importante para que o conteúdo possa se adaptar responsivamente após ser aberto.
                 collapsibleContent.addEventListener('transitionend', () => {
                     if (collapsibleContent.classList.contains('expanded')) {
-                        collapsibleContent.style.maxHeight = 'none'; // Remove max-height fixo após expansão completa
+                        collapsibleContent.style.maxHeight = 'none';
                     }
                 });
+            }
+        });
+
+        // Lógica do Modal de Imagem
+        const workshopImages = document.querySelectorAll('.enlarge-image');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        workshopImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modalImage.src = this.src; // Pega a URL da imagem clicada
+                imageModal.classList.add('visible'); // Mostra o modal
+            });
+        });
+
+        closeModalBtn.addEventListener('click', function() {
+            imageModal.classList.remove('visible'); // Esconde o modal
+        });
+
+        // Fecha o modal ao clicar fora da imagem
+        imageModal.addEventListener('click', function(event) {
+            if (event.target === imageModal) { // Verifica se o clique foi diretamente no overlay
+                imageModal.classList.remove('visible');
+            }
+        });
+
+        // Fecha o modal ao pressionar a tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
+                imageModal.classList.remove('visible');
             }
         });
     });
