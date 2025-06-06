@@ -1,13 +1,50 @@
 /* components.css */
 
 /* ========================================= */
+/* Estilos para Seções de Conteúdo Reutilizáveis (descricao, beneficios) */
+/* ========================================= */
+.descricao, .beneficios {
+    background: #fdf5e6; /* Cor de fundo para seções de conteúdo */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Espaçamento da seção anterior */
+    margin-bottom: 40px; /* Garante espaçamento entre seções */
+    text-align: center;
+}
+
+.descricao h2, .beneficios h2 {
+    color: #8B0000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Tamanho padrão para títulos h2 */
+}
+
+.descricao p, .beneficios p {
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 1rem;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.beneficios li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ========================================= */
 /* Estilos para o Formulário (agendamento-form-section) - Reutilizado */
 /* ========================================= */
 .agendamento-form-section {
     padding: 60px 20px;
     background: #fff; /* Fundo branco padrão para formulários */
-    border-radius: 10px; /* Adicionado para consistência visual */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionado para consistência visual */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 40px; /* Espaçamento da seção anterior */
     margin-bottom: 40px; /* Espaçamento da próxima seção */
 }
@@ -73,7 +110,7 @@
 .proximos-workshops h2, .cursos-formacao-cards h2 {
     color: #8B0000;
     margin-bottom: 40px;
-    font-size: 2rem; /* Tamanho padrão para títulos h2 */
+    font-size: 2rem;
 }
 
 .workshops-grid {
@@ -217,7 +254,7 @@
     margin-bottom: 0;
 }
 
-.collapsible-item h3 { /* Para garantir que o h3 dentro de .collapsible-item tenha o estilo correto */
+.collapsible-item h3 {
     margin: 0;
     padding: 0;
 }
