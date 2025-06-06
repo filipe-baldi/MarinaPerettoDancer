@@ -156,11 +156,11 @@
 /* Estilos para Seções Colapsáveis (Aplicado em Aulas-Presenciais e Workshops Temáticos) */
 /* ========================================= */
 .collapsible-item {
-    margin-bottom: 20px; /* <--- NOVO: Aplica espaçamento abaixo de cada item colapsável */
+    margin-bottom: 20px; /* Aplica espaçamento abaixo de cada item colapsável */
 }
 
 .collapsible-item:last-child {
-    margin-bottom: 0; /* <--- NOVO: Remove a margem do último item colapsável */
+    margin-bottom: 0; /* Remove a margem do último item colapsável */
 }
 
 .collapsible-header {
@@ -215,3 +215,25 @@
 }
 
 /* A classe .expanded será adicionada/removida via JavaScript para controlar a altura e padding-top */
+
+/* ========================================= */
+/* Estilos para o texto "Não encontrou o workshop que procura?" dentro da seção .beneficios */
+/* ========================================= */
+.beneficios .workshop-cta-text {
+    margin-top: 30px; /* Adiciona um espaço acima deste bloco, separando-o dos itens colapsáveis */
+    padding-top: 20px; /* Um padding interno para a parte superior do texto */
+    border-top: 1px solid rgba(139, 0, 0, 0.2); /* Uma linha sutil para separar visualmente */
+}
+
+.beneficios .workshop-cta-text h2 {
+    color: #8B0000; /* Cor vermelha para o título */
+    text-align: center;
+    margin-bottom: 15px; /* Margem inferior para separar do parágrafo */
+    font-size: 1.8rem; /* Um pouco menor que o h2 principal da seção, mas ainda destacável */
+}
+
+.beneficios .workshop-cta-text p {
+    text-align: center; /* Centraliza o parágrafo */
+    color: #333; /* Cor do texto padrão */
+    margin-bottom: 0; /* Remove margem inferior padrão do último parágrafo */
+}
