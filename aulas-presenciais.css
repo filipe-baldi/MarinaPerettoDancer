@@ -243,7 +243,7 @@
 /* ========================================= */
 .proximos-workshops {
     padding: 60px 20px; /* Padding padrão para seções */
-    background: #fff; /* <--- FUNDO BRANCO AGORA */
+    background: #fff; /* FUNDO BRANCO AGORA */
     text-align: center;
     margin-top: 40px; /* Espaçamento da seção anterior */
 }
@@ -278,7 +278,7 @@
 
 .workshop-item img {
     width: 100%;
-    height: 200px; /* Altura fixa para as imagens */
+    height: 250px; /* <--- ALTURA AUMENTADA PARA AS IMAGENS */
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Linha para separar imagem do texto */
 }
