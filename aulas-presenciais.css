@@ -1,385 +1,208 @@
-/* aulas-presenciais.css */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Formação - Marina Peretto | Danças Árabes</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Incluído aulas-presenciais.css para reutilizar estilos de cards e formulários -->
+    <link rel="stylesheet" href="aulas-presenciais.css">
 
-.agenda {
-    margin-top: 40px;
-    text-align: center;
-}
-/* Centralizar o botão abaixo da agenda */
-.agenda .btn {
-    display: block;
-    margin: 20px auto;
-}
-.agenda iframe {
-    border: 0;
-    width: 100%;
-    height: 600px;
-    margin: 20px 0;
-}
+    <!-- Font Awesome para ícones oficiais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
 
-/* ========================================= */
-/* Estilos do Formulário de Agendamento (Movido de agendamento.css) */
-/* ========================================= */
-.agendamento-form-section { /* Nova classe para a seção do formulário */
-    padding: 60px 20px;
-    background: #fff; /* Fundo branco para o formulário */
-}
+<!-- Placeholder para o Header dinâmico -->
+<header id="header-placeholder"></header>
 
-.agendamento-form-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #8B0000;
-}
+<section class="hero-small">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Cursos de Formação</h1>
+        <p>Formação completa para futuras bailarinas e professoras de danças árabes.</p>
+    </div>
+</section>
 
-.form-group {
-    margin-bottom: 20px;
-    text-align: left; /* Mantém labels e inputs alinhados à esquerda */
-}
+<main class="main-experiencia">
+    <div class="container">
+        <section class="descricao">
+            <h2>Como funcionam os cursos de formação</h2>
+            <p>Programa estruturado para formar bailarinas e professoras, com foco no aperfeiçoamento técnico, histórico e artístico.</p>
+        </section>
 
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
+        <section class="beneficios">
+            <h2>Formações oferecidas</h2>
+            <ul class="lista-sem-bolinha">
+                <li>Curso de formação de professoras em dança árabe (16 módulos)</li>
+                <li>Curso de especialização em folclore árabe (8 módulos)</li>
+            </ul>
+        </section>
 
-.form-group input,
-.form-group textarea,
-.form-group select { /* Adicionado 'select' para estilização consistente */
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
+        <!-- NOVA SEÇÃO: CARDS DOS CURSOS DE FORMAÇÃO -->
+        <section class="cursos-formacao-cards proximos-workshops">
+            <div class="container">
+                <h2>Conheça Nossos Cursos</h2>
+                <div class="workshops-grid"> <!-- Reutilizando a classe de grid de workshops -->
+                    <div class="workshop-item">
+                        <img src="imagens/CardsWorkshops/formacao_professoras.jpeg" alt="Curso Formação de Professoras" class="enlarge-image" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Forma%C3%A7%C3%A3o+Professora';">
+                        <h3>Formação de Professoras</h3>
+                        <p>Programa completo com 16 módulos para capacitar você a ministrar aulas de dança árabe com excelência.</p>
+                    </div>
+                    <div class="workshop-item">
+                        <img src="imagens/CardsWorkshops/especializacao_folclore.jpeg" alt="Curso Especialização em Folclore" class="enlarge-image" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Especializa%C3%A7%C3%A3o+Folclore';">
+                        <h3>Especialização em Folclore</h3>
+                        <p>Aprofunde seus conhecimentos em 8 módulos dedicados aos folclores e danças populares árabes.</p>
+                    </div>
+                    <!-- Adicione mais cards de cursos conforme necessário -->
+                </div>
+            </div>
+        </section>
+        <!-- FIM DA SEÇÃO DE CARDS -->
 
-/* Centralização e estilo do botão de envio do formulário */
-.agendamento-form-section button[type="submit"] {
-    display: block;
-    margin: 20px auto; /* Centraliza horizontalmente */
-    width: auto;
-    padding: 10px 25px;
-    font-size: 1rem;
-    border-radius: 30px;
-    background-color: #8B0000; /* Fundo vermelho escuro */
-    color: white; /* Cor do texto branca */
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
+        <!-- NOVA SEÇÃO: FORMULÁRIO DE INSCRIÇÃO PARA CURSOS -->
+        <section class="formulario-cursos agendamento-form-section"> <!-- Reutilizando estilos base do formulário de agendamento -->
+            <div class="container">
+                <h2>Inscreva-se ou Saiba Mais</h2>
+                <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para mais informações sobre os cursos.</p>
 
-.agendamento-form-section button[type="submit"]:hover {
-    background-color: #a30000; /* Tom mais escuro no hover */
-}
+                <!-- Formulário conectado ao Formspree com novo link -->
+                <form action="https://formspree.io/f/mgvyoylg" method="POST">
+                    <div class="form-group">
+                        <label for="nome-curso">Nome:</label>
+                        <input type="text" id="nome-curso" name="nome_curso" placeholder="Seu nome completo" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="whatsapp-curso">WhatsApp:</label>
+                        <input type="tel" id="whatsapp-curso" name="whatsapp_curso" placeholder="(51) 9 8138-0686" required>
+                    </div>
 
-/* ========================================= */
-/* Estilos existentes para a seção de Descrição */
-/* ========================================= */
-.descricao {
-    background: #fdf5e6; /* Mesmo tom bege da seção Quem Sou */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Removido margin-top para evitar espaçamento duplicado */
-    margin-top: 0; /* AJUSTADO AQUI */
-}
+                    <div class="form-group">
+                        <label for="curso-interesse">Curso de Interesse:</label>
+                        <select id="curso-interesse" name="curso_interesse" required>
+                            <option value="">Selecione um curso</option>
+                            <option value="Formacao de Professoras">Formação de Professoras em Dança Árabe</option>
+                            <option value="Especializacao em Folclore">Especialização em Folclore Árabe</option>
+                            <option value="Outro Curso">Outro (especifique nos comentários)</option>
+                        </select>
+                    </div>
 
-.descricao h2 {
-    color: #8B0000; /* Vermelho escuro */
-    text-align: center;
-    margin-bottom: 20px;
-}
+                    <div class="form-group">
+                        <label for="comentarios-curso">Comentários (opcional):</label>
+                        <textarea id="comentarios-curso" name="comentarios_curso" rows="4" placeholder="Descreva suas dúvidas ou interesse em outros cursos"></textarea>
+                    </div>
 
-.descricao p {
-    text-align: justify;
-    hyphens: auto;
-    margin-bottom: 1rem;
-}
+                    <!-- Botão de envio -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-submit">Enviar Solicitação</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- FIM DA SEÇÃO DO FORMULÁRIO -->
 
-/* ========================================= */
-/* Estilos existentes para a seção de Benefícios */
-/* ========================================= */
-.beneficios {
-    background: #fdf5e6; /* Cor de fundo igual à seção .descricao */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    text-align: center;
-    margin-bottom: 40px; /* ADICIONADO PARA CONTROLAR O ESPAÇAMENTO EXTERNO DA SEÇÃO */
-}
+        <!-- A seção "chamada-acao" foi removida daqui -->
 
-/* Ajustado o tamanho da fonte para o título principal da seção 'Temas Oferecidos' */
-.beneficios h2 {
-    color: #8B0000;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem; /* MANTIDO O TAMANHO ORIGINAL */
-}
+    </div>
+</main>
 
-.beneficios p {
-    text-align: center;
-    margin-bottom: 1rem;
-}
+<!-- Placeholder para a seção de Contato -->
+<div id="secao-contato"></div>
 
-.beneficios ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
+<!-- Botão Fixo WhatsApp -->
+<!-- Corrigido número do WhatsApp -->
+<a href="https://wa.me/5551981380686" target="_blank" class="whatsapp-fixo">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
-.beneficios li {
-    margin-bottom: 10px;
-    text-align: center;
-}
+<!-- ESTRUTURA DO MODAL (LIGHTBOX) - Reutilizada de workshops-tematicos.html -->
+<div id="imageModal" class="modal-overlay">
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem Ampliada">
+        <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
+    </div>
+</div>
+<!-- FIM DA ESTRUTURA DO MODAL -->
 
-/* ========================================= */
-/* Estilos existentes para a seção de Observação */
-/* ========================================= */
-.observacao {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #666;
-    font-size: 0.95rem;
-    font-style: italic;
-}
+<!-- Script principal para carregar header e contato -->
+<script src="scripts.js"></script>
 
-.observacao p {
-    margin: 0;
-}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Lógica dos cabeçalhos colapsáveis (se existirem na página, caso contrário, não afetará)
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
 
-/* ========================================= */
-/* Estilos para Seções Colapsáveis (Aplicado em Aulas-Presenciais e Workshops Temáticos) */
-/* ========================================= */
-.collapsible-item {
-    margin-bottom: 20px; /* Aplica espaçamento abaixo de cada item colapsável */
-}
+        collapsibleHeaders.forEach(header => {
+            const collapsibleContent = header.nextElementSibling;
 
-.collapsible-item:last-child {
-    margin-bottom: 0; /* Remove a margem do último item colapsável */
-}
+            if (collapsibleContent) {
+                collapsibleContent.style.maxHeight = '0';
+                collapsibleContent.style.paddingTop = '0';
+                collapsibleContent.style.paddingBottom = '0';
 
-.collapsible-header {
-    cursor: pointer; /* Indica que é clicável */
-    display: flex;
-    justify-content: center; /* Centraliza o texto e o ícone */
-    align-items: center;
-    gap: 10px; /* Espaço entre o texto e o ícone */
-    user-select: none; /* Evita seleção de texto ao clicar */
-    color: #8B0000; /* Cor vermelha para o título */
-    /* Removido o font-size explícito para usar o tamanho padrão do h3 do navegador */
-    font-weight: bold; /* Garante que o texto fique em negrito */
-    margin-top: 0; /* REMOVIDA MARGEM SUPERIOR PARA MAIOR CONTROLE */
-    margin-bottom: 0; /* REMOVIDA MARGEM INFERIOR PARA MAIOR CONTROLE PELO .collapsible-item */
-}
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
 
-/* Para garantir que o h3 dentro de .collapsible-item tenha o estilo correto se não for o collapsible-header */
-.collapsible-item h3 {
-    margin: 0; /* Remove margem padrão para melhor controle com o collapsible-header */
-    padding: 0;
-}
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.classList.remove('expanded');
+                        collapsibleContent.style.maxHeight = '0';
+                        collapsibleContent.style.paddingTop = '0';
+                        collapsibleContent.style.paddingBottom = '0';
+                    } else {
+                        collapsibleContent.classList.add('expanded');
+                        collapsibleContent.style.paddingTop = '20px';
+                        collapsibleContent.style.paddingBottom = '20px';
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
 
+                window.addEventListener('resize', () => {
+                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
 
-.collapsible-header i {
-    transition: transform 0.3s ease; /* Rotação suave do ícone */
-}
+                collapsibleContent.addEventListener('transitionend', () => {
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.style.maxHeight = 'none';
+                    }
+                });
+            }
+        });
 
-.collapsible-header.active i {
-    transform: rotate(180deg); /* Gira o ícone quando a seção está ativa/expandida */
-}
+        // Lógica do Modal de Imagem (reutilizado de workshops-tematicos.html)
+        const workshopImages = document.querySelectorAll('.enlarge-image');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModalBtn');
 
-.collapsible-content {
-    max-height: 0; /* Inicialmente oculta */
-    overflow: hidden;
-    /* Transição suave para altura, padding superior e inferior */
-    transition: max-height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out;
-    padding-top: 0; /* Garante que não há padding superior quando colapsado */
-    padding-bottom: 0; /* Garante que não há padding inferior quando colapsado */
-    text-align: center; /* Centraliza o conteúdo da lista, se houver */
-}
+        workshopImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modalImage.src = this.src; // Pega a URL da imagem clicada
+                imageModal.classList.add('visible'); // Mostra o modal
+            });
+        });
 
-/* Garante que o ul e li dentro do conteúdo colapsável não tenham margens/paddings indesejados */
-.collapsible-content ul {
-    margin: 0; /* Remove margens padrão de UL */
-    padding: 0; /* Garante que não há padding do UL */
-    list-style: none; /* Já estava lá, mas reconfirmo */
-}
+        closeModalBtn.addEventListener('click', function() {
+            imageModal.classList.remove('visible'); // Esconde o modal
+        });
 
-.collapsible-content li {
-    margin: 0; /* Remove margem padrão de LI */
-    padding: 5px 0; /* Adiciona um pequeno padding interno nos itens da lista para legibilidade */
-}
+        // Fecha o modal ao clicar fora da imagem
+        imageModal.addEventListener('click', function(event) {
+            if (event.target === imageModal) { // Verifica se o clique foi diretamente no overlay
+                imageModal.classList.remove('visible');
+            }
+        });
 
-/* A classe .expanded será adicionada/removida via JavaScript para controlar a altura e padding-top */
+        // Fecha o modal ao pressionar a tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
+                imageModal.classList.remove('visible');
+            }
+        });
+    });
+</script>
 
-/* ========================================= */
-/* Estilos para o texto "Não encontrou o workshop que procura?" dentro da seção .beneficios */
-/* ========================================= */
-.beneficios .workshop-cta-text {
-    margin-top: 30px; /* Adiciona um espaço acima deste bloco, separando-o dos itens colapsáveis */
-    padding-top: 20px; /* Um padding interno para a parte superior do texto */
-    border-top: 1px solid rgba(139, 0, 0, 0.2); /* Uma linha sutil para separar visualmente */
-}
-
-.beneficios .workshop-cta-text h2 {
-    color: #8B0000; /* Cor vermelha para o título */
-    text-align: center;
-    margin-bottom: 15px; /* Margem inferior para separar do parágrafo */
-    font-size: 1.8rem; /* Um pouco menor que o h2 principal da seção, mas ainda destacável */
-}
-
-.beneficios .workshop-cta-text p {
-    text-align: center; /* Centraliza o parágrafo */
-    color: #333; /* Cor do texto padrão */
-    margin-bottom: 0; /* Remove margem inferior padrão do último parágrafo */
-}
-
-/* ========================================= */
-/* Estilos para a seção "Próximos Workshops" (reutilizado para cards de cursos) */
-/* ========================================= */
-.proximos-workshops, .cursos-formacao-cards { /* Adicionado .cursos-formacao-cards aqui */
-    padding: 60px 20px; /* Padding padrão para seções */
-    background: #fff; /* FUNDO BRANCO AGORA */
-    text-align: center;
-    margin-top: 40px; /* Espaçamento da seção anterior */
-}
-
-.proximos-workshops h2, .cursos-formacao-cards h2 { /* Títulos das seções de cards */
-    color: #8B0000; /* Título em vermelho */
-    margin-bottom: 40px; /* Espaço abaixo do título */
-    font-size: 2rem;
-}
-
-.workshops-grid { /* Usado tanto para workshops quanto para cursos */
-    display: grid;
-    /* Colunas responsivas: 1 coluna em telas pequenas, 2 em médias, 3 em grandes */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; /* Espaçamento entre os itens do grid */
-    max-width: 1100px; /* Limita a largura do grid */
-    margin: 0 auto; /* Centraliza o grid */
-}
-
-.workshop-item { /* Usado tanto para workshops quanto para cursos */
-    background: #fdf5e6; /* Fundo para cada item do workshop */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para o item */
-    overflow: hidden; /* Garante que a imagem respeite o border-radius */
-    text-align: center;
-    transition: transform 0.3s ease; /* Efeito de hover */
-}
-
-.workshop-item:hover {
-    transform: translateY(-5px); /* Efeito de "levantar" no hover */
-}
-
-.workshop-item img {
-    width: 100%;
-    /* Removido altura fixa para evitar zoom indesejado */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer no grid */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Linha para separar imagem do texto */
-    cursor: zoom-in; /* CURSOR INDICANDO QUE A IMAGEM É CLICÁVEL */
-}
-
-.workshop-item h3 {
-    color: #8B0000; /* Título do item em vermelho */
-    font-size: 1.3rem;
-    margin: 15px 10px 10px; /* Margem interna para o título */
-}
-
-.workshop-item p {
-    color: #555;
-    font-size: 0.95rem;
-    padding: 0 15px 15px; /* Padding interno para o parágrafo */
-    margin: 0; /* Remove margem padrão */
-}
-
-/* ========================================= */
-/* Estilos para o Modal de Imagem (Lightbox) */
-/* ========================================= */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Fundo escuro semitransparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000; /* Garante que o modal esteja acima de tudo */
-    opacity: 0; /* Inicia transparente */
-    visibility: hidden; /* Inicia oculto */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.modal-overlay.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    position: relative;
-    background: #fff;
-    padding: 0; /* Padding removido do modal-content para evitar cortes */
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    display: flex; /* Flexbox para centralizar a imagem */
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content img {
-    max-width: 90vw;   /* Limita a largura máxima da imagem a 90% da largura da viewport */
-    max-height: 90vh;  /* Limita a altura máxima da imagem a 90% da altura da viewport */
-    width: auto;       /* Permite que a largura se ajuste automaticamente */
-    height: auto;      /* Permite que a altura se ajuste automaticamente */
-    display: block;
-    border-radius: 5px;
-    object-fit: contain; /* Garante que a imagem se ajuste completamente sem cortes, mantendo proporção */
-    padding: 20px; /* Adiciona padding diretamente à imagem para que não fique colada nas bordas do modal */
-    box-sizing: border-box; /* Inclui o padding no cálculo total da largura/altura do elemento */
-}
-
-.modal-close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #8B0000;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.modal-close-btn:hover {
-    background: #a30000;
-}
-
-/* Estilo para telas muito pequenas, para que a imagem não fique muito grande */
-@media (max-width: 600px) {
-    .modal-content img {
-        padding: 10px; /* Reduced padding for smaller screens */
-    }
-}
-
-/* ========================================= */
-/* Estilos Específicos para o Formulário de Cursos */
-/* (Reutiliza .agendamento-form-section e .form-group) */
-/* ========================================= */
-.formulario-cursos {
-    margin-top: 40px; /* Espaçamento da seção anterior */
-    margin-bottom: 40px; /* Espaçamento da próxima seção */
-}
+</body>
+</html>
