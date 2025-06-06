@@ -279,10 +279,10 @@
 .workshop-item img {
     width: 100%;
     /* Removido altura fixa para evitar zoom indesejado */
-    /* height: 300px; */ /* <--- ALTURA REMOVIDA */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    /* height: 300px; */ /* ALTURA REMOVIDA */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer no grid */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Linha para separar imagem do texto */
-    cursor: zoom-in; /* <--- CURSOR INDICANDO QUE A IMAGEM É CLICÁVEL */
+    cursor: zoom-in; /* CURSOR INDICANDO QUE A IMAGEM É CLICÁVEL */
 }
 
 .workshop-item h3 {
@@ -340,6 +340,7 @@
     max-height: 100%;
     display: block;
     border-radius: 5px;
+    object-fit: contain; /* <--- AJUSTADO PARA GARANTIR QUE A IMAGEM INTEIRA SE ENCAIXE */
 }
 
 .modal-close-btn {
@@ -372,5 +373,6 @@
     }
     .modal-content img {
         height: auto; /* Permite que a altura se ajuste à largura máxima */
+        /* object-fit: contain; já definido acima */
     }
 }
