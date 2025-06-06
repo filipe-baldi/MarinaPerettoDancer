@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos de Formação - Marina Peretto | Danças Árabes</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
+    <!-- Incluído aulas-presenciais.css para reutilizar estilos de cards e formulários -->
+    <link rel="stylesheet" href="aulas-presenciais.css">
+
+    <!-- Font Awesome para ícones oficiais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -23,34 +27,83 @@
 <main class="main-experiencia">
     <div class="container">
         <section class="descricao">
-            <h2>O que são os Cursos de Formação?</h2>
-            <p>Programa estruturado para formar bailarinas e professoras com conteúdo técnico, histórico e artístico da dança árabe. Ideal tanto para quem está começando quanto para quem deseja se especializar.</p>
+            <h2>Como funcionam os cursos de formação</h2>
+            <p>Programa estruturado para formar bailarinas e professoras, com foco no aperfeiçoamento técnico, histórico e artístico.</p>
         </section>
 
         <section class="beneficios">
-            <h2>O que você vai aprender</h2>
+            <h2>Formações oferecidas</h2>
             <ul class="lista-sem-bolinha">
-                <li>Técnicas de movimento e postura</li>
-                <li>Ritmos tradicionais e variações</li>
-                <li>História e simbologia dos gestos</li>
-                <li>Figurinos, adereços e maquiagem oriental</li>
-                <li>Metodologia de ensino (para professoras)</li>
+                <li>Curso de formação de professoras em dança árabe (16 módulos)</li>
+                <li>Curso de especialização em folclore árabe (8 módulos)</li>
             </ul>
         </section>
 
-        <section class="detalhes">
-            <h2>Estrutura do Curso</h2>
-            <ul>
-                <li>Níveis: Iniciante, Intermediário e Avançado</li>
-                <li>Opção: Presencial ou Online</li>
-                <li>Duração: 6 meses por nível (média)</li>
-                <li>Material didático incluso</li>
-                <li>Aulas práticas + teóricas</li>
-            </ul>
+        <!-- NOVA SEÇÃO: CARDS DOS CURSOS DE FORMAÇÃO -->
+        <section class="cursos-formacao-cards proximos-workshops">
+            <div class="container">
+                <h2>Conheça Nossos Cursos</h2>
+                <div class="workshops-grid"> <!-- Reutilizando a classe de grid de workshops -->
+                    <div class="workshop-item">
+                        <img src="imagens/cursosformacao/formacao_professoras.jpeg" alt="Curso Formação de Professoras" class="enlarge-image" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Forma%C3%A7%C3%A3o+Professora';">
+                        <h3>Formação de Professoras</h3>
+                        <p>Programa completo com 16 módulos para capacitar você a ministrar aulas de dança árabe com excelência.</p>
+                    </div>
+                    <div class="workshop-item">
+                        <img src="imagens/cursosformacao/especializacao_folclore.jpeg" alt="Curso Especialização em Folclore" class="enlarge-image" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F0F0/8B0000?text=Especializa%C3%A7%C3%A3o+Folclore';">
+                        <h3>Especialização em Folclore</h3>
+                        <p>Aprofunde seus conhecimentos em 8 módulos dedicados aos folclores e danças populares árabes.</p>
+                    </div>
+                    <!-- Adicione mais cards de cursos conforme necessário -->
+                </div>
+            </div>
         </section>
+        <!-- FIM DA SEÇÃO DE CARDS -->
+
+        <!-- NOVA SEÇÃO: FORMULÁRIO DE INSCRIÇÃO PARA CURSOS -->
+        <section class="formulario-cursos agendamento-form-section"> <!-- Reutilizando estilos base do formulário de agendamento -->
+            <div class="container">
+                <h2>Inscreva-se ou Saiba Mais</h2>
+                <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para mais informações sobre os cursos.</p>
+
+                <!-- Formulário conectado ao Formspree -->
+                <form action="https://formspree.io/f/manjwvkv" method="POST">
+                    <div class="form-group">
+                        <label for="nome-curso">Nome:</label>
+                        <input type="text" id="nome-curso" name="nome_curso" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp-curso">WhatsApp:</label>
+                        <input type="tel" id="whatsapp-curso" name="whatsapp_curso" placeholder="(51) 9 8138-0686" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="curso-interesse">Curso de Interesse:</label>
+                        <select id="curso-interesse" name="curso_interesse" required>
+                            <option value="">Selecione um curso</option>
+                            <option value="Formacao de Professoras">Formação de Professoras em Dança Árabe</option>
+                            <option value="Especializacao em Folclore">Especialização em Folclore Árabe</option>
+                            <option value="Outro Curso">Outro (especifique nos comentários)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios-curso">Comentários (opcional):</label>
+                        <textarea id="comentarios-curso" name="comentarios_curso" rows="4" placeholder="Descreva suas dúvidas ou interesse em outros cursos"></textarea>
+                    </div>
+
+                    <!-- Botão de envio -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-submit">Enviar Solicitação</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- FIM DA SEÇÃO DO FORMULÁRIO -->
 
         <section class="chamada-acao">
-            <h2>Matricule-se agora</h2>
+            <h2>Tenho interesse em saber mais</h2>
             <p>Seja aluna ou obtenha certificação para ministrar aulas. Garanta sua vaga nas turmas regulares!</p>
             <!-- Link ajustado para apontar para a seção de contato que será carregada -->
             <a href="#contato" class="btn btn-instagram">Inscreva-se</a>
@@ -67,8 +120,93 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- ESTRUTURA DO MODAL (LIGHTBOX) - Reutilizada de workshops-tematicos.html -->
+<div id="imageModal" class="modal-overlay">
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem Ampliada">
+        <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
+    </div>
+</div>
+<!-- FIM DA ESTRUTURA DO MODAL -->
+
 <!-- Script principal para carregar header e contato -->
 <script src="scripts.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Lógica dos cabeçalhos colapsáveis (se existirem na página, caso contrário, não afetará)
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+
+        collapsibleHeaders.forEach(header => {
+            const collapsibleContent = header.nextElementSibling;
+
+            if (collapsibleContent) {
+                collapsibleContent.style.maxHeight = '0';
+                collapsibleContent.style.paddingTop = '0';
+                collapsibleContent.style.paddingBottom = '0';
+
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.classList.remove('expanded');
+                        collapsibleContent.style.maxHeight = '0';
+                        collapsibleContent.style.paddingTop = '0';
+                        collapsibleContent.style.paddingBottom = '0';
+                    } else {
+                        collapsibleContent.classList.add('expanded');
+                        collapsibleContent.style.paddingTop = '20px';
+                        collapsibleContent.style.paddingBottom = '20px';
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
+
+                window.addEventListener('resize', () => {
+                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
+
+                collapsibleContent.addEventListener('transitionend', () => {
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.style.maxHeight = 'none';
+                    }
+                });
+            }
+        });
+
+        // Lógica do Modal de Imagem (reutilizado de workshops-tematicos.html)
+        const workshopImages = document.querySelectorAll('.enlarge-image');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        workshopImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modalImage.src = this.src; // Pega a URL da imagem clicada
+                imageModal.classList.add('visible'); // Mostra o modal
+            });
+        });
+
+        closeModalBtn.addEventListener('click', function() {
+            imageModal.classList.remove('visible'); // Esconde o modal
+        });
+
+        // Fecha o modal ao clicar fora da imagem
+        imageModal.addEventListener('click', function(event) {
+            if (event.target === imageModal) { // Verifica se o clique foi diretamente no overlay
+                imageModal.classList.remove('visible');
+            }
+        });
+
+        // Fecha o modal ao pressionar a tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
+                imageModal.classList.remove('visible');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
