@@ -159,7 +159,7 @@
     gap: 10px; /* Espaço entre o texto e o ícone */
     user-select: none; /* Evita seleção de texto ao clicar */
     color: #8B0000; /* Cor vermelha para o título */
-    font-size: 1.8rem; /* <--- Ajustado para um tamanho adequado para H3 clicável */
+    font-size: 1.8rem; /* Ajustado para um tamanho adequado para H3 clicável */
     margin-top: 20px; /* Adiciona um espaço acima do cabeçalho colapsável */
     margin-bottom: 15px; /* Margem inferior para separar do conteúdo */
 }
@@ -182,8 +182,16 @@
 .collapsible-content {
     max-height: 0; /* Inicialmente oculta */
     overflow: hidden;
-    transition: max-height 0.5s ease-out, padding-top 0.5s ease-out; /* Transição suave para altura e padding */
-    padding-top: 0; /* Garante que não há padding quando colapsado */
+    /* Adiciona padding-bottom à transição para suavidade total */
+    transition: max-height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out;
+    padding-top: 0; /* Garante que não há padding superior quando colapsado */
+    padding-bottom: 0; /* Garante que não há padding inferior quando colapsado */
     text-align: center; /* Centraliza o conteúdo da lista, se houver */
 }
+
+/* Garante que o ul dentro do conteúdo colapsável não tenha margens indesejadas */
+.collapsible-content .lista-sem-bolinha {
+    margin: 0; /* Remove margens padrão de UL para melhor controle do colapso */
+}
+
 /* A classe .expanded será adicionada/removida via JavaScript para controlar a altura e padding-top */
