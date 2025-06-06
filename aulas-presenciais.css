@@ -4,7 +4,6 @@
     margin-top: 40px;
     text-align: center;
 }
-/* Centralizar o botão abaixo da agenda */
 .agenda .btn {
     display: block;
     margin: 20px auto;
@@ -16,108 +15,27 @@
     margin: 20px 0;
 }
 
-/* ========================================= */
-/* Estilos do Formulário de Agendamento (Movido de agendamento.css) */
-/* ========================================= */
-.agendamento-form-section { /* Nova classe para a seção do formulário */
-    padding: 60px 20px;
-    background: #fff; /* Fundo branco para o formulário */
-}
-
-.agendamento-form-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #8B0000;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left; /* Mantém labels e inputs alinhados à esquerda */
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-/* Centralização e estilo do botão de envio do formulário */
-.agendamento-form-section button[type="submit"] {
-    display: block;
-    margin: 20px auto; /* Centraliza horizontalmente */
-    width: auto;
-    padding: 10px 25px;
-    font-size: 1rem;
-    border-radius: 30px;
-    background-color: #8B0000; /* Fundo vermelho escuro */
-    color: white; /* Cor do texto branca */
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.agendamento-form-section button[type="submit"]:hover {
-    background-color: #a30000; /* Tom mais escuro no hover */
-}
-
-
-/* ========================================= */
-/* Estilos existentes para a seção de Descrição */
-/* ========================================= */
-.descricao {
-    background: #fdf5e6; /* Mesmo tom bege da seção Quem Sou */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Removido margin-top para evitar espaçamento duplicado */
-    margin-top: 0; /* AJUSTADO AQUI */
-}
-
-.descricao h2 {
-    color: #8B0000; /* Vermelho escuro */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.descricao p {
-    text-align: justify;
-    hyphens: auto;
-    margin-bottom: 1rem;
-}
-
-/* ========================================= */
-/* Estilos existentes para a seção de Benefícios */
-/* ========================================= */
-.beneficios {
-    background: #fdf5e6; /* Cor de fundo igual à seção .descricao */
+/* Estilos para seções de conteúdo como Descrição, Benefícios, Observação */
+.descricao, .beneficios, .observacao {
+    background: #fdf5e6; /* Cor de fundo para seções de conteúdo */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
+    margin-bottom: 40px; /* Garante espaçamento entre seções */
     text-align: center;
-    margin-bottom: 40px; /* ADICIONADO PARA CONTROLAR O ESPAÇAMENTO EXTERNO DA SEÇÃO */
 }
 
-/* Ajustado o tamanho da fonte para o título principal da seção 'Temas Oferecidos' */
-.beneficios h2 {
+.descricao h2, .beneficios h2 {
     color: #8B0000;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2rem; /* MANTIDO O TAMANHO ORIGINAL */
+    font-size: 2rem; /* Tamanho padrão para títulos h2 */
 }
 
-.beneficios p {
-    text-align: center;
+.descricao p, .beneficios p {
+    text-align: justify;
+    hyphens: auto;
     margin-bottom: 1rem;
 }
 
@@ -132,245 +50,9 @@
     text-align: center;
 }
 
-/* ========================================= */
-/* Estilos existentes para a seção de Observação */
-/* ========================================= */
 .observacao {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
+    background: #f9f9f9; /* Fundo diferente para observação */
+    font-style: italic;
     color: #666;
     font-size: 0.95rem;
-    font-style: italic;
-}
-
-.observacao p {
-    margin: 0;
-}
-
-/* ========================================= */
-/* Estilos para Seções Colapsáveis (Aplicado em Aulas-Presenciais e Workshops Temáticos) */
-/* ========================================= */
-.collapsible-item {
-    margin-bottom: 20px; /* Aplica espaçamento abaixo de cada item colapsável */
-}
-
-.collapsible-item:last-child {
-    margin-bottom: 0; /* Remove a margem do último item colapsável */
-}
-
-.collapsible-header {
-    cursor: pointer; /* Indica que é clicável */
-    display: flex;
-    justify-content: center; /* Centraliza o texto e o ícone */
-    align-items: center;
-    gap: 10px; /* Espaço entre o texto e o ícone */
-    user-select: none; /* Evita seleção de texto ao clicar */
-    color: #8B0000; /* Cor vermelha para o título */
-    /* Removido o font-size explícito para usar o tamanho padrão do h3 do navegador */
-    font-weight: bold; /* Garante que o texto fique em negrito */
-    margin-top: 0; /* REMOVIDA MARGEM SUPERIOR PARA MAIOR CONTROLE */
-    margin-bottom: 0; /* REMOVIDA MARGEM INFERIOR PARA MAIOR CONTROLE PELO .collapsible-item */
-}
-
-/* Para garantir que o h3 dentro de .collapsible-item tenha o estilo correto se não for o collapsible-header */
-.collapsible-item h3 {
-    margin: 0; /* Remove margem padrão para melhor controle com o collapsible-header */
-    padding: 0;
-}
-
-
-.collapsible-header i {
-    transition: transform 0.3s ease; /* Rotação suave do ícone */
-}
-
-.collapsible-header.active i {
-    transform: rotate(180deg); /* Gira o ícone quando a seção está ativa/expandida */
-}
-
-.collapsible-content {
-    max-height: 0; /* Inicialmente oculta */
-    overflow: hidden;
-    /* Transição suave para altura, padding superior e inferior */
-    transition: max-height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out;
-    padding-top: 0; /* Garante que não há padding superior quando colapsado */
-    padding-bottom: 0; /* Garante que não há padding inferior quando colapsado */
-    text-align: center; /* Centraliza o conteúdo da lista, se houver */
-}
-
-/* Garante que o ul e li dentro do conteúdo colapsável não tenham margens/paddings indesejados */
-.collapsible-content ul {
-    margin: 0; /* Remove margens padrão de UL */
-    padding: 0; /* Garante que não há padding do UL */
-    list-style: none; /* Já estava lá, mas reconfirmo */
-}
-
-.collapsible-content li {
-    margin: 0; /* Remove margem padrão de LI */
-    padding: 5px 0; /* Adiciona um pequeno padding interno nos itens da lista para legibilidade */
-}
-
-/* A classe .expanded será adicionada/removida via JavaScript para controlar a altura e padding-top */
-
-/* ========================================= */
-/* Estilos para o texto "Não encontrou o workshop que procura?" dentro da seção .beneficios */
-/* ========================================= */
-.beneficios .workshop-cta-text {
-    margin-top: 30px; /* Adiciona um espaço acima deste bloco, separando-o dos itens colapsáveis */
-    padding-top: 20px; /* Um padding interno para a parte superior do texto */
-    border-top: 1px solid rgba(139, 0, 0, 0.2); /* Uma linha sutil para separar visualmente */
-}
-
-.beneficios .workshop-cta-text h2 {
-    color: #8B0000; /* Cor vermelha para o título */
-    text-align: center;
-    margin-bottom: 15px; /* Margem inferior para separar do parágrafo */
-    font-size: 1.8rem; /* Um pouco menor que o h2 principal da seção, mas ainda destacável */
-}
-
-.beneficios .workshop-cta-text p {
-    text-align: center; /* Centraliza o parágrafo */
-    color: #333; /* Cor do texto padrão */
-    margin-bottom: 0; /* Remove margem inferior padrão do último parágrafo */
-}
-
-/* ========================================= */
-/* Estilos para a nova seção "Próximos Workshops" */
-/* ========================================= */
-.proximos-workshops {
-    padding: 60px 20px; /* Padding padrão para seções */
-    background: #fff; /* FUNDO BRANCO AGORA */
-    text-align: center;
-    margin-top: 40px; /* Espaçamento da seção anterior */
-}
-
-.proximos-workshops h2 {
-    color: #8B0000; /* Título em vermelho */
-    margin-bottom: 40px; /* Espaço abaixo do título */
-    font-size: 2rem;
-}
-
-.workshops-grid {
-    display: grid;
-    /* Colunas responsivas: 1 coluna em telas pequenas, 2 em médias, 3 em grandes */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; /* Espaçamento entre os itens do grid */
-    max-width: 1100px; /* Limita a largura do grid */
-    margin: 0 auto; /* Centraliza o grid */
-}
-
-.workshop-item {
-    background: #fdf5e6; /* Fundo para cada item do workshop */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para o item */
-    overflow: hidden; /* Garante que a imagem respeite o border-radius */
-    text-align: center;
-    transition: transform 0.3s ease; /* Efeito de hover */
-}
-
-.workshop-item:hover {
-    transform: translateY(-5px); /* Efeito de "levantar" no hover */
-}
-
-.workshop-item img {
-    width: 100%;
-    /* Removido altura fixa para evitar zoom indesejado */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer no grid */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Linha para separar imagem do texto */
-    cursor: zoom-in; /* CURSOR INDICANDO QUE A IMAGEM É CLICÁVEL */
-}
-
-.workshop-item h3 {
-    color: #8B0000; /* Título do workshop em vermelho */
-    font-size: 1.3rem;
-    margin: 15px 10px 10px; /* Margem interna para o título */
-}
-
-.workshop-item p {
-    color: #555;
-    font-size: 0.95rem;
-    padding: 0 15px 15px; /* Padding interno para o parágrafo */
-    margin: 0; /* Remove margem padrão */
-}
-
-/* ========================================= */
-/* Estilos para o Modal de Imagem (Lightbox) */
-/* ========================================= */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Fundo escuro semitransparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000; /* Garante que o modal esteja acima de tudo */
-    opacity: 0; /* Inicia transparente */
-    visibility: hidden; /* Inicia oculto */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.modal-overlay.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    position: relative;
-    /* Removidos max-width e max-height daqui para que a imagem controle as dimensões */
-    background: #fff;
-    padding: 0; /* Padding removido do modal-content para evitar cortes */
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    display: flex; /* Flexbox para centralizar a imagem */
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content img {
-    max-width: 90vw;   /* Limita a largura máxima da imagem a 90% da largura da viewport */
-    max-height: 90vh;  /* Limita a altura máxima da imagem a 90% da altura da viewport */
-    width: auto;       /* Permite que a largura se ajuste automaticamente */
-    height: auto;      /* Permite que a altura se ajuste automaticamente */
-    display: block;
-    border-radius: 5px;
-    object-fit: contain; /* Garante que a imagem se ajuste completamente sem cortes, mantendo proporção */
-    padding: 20px; /* <--- Adiciona padding diretamente à imagem para que não fique colada nas bordas do modal */
-    box-sizing: border-box; /* Inclui o padding no cálculo total da largura/altura do elemento */
-}
-
-.modal-close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #8B0000;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.modal-close-btn:hover {
-    background: #a30000;
-}
-
-/* Estilo para telas muito pequenas, para que a imagem não fique muito grande */
-@media (max-width: 600px) {
-    .modal-content img {
-        padding: 10px; /* Reduced padding for smaller screens */
-    }
 }
