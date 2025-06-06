@@ -182,16 +182,23 @@
 .collapsible-content {
     max-height: 0; /* Inicialmente oculta */
     overflow: hidden;
-    /* Adiciona padding-bottom à transição para suavidade total */
+    /* Transição suave para altura, padding superior e inferior */
     transition: max-height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out;
     padding-top: 0; /* Garante que não há padding superior quando colapsado */
     padding-bottom: 0; /* Garante que não há padding inferior quando colapsado */
     text-align: center; /* Centraliza o conteúdo da lista, se houver */
 }
 
-/* Garante que o ul dentro do conteúdo colapsável não tenha margens indesejadas */
-.collapsible-content .lista-sem-bolinha {
-    margin: 0; /* Remove margens padrão de UL para melhor controle do colapso */
+/* Garante que o ul e li dentro do conteúdo colapsável não tenham margens/paddings indesejados */
+.collapsible-content ul {
+    margin: 0; /* Remove margens padrão de UL */
+    padding: 0; /* Garante que não há padding do UL */
+    list-style: none; /* Já estava lá, mas reconfirmo */
+}
+
+.collapsible-content li {
+    margin: 0; /* Remove margem padrão de LI */
+    padding: 5px 0; /* Adiciona um pequeno padding interno nos itens da lista para legibilidade */
 }
 
 /* A classe .expanded será adicionada/removida via JavaScript para controlar a altura e padding-top */
