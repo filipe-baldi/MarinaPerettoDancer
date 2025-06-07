@@ -37,34 +37,6 @@
     text-align: center; /* Centraliza os itens, mas será sobrescrito pela lista personalizada */
 }
 
-/* NOVO: Estilos para a lista personalizada com tracinhos e justificada */
-.lista-personalizada-coreografia {
-    list-style: none; /* Garante que não haja bolinhas */
-    padding-left: 0; /* Remove o padding padrão da UL */
-    margin: 0 auto; /* Centraliza a lista inteira */
-    max-width: 800px; /* Limita a largura para melhor justificativa */
-    text-align: initial; /* Reinicia o alinhamento de texto para que os LIs possam ser justificados */
-}
-
-.lista-personalizada-coreografia li {
-    text-align: justify; /* Justifica o texto dentro do LI */
-    margin-bottom: 15px; /* Espaço entre os itens */
-    position: relative; /* Para posicionar o pseudo-elemento */
-    padding-left: 20px; /* Espaço para o tracinho */
-    color: #333; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte consistente */
-    line-height: 1.6; /* Altura da linha para legibilidade */
-}
-
-.lista-personalizada-coreografia li::before {
-    content: "– "; /* O tracinho (travessão) como bullet */
-    color: #8B0000; /* Cor do tracinho */
-    font-weight: bold; /* Deixa o tracinho em negrito */
-    position: absolute;
-    left: 0; /* Posição do tracinho */
-    top: 0;
-}
-
 /* Estilos específicos para a seção de shows.html */
 .beneficios .beneficios-subtitle { /* Para o texto "Conheça os formatos..." */
     font-size: 1.1rem; /* Tamanho ligeiramente maior que o p padrão */
@@ -104,6 +76,34 @@
     margin-top: 40px; /* Espaço acima do subtítulo "Outras Opções" */
     margin-bottom: 15px; /* Espaço abaixo do subtítulo "Outras Opções" */
     text-align: center;
+}
+
+/* NOVO: Estilos para a lista personalizada com tracinhos e justificada */
+.lista-personalizada-coreografia {
+    list-style: none; /* Garante que não haja bolinhas */
+    padding-left: 0; /* Remove o padding padrão da UL */
+    margin: 0 auto; /* Centraliza a lista inteira */
+    max-width: 800px; /* Limita a largura para melhor justificativa */
+    text-align: initial; /* Reinicia o alinhamento de texto para que os LIs possam ser justificados */
+}
+
+.lista-personalizada-coreografia li {
+    text-align: justify; /* Justifica o texto dentro do LI */
+    margin-bottom: 15px; /* Espaço entre os itens */
+    position: relative; /* Para posicionar o pseudo-elemento */
+    padding-left: 20px; /* Espaço para o tracinho */
+    color: #333; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte consistente */
+    line-height: 1.6; /* Altura da linha para legibilidade */
+}
+
+.lista-personalizada-coreografia li::before {
+    content: "– "; /* O tracinho (travessão) como bullet */
+    color: #8B0000; /* Cor do tracinho */
+    font-weight: bold; /* Deixa o tracinho em negrito */
+    position: absolute;
+    left: 0; /* Posição do tracinho */
+    top: 0;
 }
 
 /* ========================================= */
@@ -266,10 +266,28 @@
 
 .workshops-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(1, 1fr); /* Padrão: 1 coluna em telas muito pequenas */
     gap: 30px;
-    max-width: 1100px;
+    max-width: 1100px; /* Limita a largura máxima do grid */
     margin: 0 auto;
+}
+
+@media (min-width: 640px) { /* Telas médias e maiores */
+    .workshops-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+@media (min-width: 900px) { /* Telas maiores (desktop) */
+    .workshops-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+}
+
+@media (min-width: 1200px) { /* Telas muito grandes (desktops mais largos) */
+    .workshops-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    }
 }
 
 .workshop-item {
@@ -287,6 +305,7 @@
 
 .workshop-item img {
     width: 100%;
+    height: 200px; /* Altura fixa para as imagens dos cards */
     object-fit: cover;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     cursor: zoom-in;
