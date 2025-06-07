@@ -48,20 +48,24 @@
 
 .beneficios .show-format-detail {
     margin-bottom: 25px; /* Espaço entre os blocos de tipo de show */
-    text-align: center; /* Centraliza o conteúdo dentro do bloco */
+    /* Removido text-align: center; daqui para permitir justificar o h3 e p */
 }
 
 .beneficios .show-format-detail h3 {
-    color: #8B0000; /* Cor vermelha para o título do formato de show */
-    font-size: 1.5rem; /* Tamanho do título do formato */
+    color: #333; /* <--- COR PRETA */
+    font-size: 1rem; /* <--- MESMO TAMANHO DO CONTEÚDO (1rem) */
     margin-bottom: 10px; /* Espaço abaixo do título do formato */
     font-weight: bold; /* Mantém negrito para os títulos de formato */
+    text-align: justify; /* <--- JUSTIFICADO */
+    max-width: 800px; /* Limita a largura para consistência com o parágrafo */
+    margin-left: auto; /* Centraliza junto com max-width */
+    margin-right: auto; /* Centraliza junto com max-width */
 }
 
 .beneficios .show-format-detail p {
     color: #333; /* Cor preta para o texto do formato */
     font-size: 1rem;
-    text-align: justify; /* Justifica o parágrafo de descrição */
+    text-align: justify; /* Já estava justificado, mantido */
     hyphens: auto;
     max-width: 800px; /* Limita a largura do parágrafo para melhor legibilidade */
     margin: 0 auto; /* Centraliza o parágrafo */
