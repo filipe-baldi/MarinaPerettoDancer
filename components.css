@@ -651,7 +651,7 @@
 }
 
 /* ========================================= */
-/* NOVOS ESTILOS PARA SEÇÕES DO PORTFÓLIO (Ajustes de Flexbox) */
+/* NOVOS ESTILOS PARA SEÇÕES DO PORTFÓLIO (Ajustes de Flexbox e Fonte) */
 /* ========================================= */
 
 /* Estilos para seções com imagem e texto */
@@ -668,7 +668,7 @@
     flex-direction: row; /* Padrão: Imagem à esquerda, texto à direita */
     align-items: center;
     gap: 40px; /* Espaço entre a imagem e o texto */
-    /* Removido flex-wrap para desktop para forçar lado a lado */
+    flex-wrap: wrap; /* Adicionado flex-wrap para permitir quebra de linha em telas menores */
     justify-content: center; /* Centraliza conteúdo quando quebra a linha */
 }
 
@@ -679,15 +679,13 @@
 
 .section-content-split .image-col-left,
 .section-content-split .image-col-right {
-    flex-shrink: 0; /* Impede que a imagem encolha além do necessário */
-    flex-grow: 0; /* Impede que a imagem cresça além do seu tamanho ideal */
-    /* Definindo largura e altura fixas para as imagens aqui */
+    /* Removido flex-shrink: 0; e flex-grow: 0; para permitir mais flexibilidade */
     width: 556px; /* Largura desejada para a imagem */
     height: 800px; /* Altura desejada para a imagem */
     max-width: 45%; /* Garante que a imagem não seja muito grande em telas menores de desktop */
-    object-fit: cover; /* Recorta a imagem para preencher o espaço mantendo a proporção */
+    min-width: 250px; /* Para evitar que a imagem fique minúscula em telas apertadas antes de empilhar */
+    object-fit: cover;
     border-radius: 10px;
-    /* Ajuste da sombra para ser menos parecida com borda */
     box-shadow: none !important; /* REMOVIDO BOX-SHADOW */
     display: block; /* Remove espaço extra abaixo da imagem */
     margin: 0; /* Remove margens automáticas para permitir que o flexbox gerencie */
@@ -708,16 +706,35 @@
     flex-grow: 1; /* Permite que o texto cresça para preencher o espaço restante */
     flex-shrink: 1; /* Permite que o texto encolha se necessário */
     flex-basis: auto; /* Base inicial flexível */
-    min-width: 300px; /* Largura mínima para o texto antes de quebrar em novas linhas */
+    min-width: 350px; /* Aumentar a largura mínima para o texto para dar mais espaço */
     text-align: justify;
     hyphens: auto;
 }
+
+/* Estilos específicos para o nome "Marina Peretto" */
+.section-content-split .profile-name-large {
+    font-size: 3rem; /* Tamanho da fonte maior para Marina Peretto */
+    margin-bottom: 5px; /* Reduz a margem entre Marina e Peretto */
+    line-height: 1.1; /* Ajusta a altura da linha */
+    color: #8B0000; /* Cor vermelha escura */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos específicos para o cargo "Bailarina, professora, coreógrafa..." */
+.section-content-split .profile-role-text {
+    font-size: 1.5rem; /* Tamanho da fonte maior para o cargo */
+    font-weight: bold;
+    margin-bottom: 25px; /* Adiciona espaço abaixo do cargo */
+    text-align: center; /* Centraliza o texto */
+    color: #333; /* Cor padrão para o texto */
+}
+
 
 .section-content-split h2 {
     color: #8B0000;
     text-align: center; /* Centraliza o título dentro da coluna de texto */
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 2rem; /* Tamanho padrão para outros h2s */
 }
 
 .section-content-split p, .section-content-split ul {
@@ -836,6 +853,13 @@
     .section-content-split h2,
     .section-text-only h2 {
         font-size: 1.8rem; /* Reduz tamanho dos títulos em mobile */
+    }
+    /* Ajustes específicos para mobile */
+    .section-content-split .profile-name-large {
+        font-size: 2.2rem; /* Ajusta tamanho para mobile */
+    }
+    .section-content-split .profile-role-text {
+        font-size: 1.2rem; /* Ajusta tamanho para mobile */
     }
 
     .section-content-split p, .section-content-split ul,
