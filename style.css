@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Reset */
 * {
     margin: 0;
@@ -11,15 +9,15 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff; /* Fundo branco padrão do body */
+    background-color: #fff;
     padding-top: 70px; /* Adicionado padding ao body para o conteúdo não se esconder atrás do header fixo */
 }
 
-/* Container genérico para centralizar conteúdo */
 .container {
     width: 90%;
     max-width: 1100px;
-    margin: auto; /* Centraliza o container */
+    margin: auto;
+    /* padding-top: 80px; Removido padding-top do container pois agora está no body */
 }
 
 /* Header */
@@ -33,33 +31,35 @@ header {
     width: 100%;
     z-index: 1000;
     height: 70px; /* Altura fixa para o header */
-    display: flex;
-    align-items: center;
+    display: flex; /* Usado flexbox para alinhamento */
+    align-items: center; /* Centraliza itens verticalmente */
 }
 
-header .container {
+header .container { /* Aplicar flex ao container dentro do header */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaço entre logo e nav */
     align-items: center;
-    width: 100%;
-    padding-top: 0; /* Reseta padding superior do container dentro do header */
+    width: 100%; /* Garante que o container ocupe a largura total */
+    padding-top: 0; /* Reseta o padding */
 }
 
 header h1 {
-    margin: 0;
-    padding-left: 20px; /* Mantido padding-left para o título */
-    font-size: 1.5rem;
+    /* float: left; Removido float */
+    margin-left: 20px;
+    margin: 0; /* Reseta margin */
+    padding-left: 20px; /* Adiciona padding se necessário */
+    font-size: 1.5rem; /* Ajusta tamanho se necessário */
 }
 
 /* Menu Hamburguer */
 .menu-toggle {
-    display: none;
+    display: none; /* Escondido por padrão */
     background: none;
     border: none;
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Ligeiramente maior */
     cursor: pointer;
-    padding: 0 20px;
+    padding: 0 20px; /* Adiciona algum padding */
 }
 .menu-toggle i {
     transition: transform 0.3s ease;
@@ -69,9 +69,13 @@ header h1 {
 }
 
 /* Navegação principal */
+#main-nav {
+    /* Sem estilos específicos necessários aqui para desktop inicialmente */
+}
+
 #main-nav ul {
     list-style: none;
-    display: flex;
+    display: flex; /* Display flex por padrão para desktop */
     justify-content: flex-end;
     margin: 0;
     padding-right: 20px;
@@ -84,16 +88,136 @@ header h1 {
     text-decoration: none;
     font-weight: bold;
     transition: opacity 0.3s;
-    padding: 5px 0;
+    padding: 5px 0; /* Adiciona algum padding para facilitar o clique */
 }
 #main-nav a:hover {
     opacity: 0.8;
 }
 
-/* Hero Section (Página Inicial) */
+/* --- Mobile Styles --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.3rem; /* Ajusta tamanho para mobile */
+        padding-left: 15px;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão hambúrguer no mobile */
+    }
+
+    #main-nav {
+        position: absolute;
+        top: 70px; /* Posiciona abaixo do header */
+        left: 0;
+        width: 100%;
+        background: #8B0000; /* Mesmo fundo do header */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    #main-nav.active {
+        max-height: 500px; /* Ou altura grande o suficiente para mostrar todos os itens */
+    }
+
+    #main-nav ul {
+        flex-direction: column; /* Empilha itens verticalmente */
+        width: 100%;
+        padding: 0; /* Reseta padding */
+        align-items: center; /* Centraliza itens */
+    }
+
+    #main-nav li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* Linhas separadoras */
+    }
+
+    #main-nav li:first-child {
+        border-top: none;
+    }
+
+    #main-nav a {
+        display: block; /* Faz com que os links ocupem a largura total */
+        padding: 15px 0; /* Adiciona padding */
+        width: 100%;
+    }
+
+    /* Ajustes para outras seções se necessário devido ao header fixo */
+    .hero {
+        height: 60vh; /* AJUSTE: Altura menor para a seção hero em mobile */
+        margin-top: 0; /* Reseta margin se houver */
+    }
+    .hero-small {
+        margin-top: 0; /* Reseta margin */
+    }
+
+    .container {
+       /* padding-top: 0; Garante que não haja padding extra */
+    }
+
+    /* Outros ajustes mobile */
+    .hero-content {
+        white-space: normal;
+        width: 90%;
+        font-size: 0.95rem;
+    }
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .foto-professora {
+        order: 1;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    .texto-quem-sou {
+        order: 2;
+        width: 100%;
+    }
+
+    .texto-quem-sou p {
+        text-align: left;
+    }
+
+    /* Ajustes para os botões de contato em mobile (opcional, mas bom para consistência) */
+    .botoes-contato .btn {
+        width: 50px; /* Um pouco menor no mobile */
+        height: 50px;
+        font-size: 1.8rem; /* Ícone um pouco maior para mobile */
+    }
+
+    .card-btn h3 {
+        white-space: normal;
+        font-size: 0.95rem;
+        min-height: auto;
+        height: auto;
+        line-height: normal;
+    }
+
+    .card-btn p {
+        font-size: 0.85rem;
+    }
+
+    /* WhatsApp Fixo - Regras específicas para mobile */
+    .whatsapp-fixo {
+        display: flex; /* Faz o botão aparecer no mobile */
+        width: 60px; /* Mantém o tamanho para mobile */
+        height: 60px;
+        font-size: 2rem; /* Usa o tamanho que você já tinha para mobile */
+        /* Outras propriedades de posicionamento e cor já estão no estilo base */
+    }
+}
+
+/* Hero Section */
 .hero {
     background: url('imagens/fundao.jpeg') no-repeat center center/cover;
-    height: 100vh;
+    height: 100vh; /* Altura padrão para desktop */
     position: relative;
     color: white;
     display: flex;
@@ -114,6 +238,7 @@ header h1 {
     z-index: 2;
     text-align: center;
     max-width: 900px;
+    /* white-space: nowrap; Removido para melhor quebra de linha */
 }
 .hero h2 {
     font-size: 2.5rem;
@@ -125,57 +250,10 @@ header h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Hero pequeno para páginas internas */
-.hero-small {
-    background: url('imagens/fundao.jpeg') no-repeat center center/cover;
-    height: 40vh;
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0; /* Garante que não haja margem superior extra */
-}
-.hero-small .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-.hero-small .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 900px;
-    width: 90%;
-}
-.hero-small h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-.hero-small p {
-    font-size: 1.1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-/* Main Content Wrapper para páginas internas */
-.main-experiencia {
-    padding: 60px 20px;
-    background: #fff; /* Fundo branco para a área principal de conteúdo */
-}
-
-/* Seção Quem Sou (Específica da Página Inicial/Quem-Sou) */
+/* Seção Quem Sou */
 .sobre {
     padding: 60px 20px;
     background: #fdf5e6;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px; /* Adiciona margem superior para consistência */
-    margin-bottom: 40px; /* Adiciona margem inferior para consistência */
 }
 .sobre h2 {
     text-align: center;
@@ -216,21 +294,78 @@ header h1 {
     transform: scale(1.02);
 }
 
+/* Serviços / Experiências Oferecidas */
+.servicos {
+    padding: 60px 20px;
+    background: #fff;
+}
+.servicos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #8B0000;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.card-btn {
+    background: #fdf5e6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.card-btn:hover {
+    transform: scale(1.03);
+    background-color: #f5e8ca;
+}
+.card-btn h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #8B0000;
+    /* white-space: nowrap; Permite quebra de linha */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto; /* Ajusta altura */
+    line-height: 1.2;
+}
+.card-btn p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 10px;
+}
 
-/* Contato (Estilos Gerais da Seção de Contato) */
+/* Galeria */
+.galeria {
+    padding: 60px 20px;
+    background: #fdf5e6;
+}
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Contato */
 .contato {
     padding: 60px 20px;
-    background: #f9f9f9; /* Fundo leve para a seção de contato */
+    background: #fff;
     text-align: center;
-    margin-top: 40px; /* Espaçamento consistente */
-    margin-bottom: 40px; /* Espaçamento consistente */
-    border-radius: 10px; /* Arredonda bordas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-.contato h2 {
-    color: #8B0000;
-    margin-bottom: 30px;
-    font-size: 2rem; /* Tamanho consistente com outros h2 */
 }
 .contatos-info {
     display: flex;
@@ -242,8 +377,67 @@ header h1 {
     color: #333;
 }
 
+/* Correção Principal para o Espaçamento dos Botões de Contato */
+.botoes-contato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
 
-/* Footer */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Ajuste do tamanho da fonte dos ícones dentro dos botões de contato */
+.btn i {
+    font-size: 2.0rem;
+    color: inherit;
+}
+
+/* Estilos dos botões de contato - CORES MAIS VIBRANTES (REVERTIDO) */
+.btn-email {
+    background-color: #8B0000; /* Vermelho escuro, consistente com a identidade */
+    color: white; /* Cor do ícone branca */
+}
+.btn-email:hover {
+    background-color: #a30000; /* Tom mais escuro no hover */
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-instagram {
+    /* Gradiente de cores do Instagram */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white; /* Cor do ícone branca */
+}
+.btn-instagram:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white; /* Cor do ícone branca */
+}
+.btn-whatsapp:hover {
+    background-color: #1ebd58; /* Tom mais escuro no hover */
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Footer (para manter a consistência) */
 footer {
     background: #8B0000;
     color: white;
@@ -257,8 +451,125 @@ footer p {
     margin: 5px 0;
 }
 
-/* Botão Fixo WhatsApp - Global Visibility/Positioning */
+/* Hero pequeno para páginas internas */
+.hero-small {
+    background: url('imagens/fundao.jpeg') no-repeat center center/cover;
+    height: 40vh;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-small .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.hero-small .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    width: 90%;
+}
+.hero-small h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+.hero-small p {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Conteúdo interno das páginas de experiência */
+.main-experiencia {
+    padding: 60px 20px;
+    background: #fff;
+}
+.descricao,
+.beneficios,
+.chamada-acao {
+    margin-bottom: 40px;
+    background: #fffacd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.descricao h2,
+.beneficios h2,
+.chamada-acao h2 {
+    color: #8B0000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.lista-sem-bolinha {
+    list-style: none;
+    padding-left: 0;
+}
+.lista-sem-bolinha li::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.chamada-acao {
+    background: #FFD700;
+    text-align: center;
+}
+.chamada-acao .btn {
+    margin-top: 15px;
+}
+
+/* Centralização do contato em páginas internas */
+.main-experiencia + #secao-contato .contato {
+    margin: 0 auto;
+    max-width: 100%;
+}
+.main-experiencia + #secao-contato .contato .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+}
+.main-experiencia + #secao-contato .contatos-info {
+    max-width: 600px;
+}
+.main-experiencia + #secao-contato .botoes-contato {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Estilo para o botão Agende Sua Aula */
+.btn-agendar {
+    background-color: #8B0000; /* Vermelho escuro, consistente com a identidade */
+    color: white;
+    padding: 12px 25px; /* Ajuste de padding para texto */
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas levemente arredondadas, não circular */
+    text-decoration: none;
+    display: inline-block; /* Para que o padding funcione corretamente */
+    transition: background 0.3s ease;
+    text-align: center;
+    width: auto; /* Sobrescreve largura específica se necessário */
+    height: auto; /* Sobrescreve altura específica se necessário */
+}
+
+.btn-agendar:hover {
+    background-color: #a30000; /* Tom mais escuro no hover */
+}
+
+/* WhatsApp Fixo - Estilo para Desktop (oculto) */
 .whatsapp-fixo {
+    display: none; /* OCULTA O BOTÃO POR PADRÃO EM TELAS MAIORES */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -267,13 +578,12 @@ footer p {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Manter para centralizar conteúdo quando visível */
+    justify-content: center; /* Manter para centralizar conteúdo quando visível */
     font-size: 2.2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     z-index: 1000;
-    display: none; /* CORRIGIDO: Oculta por padrão em telas maiores */
 }
 
 .whatsapp-fixo:hover {
@@ -281,85 +591,10 @@ footer p {
     background-color: #1ebd58;
 }
 
-/* --- Estilos Mobile --- */
+/* WhatsApp Fixo - Estilo para Mobile (visível) */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.3rem;
-        padding-left: 15px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    #main-nav {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #8B0000;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out;
-    }
-
-    #main-nav.active {
-        max-height: 500px;
-    }
-
-    #main-nav ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        align-items: center;
-    }
-
-    #main-nav li {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    #main-nav li:first-child {
-        border-top: none;
-    }
-
-    #main-nav a {
-        display: block;
-        padding: 15px 0;
-        width: 100%;
-    }
-
-    .hero-content {
-        white-space: normal;
-        width: 90%;
-        font-size: 0.95rem;
-    }
-    .hero h2 {
-        font-size: 1.6rem;
-    }
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    /* WhatsApp Fixo - Visível em mobile */
     .whatsapp-fixo {
-        display: flex; /* Exibe o botão somente em telas de até 768px */
-    }
-
-    /* Ajustes para a seção Quem Sou em mobile */
-    .sobre-conteudo {
-        flex-direction: column;
-    }
-    .foto-professora {
-        order: 1;
-        margin: 20px auto;
-        max-width: 90%;
-    }
-    .texto-quem-sou {
-        order: 2;
-        width: 100%;
-        text-align: left;
+        display: flex; /* EXIBE O BOTÃO SOMENTE EM TELAS DE ATÉ 768px */
+        /* As outras propriedades de tamanho e fonte já estão definidas acima ou no mobile media query global */
     }
 }
