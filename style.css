@@ -146,8 +146,9 @@ header h1 {
 
     /* Ajustes para outras seções se necessário devido ao header fixo */
     .hero {
-        height: 60vh; /* AJUSTE: Altura menor para a seção hero em mobile */
+        height: 60vh; /* Altura menor para a seção hero em mobile */
         margin-top: 0; /* Reseta margin se houver */
+        background-position: center 20%; /* NOVO: Ajuste fino para focar na parte desejada */
     }
     .hero-small {
         margin-top: 0; /* Reseta margin */
