@@ -24,27 +24,23 @@
 </section>
 
 <main class="main-experiencia">
-    <div class="container">
-        <!-- As seções "O que você encontrará aqui" e "Principais momentos" foram removidas daqui conforme solicitado -->
-
-        <!-- SEÇÃO: TEXTO ESQUERDA, IMAGEM DIREITA (Fundo Branco) - Layout invertido -->
-        <section class="section-content-split section-background-white section-reverse">
-            <div class="container">
-                <div class="content-wrapper">
-                    <div class="text-col-left">
-                        <h2 class="profile-name-large">MARINA</h2>
-                        <h2 class="profile-name-large">PERETTO</h2>
-                        <p class="profile-role-text">Bailarina, professora, coreógrafa e pesquisadora de Danças Árabes</p>
-                        
-                    </div>
-                    <div class="image-col-right">
-                        <img src="imagens/portfolio/Siteurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem';">
-                    </div>
-                </div>
+    <!-- A PRIMEIRA SEÇÃO AGORA OCUPA A LARGURA TOTAL DA TELA, SEM O CONTAINER INTERNO -->
+    <section class="section-content-split section-background-white section-reverse section-full-width">
+        <div class="content-wrapper">
+            <div class="text-col-left">
+                <h2 class="profile-name-large">MARINA</h2>
+                <h2 class="profile-name-large">PERETTO</h2>
+                <p class="profile-role-text">Bailarina, professora, coreógrafa e pesquisadora de Danças Árabes</p>
+                
             </div>
-        </section>
-        <!-- FIM DA SEÇÃO -->
+            <div class="image-col-right">
+                <img src="imagens/portfolio/Siteurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem';">
+            </div>
+        </div>
+    </section>
+    <!-- FIM DA SEÇÃO DE LARGURA TOTAL -->
 
+    <div class="container"> <!-- ESTE CONTAINER CONTINUA PARA AS SEÇÕES SEGUINTES -->
         <!-- SEÇÃO: FORMAÇÃO (Fundo #f5e8ca) -->
         <section class="section-text-only section-background-primary">
             <div class="container">
@@ -82,7 +78,7 @@
         </section>
         <!-- FIM DA SEÇÃO -->
         
-    </div>
+    </div> <!-- FIM DO CONTAINER PRINCIPAL PARA AS SEÇÕES SEGUINTES -->
 </main>
 
 <!-- Placeholder para a seção de Contato -->
