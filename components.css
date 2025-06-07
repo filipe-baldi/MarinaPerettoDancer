@@ -589,6 +589,12 @@
     }
 }
 
+@media (min-width: 1200px) { /* Telas muito grandes (desktops mais largos) */
+    .video-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    }
+}
+
 .video-responsive-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width = 9 / 16 = 0.5625) */
@@ -656,11 +662,21 @@
 
 /* Estilos para seções com imagem e texto */
 .section-content-split {
-    padding: 60px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    margin-bottom: 40px;
+    /* Removendo padding, border-radius e box-shadow para o efeito de "largura total sem caixa" */
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove border-radius */
+    box-shadow: none !important; /* Remove box-shadow */
+    margin-top: 40px; /* Mantém o espaçamento superior */
+    margin-bottom: 40px; /* Mantém o espaçamento inferior */
+    background: #fff; /* Fundo branco para a seção */
+}
+
+/* Nova classe para a primeira seção do portfólio para largura total */
+.section-content-split.section-full-width {
+    max-width: 100vw; /* Garante largura total da viewport */
+    padding: 0; /* Zera padding para ocupar 100% da largura */
+    margin: 0; /* Zera margens para ocupar 100% da largura */
+    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
 }
 
 .section-content-split .content-wrapper {
@@ -668,8 +684,11 @@
     flex-direction: row; /* Padrão: Imagem à esquerda, texto à direita */
     align-items: center;
     gap: 40px; /* Espaço entre a imagem e o texto */
-    flex-wrap: wrap; /* Adicionado flex-wrap para permitir quebra de linha em telas menores */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
     justify-content: center; /* Centraliza conteúdo quando quebra a linha */
+    max-width: 1200px; /* Limita a largura do conteúdo interno */
+    margin: 0 auto; /* Centraliza o conteúdo interno */
+    padding: 20px; /* Adiciona um padding interno para o conteúdo */
 }
 
 /* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
@@ -679,13 +698,15 @@
 
 .section-content-split .image-col-left,
 .section-content-split .image-col-right {
-    flex: 0 0 400px; /* Base fixa para imagem em desktop, permite encolher */
+    flex-basis: 400px; /* Largura preferencial da imagem em desktop */
+    flex-shrink: 1; /* Permite que a imagem encolha se necessário */
+    flex-grow: 0; /* Impede que a imagem cresça além do necessário */
     height: 550px; /* Altura controlada para a imagem */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: none !important; /* REMOVIDO BOX-SHADOW */
-    display: block; /* Remove espaço extra abaixo da imagem */
-    margin: 0; /* Remove margens automáticas para permitir que o flexbox gerencie */
+    display: block;
+    margin: 0;
     border: none !important; /* Reforça a remoção de borda */
     outline: none !important; /* Adicionado para remover qualquer contorno */
     padding: 0 !important; /* Reforça a remoção de padding que pareça borda */
@@ -693,16 +714,19 @@
 }
 
 /* Largura específica para a imagem da seção de premiações (se for diferente) */
-.section-content-split.section-reverse .image-col-right {
-    flex: 0 0 400px; /* Mantém a base fixa para consistência */
-    height: 550px; /* Mantém a altura controlada para consistência */
-}
+/* Esta regra só deve ser aplicada se a imagem for diferente */
+/* .section-content-split.section-reverse .image-col-right {
+    flex-basis: 560px; /* Exemplo de largura específica para outra imagem */
+/* } */
+
 
 .section-content-split .text-col-left,
 .section-content-split .text-col-right {
-    flex: 1; /* Permite que o texto cresça para preencher o espaço restante */
+    flex-grow: 1; /* Permite que o texto cresça para preencher o espaço restante */
+    flex-shrink: 1; /* Permite que o texto encolha se necessário */
+    flex-basis: 0; /* Base flexível para o texto */
     min-width: 350px; /* Largura mínima para o texto antes de quebrar em novas linhas */
-    text-align: justify;
+    text-align: left;
     hyphens: auto;
 }
 
@@ -730,7 +754,7 @@
 
 .section-content-split h2 { /* Regra geral para outros h2s na seção de split-content */
     color: #8B0000;
-    text-align: center; /* Centraliza o título dentro da coluna de texto */
+    text-align: left; /* Alinhamento à esquerda por padrão nessa seção */
     margin-bottom: 20px;
     font-size: 2rem; /* Tamanho padrão para outros h2s */
 }
@@ -827,6 +851,10 @@
     .section-content-split .content-wrapper {
         flex-wrap: nowrap; /* Impede quebra de linha em telas maiores */
     }
+    /* Para garantir o padding lateral em desktop para a seção de largura total */
+    .section-content-split.section-full-width .content-wrapper {
+        padding: 20px; /* Padding interno para o conteúdo em desktop */
+    }
 }
 
 @media (max-width: 768px) {
@@ -834,6 +862,7 @@
         flex-direction: column; /* Empilha a imagem e o texto em telas menores */
         flex-wrap: wrap; /* Permite que os itens quebrem a linha */
         gap: 20px; /* Reduz o espaçamento em mobile */
+        padding: 20px; /* Adiciona padding para o conteúdo em mobile */
     }
 
     .section-content-split.section-reverse .content-wrapper {
