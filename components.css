@@ -688,7 +688,7 @@
     object-fit: cover; /* Recorta a imagem para preencher o espaço mantendo a proporção */
     border-radius: 10px;
     /* Ajuste da sombra para ser menos parecida com borda */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Aumenta o blur e espalhamento, reduz a opacidade */
+    box-shadow: none !important; /* REMOVIDO BOX-SHADOW */
     display: block; /* Remove espaço extra abaixo da imagem */
     margin: 0; /* Remove margens automáticas para permitir que o flexbox gerencie */
     border: none !important; /* Reforça a remoção de borda */
