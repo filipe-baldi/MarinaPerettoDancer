@@ -679,11 +679,8 @@
 
 .section-content-split .image-col-left,
 .section-content-split .image-col-right {
-    /* Removido flex-shrink: 0; e flex-grow: 0; para permitir mais flexibilidade */
-    width: 556px; /* Largura desejada para a imagem */
-    height: 800px; /* Altura desejada para a imagem */
-    max-width: 45%; /* Garante que a imagem não seja muito grande em telas menores de desktop */
-    min-width: 250px; /* Para evitar que a imagem fique minúscula em telas apertadas antes de empilhar */
+    flex: 0 0 400px; /* Base fixa para imagem em desktop, permite encolher */
+    height: 550px; /* Altura controlada para a imagem */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: none !important; /* REMOVIDO BOX-SHADOW */
@@ -695,42 +692,43 @@
     background-color: transparent !important; /* Garante que nenhum fundo sólido apareça com transparência */
 }
 
-/* Largura específica para a imagem da seção de premiações */
+/* Largura específica para a imagem da seção de premiações (se for diferente) */
 .section-content-split.section-reverse .image-col-right {
-    width: 560px; /* Largura para a imagem de premiações */
+    flex: 0 0 400px; /* Mantém a base fixa para consistência */
+    height: 550px; /* Mantém a altura controlada para consistência */
 }
-
 
 .section-content-split .text-col-left,
 .section-content-split .text-col-right {
-    flex-grow: 1; /* Permite que o texto cresça para preencher o espaço restante */
-    flex-shrink: 1; /* Permite que o texto encolha se necessário */
-    flex-basis: auto; /* Base inicial flexível */
-    min-width: 350px; /* Aumentar a largura mínima para o texto para dar mais espaço */
+    flex: 1; /* Permite que o texto cresça para preencher o espaço restante */
+    min-width: 350px; /* Largura mínima para o texto antes de quebrar em novas linhas */
     text-align: justify;
     hyphens: auto;
 }
 
 /* Estilos específicos para o nome "Marina Peretto" */
 .section-content-split .profile-name-large {
-    font-size: 3rem; /* Tamanho da fonte maior para Marina Peretto */
-    margin-bottom: 5px; /* Reduz a margem entre Marina e Peretto */
-    line-height: 1.1; /* Ajusta a altura da linha */
+    font-size: 4rem; /* Tamanho da fonte ainda maior para Marina Peretto */
+    margin-bottom: 0; /* Remover margem entre Marina e Peretto para ficarem bem próximas */
+    line-height: 1; /* Para deixar as linhas mais próximas */
     color: #8B0000; /* Cor vermelha escura */
     text-align: left; /* Alinhamento à esquerda conforme a imagem de exemplo */
+    text-transform: uppercase; /* Para letras maiúsculas */
+    font-weight: bold; /* Para negrito */
 }
 
 /* Estilos específicos para o cargo "Bailarina, professora, coreógrafa..." */
 .section-content-split .profile-role-text {
-    font-size: 1.5rem; /* Tamanho da fonte maior para o cargo */
+    font-size: 1.8rem; /* Tamanho da fonte maior para o cargo */
     font-weight: bold;
+    margin-top: 15px; /* Adiciona espaço acima do cargo */
     margin-bottom: 25px; /* Adiciona espaço abaixo do cargo */
     text-align: left; /* Alinhamento à esquerda conforme a imagem de exemplo */
     color: #333; /* Cor padrão para o texto */
 }
 
 
-.section-content-split h2 {
+.section-content-split h2 { /* Regra geral para outros h2s na seção de split-content */
     color: #8B0000;
     text-align: center; /* Centraliza o título dentro da coluna de texto */
     margin-bottom: 20px;
@@ -825,6 +823,12 @@
 }
 
 /* Media Queries para responsividade */
+@media (min-width: 769px) { /* Desktop e tablets maiores */
+    .section-content-split .content-wrapper {
+        flex-wrap: nowrap; /* Impede quebra de linha em telas maiores */
+    }
+}
+
 @media (max-width: 768px) {
     .section-content-split .content-wrapper {
         flex-direction: column; /* Empilha a imagem e o texto em telas menores */
@@ -856,11 +860,11 @@
     }
     /* Ajustes específicos para mobile */
     .section-content-split .profile-name-large {
-        font-size: 2.2rem; /* Ajusta tamanho para mobile */
+        font-size: 3rem; /* Ajusta tamanho para mobile */
         text-align: center; /* Centraliza para mobile */
     }
     .section-content-split .profile-role-text {
-        font-size: 1.2rem; /* Ajusta tamanho para mobile */
+        font-size: 1.4rem; /* Ajusta tamanho para mobile */
         text-align: center; /* Centraliza para mobile */
     }
 
