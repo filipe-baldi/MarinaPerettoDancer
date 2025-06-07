@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troupe de Folclore - Marina Peretto | Danças Árabes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
 </head>
 <body>
@@ -23,39 +24,49 @@
 <main class="main-experiencia">
     <div class="container">
         <section class="descricao">
-            <h2>O que é a Troupe de Folclore?</h2>
-            <p>É um grupo de artistas que representa a cultura árabe através de apresentações coletivas. As integrantes recebem treinamento contínuo e participam de eventos culturais e shows com apoio artístico e técnico.</p>
+            <h2>Como funciona a troupe de folclore</h2>
+            <p>A troupe de folclore realiza seus ensaios na cidade de Porto Alegre, às sextas-feiras, em frequência quinzenal, das 20h às 21h30.</p>
+            <p>Durante os ensaios, as bailarinas desenvolvem técnica, musicalidade, gingado, coletividade e expressão, além de aspectos teatrais e cênicos essenciais para uma performance envolvente.</p>
+            <p>Os ensaios têm como objetivo preparar apresentações coreográficas que respeitem as raízes e a autenticidade de cada folclore, destinadas a mostras, festivais e espetáculos.</p>
         </section>
 
         <section class="beneficios">
-            <h2>Benefícios</h2>
+            <h2>Quais estilos de dança estão sendo trabalhados</h2>
             <ul class="lista-sem-bolinha">
-                <li>Participação em apresentações públicas</li>
-                <li>Treinamento intensivo mensal</li>
-                <li>Integração com outras artistas</li>
-                <li>Melhora técnica e presença de palco</li>
-                <li>Visibilidade e experiência artística</li>
+                <li>Dança beduína</li>
+                <li>Ghawazy</li>
             </ul>
         </section>
+        
+    <!-- Formulário de Agendamento INTEGRADO AQUI -->
+        <section class="agendamento-form-section">
+            <div class="container"> <!-- Mantido o container para alinhamento -->
+                <h2>Quer fazer parte da troupe?</h2>
+                <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para confirmar sua aula conforme disponibilidade.</p>
 
-        <section class="detalhes">
-            <h2>Como Participar</h2>
-            <p>Para fazer parte da Troupe, é necessário passar por seleção e ter pelo menos nível intermediário em dança árabe. As atividades incluem:</p>
-            <ul>
-                <li>Ensaio semanal</li>
-                <li>Workshops mensais</li>
-                <li>Presença em eventos culturais</li>
-                <li>Uniformização e cenário padronizado</li>
-                <li>Divulgação artística coletiva</li>
-            </ul>
-        </section>
+                <!-- Formulário conectado ao Formspree -->
+                <form action="https://formspree.io/f/manjwvkv" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
 
-        <section class="chamada-acao">
-            <h2>Quer fazer parte da nossa equipe?</h2>
-            <p>Envie seu vídeo de apresentação e aguarde o convite para o próximo ciclo de seleção.</p>
-            <!-- Link ajustado para apontar para a seção de contato que será carregada -->
-            <a href="#contato" class="btn btn-instagram">Enviar Vídeo</a>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp:</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(xx) 9 xxxx-xxxx" required>
+                    </div>
+                    <section class="observacao">
+                        <p>Mensalidade: R$160</p>
+                    </section>
+                    
+                    <!-- Botão de envio -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-submit">Junte-se ao grupo</button>
+                    </div>
+                </form>
+            </div>
         </section>
+        <!-- Fim do Formulário de Agendamento INTEGRADO -->
     </div>
 </main>
 
