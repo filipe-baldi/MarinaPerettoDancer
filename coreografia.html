@@ -41,14 +41,11 @@
             </ul>
         </section>
 
-        <section class="observacao">
-            <p>Valores a partir de R$250</p>
-        </section>
-        
+              
         <!-- NOVA SEÇÃO: VÍDEOS DO YOUTUBE -->
         <section class="videos-section">
             <div class="container">
-                <h2>Veja Algumas Coreografias</h2>
+                <h2>Trabalhos coreográficos já realizados</h2>
                 <div class="video-grid">
                     <div class="video-responsive-container">
                         <iframe 
@@ -140,6 +137,43 @@
         
         <!-- A seção "chamada-acao" foi removida daqui conforme solicitado -->
 
+        <!-- SEÇÃO: FORMULÁRIO DE SOLICITAÇÃO DA COREOGRAFIA -->
+        <section class="formulario-cursos agendamento-form-section">
+            <div class="container">
+                <h2>Quero minha coreografia personalizada</h2>
+                <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para mais informações</p>
+
+                <!-- Formulário conectado ao Formspree com o link atualizado -->
+                <form action="https://formspree.io/f/myzjkadg" method="POST">
+                    <div class="form-group">
+                        <label for="nome-curso">Nome:</label>
+                        <input type="text" id="nome-curso" name="nome_curso" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp-curso">WhatsApp:</label>
+                        <input type="tel" id="whatsapp-curso" name="whatsapp_curso" placeholder="(51) 9 8138-0686" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="curso-interesse">Curso de Interesse:</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios-curso">Proposta da coreografia</label>
+                        <textarea id="comentarios-curso" name="comentarios_curso" rows="4" placeholder="Escreva sobre o estilo, música(se já tiver) e onde será apresentada"></textarea>
+                    </div>
+             <section class="observacao">
+                <p>Valores a partir de R$250</p>
+             </section>
+                    <!-- Botão de envio -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-submit">Enviar Solicitação</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
     </div>
 </main>
 
