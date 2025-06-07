@@ -717,7 +717,7 @@
     margin-bottom: 5px; /* Reduz a margem entre Marina e Peretto */
     line-height: 1.1; /* Ajusta a altura da linha */
     color: #8B0000; /* Cor vermelha escura */
-    text-align: center; /* Centraliza o texto */
+    text-align: left; /* Alinhamento à esquerda conforme a imagem de exemplo */
 }
 
 /* Estilos específicos para o cargo "Bailarina, professora, coreógrafa..." */
@@ -725,7 +725,7 @@
     font-size: 1.5rem; /* Tamanho da fonte maior para o cargo */
     font-weight: bold;
     margin-bottom: 25px; /* Adiciona espaço abaixo do cargo */
-    text-align: center; /* Centraliza o texto */
+    text-align: left; /* Alinhamento à esquerda conforme a imagem de exemplo */
     color: #333; /* Cor padrão para o texto */
 }
 
@@ -857,9 +857,11 @@
     /* Ajustes específicos para mobile */
     .section-content-split .profile-name-large {
         font-size: 2.2rem; /* Ajusta tamanho para mobile */
+        text-align: center; /* Centraliza para mobile */
     }
     .section-content-split .profile-role-text {
         font-size: 1.2rem; /* Ajusta tamanho para mobile */
+        text-align: center; /* Centraliza para mobile */
     }
 
     .section-content-split p, .section-content-split ul,
