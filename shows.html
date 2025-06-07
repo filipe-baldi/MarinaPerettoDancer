@@ -33,10 +33,21 @@
 
         <section class="beneficios">
             <h2>Tipos de Shows</h2>
-            <h3>Conheça os formatos disponíveis e escolha a melhor opção para o seu evento:</h3>
+            <!-- Texto para ser sem negrito e preto -->
+            <p class="beneficios-subtitle">Conheça os formatos disponíveis e escolha a melhor opção para o seu evento:</p>
+
+            <div class="show-format-detail">
+                <h3>Show solo com diversas performances</h3>
+                <p>Show de uma bailarina com duração de 45 minutos a 1 hora com 2 ou 3 blocos de performances com troca de figurino e variações de estilos.</p>
+            </div>
+
+            <div class="show-format-detail">
+                <h3>Show em grupo</h3>
+                <p>Duas ou mais bailarinas que variam entre performances individuais e em conjunto. Ideal para eventos maiores que contam com mais de um espaço para dança.</p>
+            </div>
+
+            <h4>Outras Opções e Adaptações:</h4>
             <ul class="lista-sem-bolinha">
-                <li>Show solo com diversas performances: Show de uma bailarina com duração de 45 minutos a 1 hora com 2 ou 3 blocos de performances com troca de figurino e variações de estilos.</li>
-                <li>Show em grupo: Duas ou mais bailarinas que variam entre performances individuais e em conjunto. Ideal para eventos maiores que contam com mais de um espaço para dança.</li>
                 <li>Opção de shows individuais ou em grupo</li>
                 <li>Música ao vivo ou trilha curada</li>
                 <li>Adaptação ao tipo de evento e público</li>
@@ -45,7 +56,7 @@
 
 
         <!-- Formulário de Agendamento INTEGRADO AQUI -->
-        <section class="agendamento-form-section">
+        <section class="formulario-shows agendamento-form-section">
             <div class="container"> <!-- Mantido o container para alinhamento -->
                 <h2>Agende sua aula</h2>
                 <p style="text-align: center;">Preencha os dados abaixo e entraremos em contato para confirmar sua aula conforme disponibilidade.</p>
@@ -63,7 +74,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="nome">Tipo de evento:</label>
+                        <label for="tipoevento">Tipo de evento:</label>
                         <input type="text" id="tipoevento" name="tipoevento" placeholder="Tipo de evento" required>
                     </div>
                     
@@ -81,7 +92,7 @@
         </section>
         <!-- Fim do Formulário de Agendamento INTEGRADO -->
 
-          </div>
+    </div>
 </main>
 
 <!-- Placeholder para a seção de Contato -->
@@ -95,6 +106,90 @@
 
 <!-- Script principal para carregar header e contato -->
 <script src="scripts.js"></script>
+
+<!-- Script para a lógica de menus colapsáveis, se necessário nesta página -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Lógica dos cabeçalhos colapsáveis (reutilizada de components.css)
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+
+        collapsibleHeaders.forEach(header => {
+            const collapsibleContent = header.nextElementSibling;
+
+            if (collapsibleContent) {
+                collapsibleContent.style.maxHeight = '0';
+                collapsibleContent.style.paddingTop = '0';
+                collapsibleContent.style.paddingBottom = '0';
+
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.classList.remove('expanded');
+                        collapsibleContent.style.maxHeight = '0';
+                        collapsibleContent.style.paddingTop = '0';
+                        collapsibleContent.style.paddingBottom = '0';
+                    } else {
+                        collapsibleContent.classList.add('expanded');
+                        collapsibleContent.style.paddingTop = '20px';
+                        collapsibleContent.style.paddingBottom = '20px';
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
+
+                window.addEventListener('resize', () => {
+                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
+
+                collapsibleContent.addEventListener('transitionend', () => {
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.style.maxHeight = 'none';
+                    }
+                });
+            }
+        });
+
+        // Lógica do Modal de Imagem (se você adicionar imagens clicáveis, reutilizada de components.css)
+        const workshopImages = document.querySelectorAll('.enlarge-image');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        workshopImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modalImage.src = this.src;
+                imageModal.classList.add('visible');
+            });
+        });
+
+        closeModalBtn.addEventListener('click', function() {
+            imageModal.classList.remove('visible');
+        });
+
+        imageModal.addEventListener('click', function(event) {
+            if (event.target === imageModal) {
+                imageModal.classList.remove('visible');
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
+                imageModal.classList.remove('visible');
+            }
+        });
+    });
+</script>
+
+<!-- ESTRUTURA DO MODAL (LIGHTBOX) - Reutilizada de components.css -->
+<div id="imageModal" class="modal-overlay">
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem Ampliada">
+        <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
+    </div>
+</div>
+<!-- FIM DA ESTRUTURA DO MODAL -->
 
 </body>
 </html>
