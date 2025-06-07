@@ -37,6 +37,44 @@
     text-align: center;
 }
 
+/* NOVO: Estilos específicos para a seção de shows.html */
+.beneficios .beneficios-subtitle { /* Para o texto "Conheça os formatos..." */
+    font-size: 1.1rem; /* Tamanho ligeiramente maior que o p padrão */
+    color: #333; /* Cor preta padrão */
+    font-weight: normal; /* Sem negrito */
+    margin-bottom: 30px; /* Espaço abaixo do subtítulo */
+    text-align: center;
+}
+
+.beneficios .show-format-detail {
+    margin-bottom: 25px; /* Espaço entre os blocos de tipo de show */
+    text-align: center; /* Centraliza o conteúdo dentro do bloco */
+}
+
+.beneficios .show-format-detail h3 {
+    color: #8B0000; /* Cor vermelha para o título do formato de show */
+    font-size: 1.5rem; /* Tamanho do título do formato */
+    margin-bottom: 10px; /* Espaço abaixo do título do formato */
+    font-weight: bold; /* Mantém negrito para os títulos de formato */
+}
+
+.beneficios .show-format-detail p {
+    color: #333; /* Cor preta para o texto do formato */
+    font-size: 1rem;
+    text-align: justify; /* Justifica o parágrafo de descrição */
+    hyphens: auto;
+    max-width: 800px; /* Limita a largura do parágrafo para melhor legibilidade */
+    margin: 0 auto; /* Centraliza o parágrafo */
+}
+
+.beneficios h4 { /* Para "Outras Opções e Adaptações" */
+    color: #555; /* Cor mais suave */
+    font-size: 1.2rem;
+    margin-top: 40px; /* Espaço acima do subtítulo "Outras Opções" */
+    margin-bottom: 15px; /* Espaço abaixo do subtítulo "Outras Opções" */
+    text-align: center;
+}
+
 /* ========================================= */
 /* Estilos para o Formulário (agendamento-form-section) - Reutilizado */
 /* ========================================= */
