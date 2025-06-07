@@ -27,14 +27,42 @@
 }
 
 .beneficios ul {
-    list-style: none;
+    list-style: none; /* Remove a bolinha padrão para todas as ULs dentro de benefícios */
     padding: 0;
-    text-align: center;
+    text-align: center; /* Centraliza a lista, mas será sobrescrito pela lista personalizada */
 }
 
 .beneficios li {
     margin-bottom: 10px;
-    text-align: center;
+    text-align: center; /* Centraliza os itens, mas será sobrescrito pela lista personalizada */
+}
+
+/* NOVO: Estilos para a lista personalizada com tracinhos e justificada */
+.lista-personalizada-coreografia {
+    list-style: none; /* Garante que não haja bolinhas */
+    padding-left: 0; /* Remove o padding padrão da UL */
+    margin: 0 auto; /* Centraliza a lista inteira */
+    max-width: 800px; /* Limita a largura para melhor justificativa */
+    text-align: initial; /* Reinicia o alinhamento de texto para que os LIs possam ser justificados */
+}
+
+.lista-personalizada-coreografia li {
+    text-align: justify; /* Justifica o texto dentro do LI */
+    margin-bottom: 15px; /* Espaço entre os itens */
+    position: relative; /* Para posicionar o pseudo-elemento */
+    padding-left: 20px; /* Espaço para o tracinho */
+    color: #333; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte consistente */
+    line-height: 1.6; /* Altura da linha para legibilidade */
+}
+
+.lista-personalizada-coreografia li::before {
+    content: "– "; /* O tracinho (travessão) como bullet */
+    color: #8B0000; /* Cor do tracinho */
+    font-weight: bold; /* Deixa o tracinho em negrito */
+    position: absolute;
+    left: 0; /* Posição do tracinho */
+    top: 0;
 }
 
 /* Estilos específicos para a seção de shows.html */
@@ -524,7 +552,6 @@
 
 .video-grid {
     display: grid;
-    /* Colunas responsivas: 1 coluna em telas pequenas, 2 em médias, 3 em grandes */
     grid-template-columns: repeat(1, 1fr); /* Padrão: 1 coluna em telas muito pequenas */
     gap: 30px;
     max-width: 1100px;
