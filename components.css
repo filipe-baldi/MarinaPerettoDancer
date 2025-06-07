@@ -685,9 +685,9 @@
     align-items: center;
     gap: 40px; /* Espaço entre a imagem e o texto */
     flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    justify-content: center; /* Centraliza conteúdo quando quebra a linha */
+    /* Removido justify-content: center; para alinhar à esquerda */
     max-width: 1200px; /* Limita a largura do conteúdo interno */
-    margin: 0 auto; /* Centraliza o conteúdo interno */
+    margin: 0; /* Alinha o conteúdo interno à esquerda */
     padding: 20px; /* Adiciona um padding interno para o conteúdo */
 }
 
