@@ -133,7 +133,7 @@
     background: #fff; /* Fundo branco padrão para formulários */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px; /* Espaçamento da seção anterior */
+    margin-top: 40px;
     margin-bottom: 40px; /* Espaçamento da próxima seção */
 }
 
@@ -687,9 +687,14 @@
     max-width: 45%; /* Garante que a imagem não seja muito grande em telas menores de desktop */
     object-fit: cover; /* Recorta a imagem para preencher o espaço mantendo a proporção */
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Ajuste da sombra para ser menos parecida com borda */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Aumenta o blur e espalhamento, reduz a opacidade */
     display: block; /* Remove espaço extra abaixo da imagem */
     margin: 0; /* Remove margens automáticas para permitir que o flexbox gerencie */
+    border: none !important; /* Reforça a remoção de borda */
+    outline: none !important; /* Adicionado para remover qualquer contorno */
+    padding: 0 !important; /* Reforça a remoção de padding que pareça borda */
+    background-color: transparent !important; /* Garante que nenhum fundo sólido apareça com transparência */
 }
 
 /* Largura específica para a imagem da seção de premiações */
@@ -735,7 +740,7 @@
 }
 
 .section-content-split ul li::before {
-    content: "– "; /* Tracinho como marcador */
+    content: "– ";
     color: #8B0000;
     font-weight: bold;
     position: absolute;
