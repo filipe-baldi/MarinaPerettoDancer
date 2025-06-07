@@ -37,7 +37,7 @@
     text-align: center;
 }
 
-/* NOVO: Estilos específicos para a seção de shows.html */
+/* Estilos específicos para a seção de shows.html */
 .beneficios .beneficios-subtitle { /* Para o texto "Conheça os formatos..." */
     font-size: 1.1rem; /* Tamanho ligeiramente maior que o p padrão */
     color: #333; /* Cor preta padrão */
@@ -48,15 +48,14 @@
 
 .beneficios .show-format-detail {
     margin-bottom: 25px; /* Espaço entre os blocos de tipo de show */
-    /* Removido text-align: center; daqui para permitir justificar o h3 e p */
 }
 
 .beneficios .show-format-detail h3 {
-    color: #333; /* <--- COR PRETA */
-    font-size: 1rem; /* <--- MESMO TAMANHO DO CONTEÚDO (1rem) */
+    color: #333; /* Cor preta */
+    font-size: 1rem; /* Mesmo tamanho do conteúdo (1rem) */
     margin-bottom: 10px; /* Espaço abaixo do título do formato */
     font-weight: bold; /* Mantém negrito para os títulos de formato */
-    text-align: justify; /* <--- JUSTIFICADO */
+    text-align: justify; /* Justificado */
     max-width: 800px; /* Limita a largura para consistência com o parágrafo */
     margin-left: auto; /* Centraliza junto com max-width */
     margin-right: auto; /* Centraliza junto com max-width */
@@ -77,6 +76,25 @@
     margin-top: 40px; /* Espaço acima do subtítulo "Outras Opções" */
     margin-bottom: 15px; /* Espaço abaixo do subtítulo "Outras Opções" */
     text-align: center;
+}
+
+/* ========================================= */
+/* Estilos para a Seção de Observação (reutilizado) */
+/* ========================================= */
+.observacao {
+    background: #f9f9f9; /* Fundo diferente para observação */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 30px; /* Espaçamento da seção anterior */
+    margin-bottom: 30px; /* Espaçamento da próxima seção */
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+.observacao p {
+    margin: 0; /* Remove margem padrão do parágrafo dentro de observação */
 }
 
 /* ========================================= */
@@ -483,4 +501,105 @@
 }
 .btn-agendar:hover {
     background-color: #a30000;
+}
+
+/* ========================================= */
+/* Estilos para a Seção de VÍDEOS (reutilizado) */
+/* ========================================= */
+.videos-section {
+    padding: 60px 20px;
+    background: #fdf5e6; /* Cor de fundo para a seção de vídeos */
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.videos-section h2 {
+    color: #8B0000;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.video-grid {
+    display: grid;
+    /* Colunas responsivas: 1 coluna em telas pequenas, 2 em médias, 3 em grandes */
+    grid-template-columns: repeat(1, 1fr); /* Padrão: 1 coluna em telas muito pequenas */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 550px) { /* Telas médias e maiores */
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+@media (min-width: 900px) { /* Telas grandes e maiores */
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+}
+
+.video-responsive-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width = 9 / 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* Black background for letterboxing */
+    border-radius: 8px; /* Rounded corners for video container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ========================================= */
+/* Estilos para a Seção de Chamada para Ação (Chamada-Acao) - Reutilizado */
+/* ========================================= */
+.chamada-acao {
+    padding: 60px 20px;
+    background: #FFD700; /* Fundo amarelo para a chamada para ação */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.chamada-acao h2 {
+    color: #8B0000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.chamada-acao p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.chamada-acao .btn {
+    margin-top: 15px;
+    background-color: #8B0000;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    width: auto;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.chamada-acao .btn:hover {
+    background-color: #a30000;
+    transform: translateY(-3px);
 }
