@@ -26,8 +26,7 @@
         <section class="descricao">
             <h2>Como funciona a criação de coreografias</h2>
             <p>Cada coreografia é desenvolvida a partir da música ou estilo escolhido pela bailarina. A partir disso, o trabalho coreográfico começa com base em pesquisa, musicalidade e no nível técnico da intérprete.</p>
-<p>A criação envolve também cuidados com o figurino, edição da música, entrada e encerramento da performance, expressividade cênica e coerência com a proposta musical. Além disso, é considerado o objetivo da bailarina e o contexto em que essa coreografia será apresentada — como shows, festivais, festas de aniversário, entre outros.</p>
-                
+            <p>A criação envolve também cuidados com o figurino, edição da música, entrada e encerramento da performance, expressividade cênica e coerência com a proposta musical. Além disso, é considerado o objetivo da bailarina e o contexto em que essa coreografia será apresentada — como shows, festivais, festas de aniversário, entre outros.</p>
         </section>
 
         <section class="beneficios">
@@ -41,11 +40,51 @@
                 <li>Consultoria pré e pós-evento</li>
             </ul>
         </section>
+
         <section class="observacao">
-             <p>Valores a partir de R$250</p>
+            <p>Valores a partir de R$250</p>
         </section>
         
-       
+        <!-- NOVA SEÇÃO: VÍDEOS DO YOUTUBE -->
+        <section class="videos-section">
+            <div class="container">
+                <h2>Veja Algumas Coreografias</h2>
+                <div class="video-grid">
+                    <div class="video-responsive-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen 
+                            title="Vídeo de Exemplo 1">
+                        </iframe>
+                    </div>
+                    <div class="video-responsive-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/o_XVx4-8jU0" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen 
+                            title="Vídeo de Exemplo 2">
+                        </iframe>
+                    </div>
+                    <div class="video-responsive-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/2_jB0Lw3_rY" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen 
+                            title="Vídeo de Exemplo 3">
+                        </iframe>
+                    </div>
+                    <!-- Adicione mais vídeos conforme necessário, seguindo o padrão -->
+                </div>
+            </div>
+        </section>
+        <!-- FIM DA NOVA SEÇÃO DE VÍDEOS -->
+        
+        <!-- A seção "chamada-acao" foi removida daqui conforme solicitado -->
+
     </div>
 </main>
 
@@ -53,13 +92,96 @@
 <div id="secao-contato"></div>
 
 <!-- Botão Fixo WhatsApp -->
-<!-- Corrigido número do WhatsApp -->
 <a href="https://wa.me/5551981380686" target="_blank" class="whatsapp-fixo">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <!-- Script principal para carregar header e contato -->
 <script src="scripts.js"></script>
+
+<!-- Scripts para funcionalidades globais (seções colapsáveis, modal de imagem) -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Lógica dos cabeçalhos colapsáveis (reutilizada de components.css)
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+
+        collapsibleHeaders.forEach(header => {
+            const collapsibleContent = header.nextElementSibling;
+
+            if (collapsibleContent) {
+                collapsibleContent.style.maxHeight = '0';
+                collapsibleContent.style.paddingTop = '0';
+                collapsibleContent.style.paddingBottom = '0';
+
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.classList.remove('expanded');
+                        collapsibleContent.style.maxHeight = '0';
+                        collapsibleContent.style.paddingTop = '0';
+                        collapsibleContent.style.paddingBottom = '0';
+                    } else {
+                        collapsibleContent.classList.add('expanded');
+                        collapsibleContent.style.paddingTop = '20px';
+                        collapsibleContent.style.paddingBottom = '20px';
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
+
+                window.addEventListener('resize', () => {
+                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
+
+                collapsibleContent.addEventListener('transitionend', () => {
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.style.maxHeight = 'none';
+                    }
+                });
+            }
+        });
+
+        // Lógica do Modal de Imagem (reutilizada de components.css)
+        const workshopImages = document.querySelectorAll('.enlarge-image');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        workshopImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modalImage.src = this.src;
+                imageModal.classList.add('visible');
+            });
+        });
+
+        closeModalBtn.addEventListener('click', function() {
+            imageModal.classList.remove('visible');
+        });
+
+        imageModal.addEventListener('click', function(event) {
+            if (event.target === imageModal) {
+                imageModal.classList.remove('visible');
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
+                imageModal.classList.remove('visible');
+            }
+        });
+    });
+</script>
+
+<!-- ESTRUTURA DO MODAL (LIGHTBOX) - Reutilizada de components.css -->
+<div id="imageModal" class="modal-overlay">
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem Ampliada">
+        <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
+    </div>
+</div>
+<!-- FIM DA ESTRUTURA DO MODAL -->
 
 </body>
 </html>
