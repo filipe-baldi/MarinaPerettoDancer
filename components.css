@@ -78,7 +78,7 @@
     text-align: center;
 }
 
-/* NOVO: Estilos para a lista personalizada com tracinhos e justificada */
+/* Estilos para a lista personalizada com tracinhos e justificada (usada em direcionamento.html) */
 .lista-personalizada-coreografia {
     list-style: none; /* Garante que não haja bolinhas */
     padding-left: 0; /* Remove o padding padrão da UL */
@@ -648,4 +648,194 @@
 .chamada-acao .btn:hover {
     background-color: #a30000;
     transform: translateY(-3px);
+}
+
+/* ========================================= */
+/* NOVOS ESTILOS PARA SEÇÕES DO PORTFÓLIO (Ajustes de Flexbox) */
+/* ========================================= */
+
+/* Estilos para seções com imagem e texto */
+.section-content-split {
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.section-content-split .content-wrapper {
+    display: flex;
+    flex-direction: row; /* Padrão: Imagem à esquerda, texto à direita */
+    align-items: center;
+    gap: 40px; /* Espaço entre a imagem e o texto */
+    /* Removido flex-wrap para desktop para forçar lado a lado */
+    justify-content: center; /* Centraliza conteúdo quando quebra a linha */
+}
+
+/* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
+.section-content-split.section-reverse .content-wrapper {
+    flex-direction: row-reverse; /* Inverte a ordem para texto à esquerda, imagem à direita */
+}
+
+.section-content-split .image-col-left,
+.section-content-split .image-col-right {
+    flex-shrink: 0; /* Impede que a imagem encolha além do necessário */
+    flex-grow: 0; /* Impede que a imagem cresça além do seu tamanho ideal */
+    /* Definindo largura e altura fixas para as imagens aqui */
+    width: 556px; /* Largura desejada para a imagem */
+    height: 800px; /* Altura desejada para a imagem */
+    max-width: 45%; /* Garante que a imagem não seja muito grande em telas menores de desktop */
+    object-fit: cover; /* Recorta a imagem para preencher o espaço mantendo a proporção */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0; /* Remove margens automáticas para permitir que o flexbox gerencie */
+}
+
+/* Largura específica para a imagem da seção de premiações */
+.section-content-split.section-reverse .image-col-right {
+    width: 560px; /* Largura para a imagem de premiações */
+}
+
+
+.section-content-split .text-col-left,
+.section-content-split .text-col-right {
+    flex-grow: 1; /* Permite que o texto cresça para preencher o espaço restante */
+    flex-shrink: 1; /* Permite que o texto encolha se necessário */
+    flex-basis: auto; /* Base inicial flexível */
+    min-width: 300px; /* Largura mínima para o texto antes de quebrar em novas linhas */
+    text-align: justify;
+    hyphens: auto;
+}
+
+.section-content-split h2 {
+    color: #8B0000;
+    text-align: center; /* Centraliza o título dentro da coluna de texto */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.section-content-split p, .section-content-split ul {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.section-content-split ul {
+    list-style: none; /* Remove marcadores padrão */
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.section-content-split ul li {
+    position: relative;
+    padding-left: 20px; /* Espaço para o tracinho */
+    margin-bottom: 10px;
+}
+
+.section-content-split ul li::before {
+    content: "– "; /* Tracinho como marcador */
+    color: #8B0000;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Estilos para seções apenas com texto */
+.section-text-only {
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-text-only h2 {
+    color: #8B0000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.section-text-only p {
+    color: #333;
+    font-size: 1rem;
+    text-align: justify;
+    hyphens: auto;
+    max-width: 900px; /* Limita a largura para melhor legibilidade */
+    margin: 0 auto 1rem auto; /* Centraliza o parágrafo */
+}
+
+.section-text-only ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 900px; /* Centraliza a lista */
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.section-text-only ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.section-text-only ul li::before {
+    content: "– ";
+    color: #8B0000;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+
+/* Cores de Fundo */
+.section-background-white {
+    background: #fff;
+}
+
+.section-background-primary {
+    background: #f5e8ca; /* Cor solicitada para "Formação" */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .section-content-split .content-wrapper {
+        flex-direction: column; /* Empilha a imagem e o texto em telas menores */
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+        gap: 20px; /* Reduz o espaçamento em mobile */
+    }
+
+    .section-content-split.section-reverse .content-wrapper {
+        flex-direction: column; /* Também empilha em telas menores, sem inverter a ordem */
+    }
+
+    .section-content-split .image-col-left,
+    .section-content-split .image-col-right,
+    .section-content-split .text-col-left,
+    .section-content-split .text-col-right {
+        min-width: unset; /* Remove largura mínima para seções quebrarem corretamente */
+        width: 100%; /* Ocupa 100% da largura em mobile */
+        max-width: 100%; /* Garante que ocupem 100% da largura disponível */
+    }
+
+    .section-content-split img {
+        height: 300px; /* Altura menor para imagens em mobile */
+        object-fit: cover;
+    }
+    
+    .section-content-split h2,
+    .section-text-only h2 {
+        font-size: 1.8rem; /* Reduz tamanho dos títulos em mobile */
+    }
+
+    .section-content-split p, .section-content-split ul,
+    .section-text-only p, .section-text-only ul {
+        font-size: 0.95rem; /* Ajusta tamanho do texto em mobile */
+        padding-left: 0; /* Garante alinhamento para listas em mobile */
+    }
 }
