@@ -53,7 +53,7 @@
 .section-content-split .content-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -63,7 +63,10 @@
 
 /* Remover padding superior especificamente para a primeira seção após o banner */
 .section-content-split.section-full-width .content-wrapper {
-    padding: 0 20px;
+    padding: 0 0 0 0;
+    margin: 0;
+    max-width: 100%;
+    justify-content: flex-start;
 }
 
 /* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
@@ -75,12 +78,18 @@
 .section-content-split .image-col-left,
 .section-content-split .image-col-right {
     flex-basis: 556px;
-    flex-shrink: 1;
+    flex-shrink: 0;
     flex-grow: 0;
     height: 800px;
     overflow: hidden;
     border-radius: 0;
     box-shadow: none;
+}
+
+/* Ajuste específico para a primeira seção - imagem colada à esquerda */
+.section-content-split.section-full-width .image-col-right {
+    margin-left: 0;
+    align-self: flex-start;
 }
 
 /* Imagens dentro das colunas */
@@ -104,6 +113,13 @@
     flex-basis: 500px;
     flex-grow: 1;
     padding: 20px;
+    align-self: flex-start;
+}
+
+/* Ajuste específico para o texto da primeira seção */
+.section-content-split.section-full-width .text-col-left {
+    padding: 0 20px 20px 20px;
+    margin-top: 0;
 }
 
 /* Estilos para o nome em grande formato */
