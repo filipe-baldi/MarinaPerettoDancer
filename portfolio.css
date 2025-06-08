@@ -121,13 +121,13 @@
 
 /* Ajuste específico para o texto da primeira seção */
 .section-content-split.section-full-width .text-col-left {
-    padding: 0 20px 20px 20px; /* Ajustado para remover padding superior */
+    padding: 30px 20px 20px 20px; /* AJUSTADO: Adicionado padding superior para descer o texto */
     margin-top: 0; /* Garante que não haja margem superior aqui */
 }
 
 /* Estilos para o nome em grande formato */
 .profile-name-large {
-    font-size: 5rem; /* AUMENTADO: Tamanho maior para o nome */
+    /* REMOVIDO: font-size */
     font-weight: 700;
     color: #8B0000;
     margin: 0; /* Garante que não haja margem acima ou abaixo */
@@ -138,7 +138,7 @@
 
 /* Estilos para o texto de função/papel */
 .profile-role-text {
-    font-size: 1.4rem; /* AUMENTADO: Tamanho ligeiramente maior para o cargo */
+    font-size: 1.4rem; /* Mantido o tamanho maior para o cargo */
     color: #333;
     margin-top: 5px; /* AJUSTADO: Reduzido o espaço acima para colar mais */
     margin-bottom: 5px;
