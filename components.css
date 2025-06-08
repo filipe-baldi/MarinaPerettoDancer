@@ -588,11 +588,11 @@
         grid-template-columns: repeat(3, 1fr); /* 3 colunas */
     }
 }
-/*
+
 @media (min-width: 1200px) { /* Telas muito grandes (desktops mais largos) */
     .video-grid {
         grid-template-columns: repeat(4, 1fr); /* 4 colunas - mantido se desejar mais colunas em telas muito grandes, mas 3 já deve ser o suficiente para a maioria dos casos */
-    }*/
+    }
 }
 
 
