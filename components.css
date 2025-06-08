@@ -684,12 +684,15 @@ body, html {
 .hero-small {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+    display: block; /* Garante que se comporte como bloco */
 }
 
 /* Remove margem/padding superior do main para colar a primeira seção */
 .main-experiencia {
     margin-top: 0 !important;
     padding-top: 0 !important;
+    background-color: transparent; /* Garante que o fundo não cause a faixa branca */
+    display: block; /* Garante que se comporte como bloco */
 }
 
 /* Ajusta o main para que o background não seja exibido no espaço da margem */
@@ -720,17 +723,19 @@ body, html {
     padding-top: 0 !important;
 }
 
-/* NOVO: Garante que o hero-small e o main-experiencia não tenham qualquer 'gap' de altura */
-.hero-small,
-.main-experiencia {
-    vertical-align: top; /* Pode ajudar com espaços fantasma em alguns casos de display inline-block */
-    line-height: 0; /* Remove qualquer altura extra de linha que possa gerar espaço */
-    font-size: 0; /* Remove qualquer espaço de fonte que possa gerar espaço */
+/* NOVO: Remove a altura extra de linha que pode gerar pequenos espaços */
+.body-portfolio-page .hero-small .hero-content,
+.body-portfolio-page .main-experiencia .container {
+    line-height: 0;
+    font-size: 0;
 }
 
-.body-portfolio-page .main-experiencia .section-content-split {
-    line-height: initial; /* Restaura o line-height para o conteúdo dentro da seção */
-    font-size: initial; /* Restaura o font-size para o conteúdo dentro da seção */
+/* NOVO: Restaura as propriedades para o conteúdo dentro da seção */
+.body-portfolio-page .main-experiencia .section-content-split .profile-name-large,
+.body-portfolio-page .main-experiencia .section-content-split .profile-role-text,
+.body-portfolio-page .main-experiencia .section-content-split p {
+    line-height: initial;
+    font-size: initial;
 }
 
 
