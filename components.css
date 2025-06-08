@@ -7,6 +7,7 @@ body, html {
     height: 100%; /* Garante que body e html ocupem 100% da altura */
     width: 100%; /* Garante que body e html ocupem 100% da largura */
     overflow-x: hidden; /* Evita scroll horizontal indesejado */
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura/altura */
 }
 
 /* ========================================= */
@@ -710,7 +711,26 @@ body, html {
 
 /* NOVO: Sobrescreve a margem superior do main-experiencia especificamente para a página do portfólio */
 .body-portfolio-page .main-experiencia {
-    margin-top: -2px !important; /* Valor pode ser ajustado (e.g., -1px, -3px) */
+    margin-top: 0 !important; /* Retorna a 0, pois outros ajustes serão feitos */
+}
+
+/* NOVO: Ajuste direto na primeira seção da página de portfólio */
+.body-portfolio-page .main-experiencia .section-content-split:first-of-type {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* NOVO: Garante que o hero-small e o main-experiencia não tenham qualquer 'gap' de altura */
+.hero-small,
+.main-experiencia {
+    vertical-align: top; /* Pode ajudar com espaços fantasma em alguns casos de display inline-block */
+    line-height: 0; /* Remove qualquer altura extra de linha que possa gerar espaço */
+    font-size: 0; /* Remove qualquer espaço de fonte que possa gerar espaço */
+}
+
+.body-portfolio-page .main-experiencia .section-content-split {
+    line-height: initial; /* Restaura o line-height para o conteúdo dentro da seção */
+    font-size: initial; /* Restaura o font-size para o conteúdo dentro da seção */
 }
 
 
