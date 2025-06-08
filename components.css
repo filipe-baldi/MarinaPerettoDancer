@@ -723,14 +723,20 @@ body, html {
     padding-top: 0 !important;
 }
 
-/* NOVO: Remove a altura extra de linha que pode gerar pequenos espaços */
-.body-portfolio-page .hero-small .hero-content,
+/* REMOVIDO: line-height e font-size para elementos de layout que causavam texto pequeno */
+/* .body-portfolio-page .hero-small .hero-content,
 .body-portfolio-page .main-experiencia .container {
     line-height: 0;
     font-size: 0;
+} */
+
+/* NOVO: Garante que o container dentro do main-experiencia tenha seu próprio line-height e font-size */
+.body-portfolio-page .main-experiencia .container {
+    line-height: initial; /* ou um valor padrão como 1.5 */
+    font-size: initial; /* ou um valor padrão como 16px */
 }
 
-/* NOVO: Restaura as propriedades para o conteúdo dentro da seção */
+/* Restaura as propriedades para o conteúdo dentro da seção (agora que o problema está nos contêineres superiores) */
 .body-portfolio-page .main-experiencia .section-content-split .profile-name-large,
 .body-portfolio-page .main-experiencia .section-content-split .profile-role-text,
 .body-portfolio-page .main-experiencia .section-content-split p {
