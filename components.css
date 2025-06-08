@@ -676,6 +676,18 @@
     padding-bottom: 0 !important;
 }
 
+/* Garantir que o overlay não adicione espaço */
+.hero-small .overlay {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Garantir que o hero-content não adicione espaço */
+.hero-small .hero-content {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 /* NOVO: Remove margem/padding superior do main para colar a primeira seção */
 .main-experiencia {
     margin-top: 0 !important;
