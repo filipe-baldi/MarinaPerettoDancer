@@ -1,5 +1,14 @@
 /* components.css */
 
+/* NOVO: Reset universal para body e html para remover margens/paddings padrão do navegador */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que body e html ocupem 100% da altura */
+    width: 100%; /* Garante que body e html ocupem 100% da largura */
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
+}
+
 /* ========================================= */
 /* Estilos para Seções de Conteúdo Reutilizáveis (descricao, beneficios) */
 /* ========================================= */
@@ -676,13 +685,18 @@
     padding-bottom: 0 !important;
 }
 
-/* NOVO: Remove margem/padding superior do main para colar a primeira seção */
+/* Remove margem/padding superior do main para colar a primeira seção */
 .main-experiencia {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
+/* Ajusta o main para que o background não seja exibido no espaço da margem */
+.main-experiencia {
+    background-color: transparent; /* Garante que o fundo não cause a faixa branca */
+}
 
+/* Ajusta a seção para que o padding seja interno ao invés de externo */
 .section-content-split .content-wrapper {
     display: flex;
     flex-direction: row;
@@ -691,8 +705,14 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0;
-    padding: 20px;
+    padding: 20px; /* Mantém o padding interno para o conteúdo */
 }
+
+/* NOVO: Sobrescreve a margem superior do main-experiencia especificamente para a página do portfólio */
+.body-portfolio-page .main-experiencia {
+    margin-top: -2px !important; /* Valor pode ser ajustado (e.g., -1px, -3px) */
+}
+
 
 /* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
 .section-content-split.section-reverse .content-wrapper {
