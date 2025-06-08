@@ -666,7 +666,7 @@
     padding: 0; /* Remove padding */
     border-radius: 0; /* Remove border-radius */
     box-shadow: none !important; /* Remove box-shadow */
-    margin-top: 40px; /* Mantém o espaçamento superior */
+    margin-top: 0; /* REMOVIDO: Era 40px, agora 0 para encostar na seção de cima */
     margin-bottom: 40px; /* Mantém o espaçamento inferior */
     background: #fff; /* Fundo branco para a seção */
 }
