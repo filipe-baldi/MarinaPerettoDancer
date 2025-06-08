@@ -1,5 +1,15 @@
 /* components.css */
 
+/* NOVO: Reset universal para body e html para remover margens/paddings padrão do navegador */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que body e html ocupem 100% da altura */
+    width: 100%; /* Garante que body e html ocupem 100% da largura */
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura/altura */
+}
+
 /* ========================================= */
 /* Estilos para Seções de Conteúdo Reutilizáveis (descricao, beneficios) */
 /* ========================================= */
@@ -674,27 +684,23 @@
 .hero-small {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+    display: block; /* Garante que se comporte como bloco */
 }
 
-/* Garantir que o overlay não adicione espaço */
-.hero-small .overlay {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* Garantir que o hero-content não adicione espaço */
-.hero-small .hero-content {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* NOVO: Remove margem/padding superior do main para colar a primeira seção */
+/* Remove margem/padding superior do main para colar a primeira seção */
 .main-experiencia {
     margin-top: 0 !important;
     padding-top: 0 !important;
+    background-color: transparent; /* Garante que o fundo não cause a faixa branca */
+    display: block; /* Garante que se comporte como bloco */
 }
 
+/* Ajusta o main para que o background não seja exibido no espaço da margem */
+.main-experiencia {
+    background-color: transparent; /* Garante que o fundo não cause a faixa branca */
+}
 
+/* Ajusta a seção para que o padding seja interno ao invés de externo */
 .section-content-split .content-wrapper {
     display: flex;
     flex-direction: row;
@@ -703,13 +709,62 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0;
-    padding: 0 20px 20px 20px;
+    padding: 20px; /* Mantém o padding interno para o conteúdo */
 }
 
-/* Remover padding superior especificamente para a primeira seção após o banner */
-.section-content-split.section-full-width .content-wrapper {
+/* NOVO: Sobrescreve a margem superior do main-experiencia especificamente para a página do portfólio */
+.body-portfolio-page .main-experiencia {
+    margin-top: 0 !important; /* Retorna a 0, pois outros ajustes serão feitos */
+}
+
+/* NOVO: Ajuste direto na primeira seção da página de portfólio */
+.body-portfolio-page .main-experiencia .section-content-split:first-of-type {
+    margin-top: 0 !important;
     padding-top: 0 !important;
 }
+
+/* REMOVIDO: line-height e font-size para elementos de layout que causavam texto pequeno */
+/* .body-portfolio-page .hero-small .hero-content,
+.body-portfolio-page .main-experiencia .container {
+    line-height: 0;
+    font-size: 0;
+} */
+
+/* NOVO: Garante que o container dentro do main-experiencia tenha seu próprio line-height e font-size */
+.body-portfolio-page .main-experiencia .container {
+    line-height: initial; /* ou um valor padrão como 1.5 */
+    font-size: initial; /* ou um valor padrão como 16px */
+}
+
+/* Restaura as propriedades para o conteúdo dentro da seção (agora que o problema está nos contêineres superiores) */
+.body-portfolio-page .main-experiencia .section-content-split .profile-name-large,
+.body-portfolio-page .main-experiencia .section-content-split .profile-role-text,
+.body-portfolio-page .main-experiencia .section-content-split p {
+    line-height: initial;
+    font-size: initial;
+}
+
+/* NOVO: Estilos para a seção "Formação e Aperfeiçoamento" */
+/* Garante que o fundo da seção ocupe a largura total da tela */
+.section-text-only.section-background-primary { /* Assumindo que você usa esta classe de fundo */
+    padding: 60px 0; /* Remove padding lateral para o fundo ir de ponta a ponta */
+    margin: 0; /* Remove margens que possam estar empurrando */
+    border-radius: 0; /* Remove bordas arredondadas se existirem */
+    box-shadow: none; /* Remove sombra se existirem */
+}
+
+/* Título alinhado à esquerda na seção "Formação e Aperfeiçoamento" */
+.section-text-only.section-background-primary h2 {
+    text-align: left; /* Alinha o título à esquerda */
+}
+
+/* Texto justificado (já está por padrão na .section-text-only p, mas reforçando) */
+.section-text-only.section-background-primary p {
+    text-align: justify;
+    margin: 0 auto 1rem auto; /* Mantém a centralização do parágrafo dentro do container */
+    max-width: 900px; /* Mantém a largura máxima para legibilidade */
+}
+
 
 /* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
 .section-content-split.section-reverse .content-wrapper {
