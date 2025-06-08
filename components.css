@@ -662,7 +662,7 @@
     padding: 0; /* Remove padding */
     border-radius: 0; /* Remove border-radius */
     box-shadow: none !important; /* Remove box-shadow */
-    margin-top: 0; /* REMOVIDO: Era 40px, agora 0 para encostar na seção de cima */
+    margin-top: 0; /* JÁ ESTAVA 0, MAS REFORÇANDO PARA TER CERTEZA QUE NÃO HÁ MARGEM SUPERIOR */
     margin-bottom: 40px; /* Mantém o espaçamento inferior */
     background: #fff; /* Fundo branco para a seção */
 }
@@ -674,6 +674,13 @@
     margin: 0; /* Zera margens para ocupar 100% da largura */
     box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
 }
+
+/* Ajuste para o hero-small para garantir que não haja margem na parte inferior */
+.hero-small {
+    margin-bottom: 0 !important; /* Força a remoção de qualquer margem inferior */
+    padding-bottom: 0 !important; /* Remove qualquer padding inferior que possa causar espaçamento */
+}
+
 
 .section-content-split .content-wrapper {
     display: flex;
