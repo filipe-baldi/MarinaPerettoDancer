@@ -703,7 +703,12 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+/* Remover padding superior especificamente para a primeira seção após o banner */
+.section-content-split.section-full-width .content-wrapper {
+    padding-top: 0 !important;
 }
 
 /* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
