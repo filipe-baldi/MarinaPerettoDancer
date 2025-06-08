@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 20px; /* AJUSTADO: Reduzido o espaço entre foto e texto */
+    gap: 20px; /* Reduzido o espaço entre foto e texto */
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
@@ -111,8 +111,10 @@
 /* Colunas de texto */
 .section-content-split .text-col-left,
 .section-content-split .text-col-right {
-    flex-basis: 500px;
     flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0; /* Permite que a coluna de texto se ajuste */
+    min-width: 350px; /* Garante um tamanho mínimo para o texto */
     padding: 20px; /* Padding interno para o texto dentro da coluna */
     align-self: flex-start;
 }
@@ -125,20 +127,23 @@
 
 /* Estilos para o nome em grande formato */
 .profile-name-large {
-    font-size: 3.5rem;
+    font-size: 5rem; /* AUMENTADO: Tamanho maior para o nome */
     font-weight: 700;
     color: #8B0000;
-    margin: 0;
-    line-height: 1;
+    margin: 0; /* Garante que não haja margem acima ou abaixo */
+    line-height: 1; /* Garante que o texto ocupe apenas sua própria altura */
     letter-spacing: 1px;
+    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 /* Estilos para o texto de função/papel */
 .profile-role-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* AUMENTADO: Tamanho ligeiramente maior para o cargo */
     color: #333;
-    margin-top: 10px;
+    margin-top: 5px; /* AJUSTADO: Reduzido o espaço acima para colar mais */
     margin-bottom: 5px;
+    line-height: 1.2; /* Ajusta a altura da linha para a leitura */
+    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 /* ========================================= */
@@ -148,7 +153,7 @@
 /* Seção apenas com texto */
 .section-text-only {
     padding: 80px 0; /* Mantém padding vertical, remove lateral para fundo full-width */
-    margin: 0 !important; /* NOVO: Garante que não haja margem entre seções */
+    margin: 0 !important; /* Garante que não haja margem entre seções */
     text-align: center;
 }
 
@@ -299,11 +304,13 @@
     }
     
     .profile-name-large {
-        font-size: 2.5rem;
+        font-size: 2.8rem; /* Ajuste responsivo para o nome */
+        text-align: center; /* Centraliza o nome em telas menores */
     }
     
     .profile-role-text {
-        font-size: 1rem;
+        font-size: 1.1rem; /* Ajuste responsivo para o cargo */
+        text-align: center; /* Centraliza o cargo em telas menores */
     }
 }
 
@@ -314,7 +321,7 @@
     }
     
     .profile-name-large {
-        font-size: 2rem;
+        font-size: 2.2rem; /* Ajuste ainda menor para o nome em telas muito pequenas */
     }
     
     .section-text-only {
