@@ -203,22 +203,21 @@
     color: #333;
     margin-bottom: 20px;
     max-width: 800px; /* Largura máxima para legibilidade */
-    margin-left: auto;
-    margin-right: auto;
+    /* REMOVIDO: margin-left: auto; e margin-right: auto; para evitar centralização do bloco */
     text-align: justify; /* Padrão justificado */
 }
 
 /* Estilos para texto em negrito e alinhado à esquerda (Pós graduação...) */
 .text-bold-left {
     font-weight: bold;
-    text-align: left !important; /* CORRIGIDO: Força alinhamento à esquerda */
+    text-align: left !important; /* Força alinhamento à esquerda */
     color: #000;
     margin-bottom: 5px;
 }
 
 /* Estilos para texto normal alinhado à esquerda (BRADANÇA...) */
 .text-left {
-    text-align: left !important; /* CORRIGIDO: Força alinhamento à esquerda */
+    text-align: left !important; /* Força alinhamento à esquerda */
     color: #000;
     margin-bottom: 20px;
 }
@@ -347,7 +346,7 @@
     
     .profile-role-text {
         font-size: 1.2rem; /* Ajuste responsivo para o cargo */
-        text-align: left !important; /* CORRIGIDO: Alinha à esquerda em telas menores */
+        text-align: left !important; /* Alinha à esquerda em telas menores */
     }
 
     .section-text-only .container {
@@ -358,7 +357,7 @@
         text-align: left !important; /* Mantido alinhamento à esquerda em telas menores */
     }
     .text-bold-left, .text-left {
-        text-align: left !important; /* CORRIGIDO: Alinha à esquerda em telas menores */
+        text-align: left !important; /* Alinha à esquerda em telas menores */
     }
 }
 
