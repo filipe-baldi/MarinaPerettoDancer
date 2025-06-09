@@ -162,6 +162,14 @@
     font-size: 2rem;
 }
 
+/* Estilos para o título alinhado à esquerda */
+.section-title-left {
+    text-align: left;
+    color: #8B0000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
 /* Estilos para parágrafos */
 .section-text-only p {
     color: #333;
@@ -169,6 +177,21 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Estilos para texto em negrito e alinhado à esquerda */
+.text-bold-left {
+    font-weight: bold;
+    text-align: left;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+/* Estilos para texto normal alinhado à esquerda */
+.text-left {
+    text-align: left;
+    color: #000;
+    margin-bottom: 20px;
 }
 
 /* Estilos para listas */
