@@ -34,17 +34,18 @@
 
 /* Estilos para seções com imagem e texto */
 .section-content-split {
-    padding: 80px 0; /* Padding vertical para a seção, mas o horizontal é 0 para fundo full-width */
+    padding: 0;
     border-radius: 0;
     box-shadow: none !important;
-    margin: 0; /* Garante que não haja margens externas */
+    margin-top: 0;
+    margin-bottom: 0; /* Alterado para 0 para colar as seções */
     background: #fff;
 }
 
 /* Classe para a primeira seção do portfólio para largura total */
 .section-content-split.section-full-width {
     max-width: 100vw;
-    padding: 0; /* Remove todo o padding para esta seção, para colagem */
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -53,21 +54,17 @@
 .section-content-split .content-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    gap: 20px; /* Reduzido o espaço entre foto e texto */
+    align-items: flex-start; /* Alterado para flex-start para alinhar o texto com o nome */
+    gap: 40px;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0;
+    padding: 0 20px 20px 20px;
 }
 
 /* Remover padding superior especificamente para a primeira seção após o banner */
-/* Esta regra garante que o conteúdo interno desta seção não tenha padding-top extra */
 .section-content-split.section-full-width .content-wrapper {
-    padding: 0 20px; /* Mantém padding lateral, mas remove top/bottom */
-    margin: 0; /* Garante que o wrapper não tenha margens */
-    max-width: 100%; /* Garante que o wrapper ocupe a largura total disponível */
-    justify-content: flex-start;
+    padding-top: 0 !important;
 }
 
 /* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
@@ -78,19 +75,13 @@
 /* Colunas de imagem */
 .section-content-split .image-col-left,
 .section-content-split .image-col-right {
-    flex-basis: 556px;
-    flex-shrink: 0;
+    flex-basis: 556px; /* Definido largura fixa */
+    flex-shrink: 0; /* Não encolher */
     flex-grow: 0;
-    height: 800px;
+    height: 800px; /* Definido altura fixa */
     overflow: hidden;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-/* Ajuste específico para a primeira seção - imagem colada à esquerda */
-.section-content-split.section-full-width .image-col-right {
-    margin-left: 0;
-    align-self: flex-start;
+    border-radius: 0; /* Removido border-radius */
+    box-shadow: none; /* Removido box-shadow */
 }
 
 /* Imagens dentro das colunas */
@@ -111,39 +102,27 @@
 /* Colunas de texto */
 .section-content-split .text-col-left,
 .section-content-split .text-col-right {
+    flex-basis: 500px;
     flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0; /* Permite que a coluna de texto se ajuste */
-    min-width: 350px; /* Garante um tamanho mínimo para o texto */
-    padding: 20px; /* Padding interno para o texto dentro da coluna */
-    align-self: flex-start;
-}
-
-/* Ajuste específico para o texto da primeira seção */
-.section-content-split.section-full-width .text-col-left {
-    padding: 100px 20px 20px 20px; /* Mantido padding superior para descer mais o texto */
-    margin-top: 0; /* Garante que não haja margem superior aqui */
+    padding: 20px;
 }
 
 /* Estilos para o nome em grande formato */
 .profile-name-large {
-    font-size: 7rem; /* Mantido: Tamanho maior para o nome */
+    font-size: 3.5rem;
     font-weight: 700;
     color: #8B0000;
-    margin: 0; /* Garante que não haja margem acima ou abaixo */
-    line-height: 1; /* Garante que o texto ocupe apenas sua própria altura */
+    margin: 0;
+    line-height: 1;
     letter-spacing: 1px;
-    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 /* Estilos para o texto de função/papel */
 .profile-role-text {
-    font-size: 1.6rem; /* Mantido: Tamanho ligeiramente maior para o cargo para complementar o nome */
+    font-size: 1.2rem;
     color: #333;
-    margin-top: 10px; /* Espaço levemente maior para separar do nome */
+    margin-top: 0; /* Removido margin-top para alinhar com o nome */
     margin-bottom: 5px;
-    line-height: 1.2; /* Ajusta a altura da linha para a leitura */
-    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 /* ========================================= */
@@ -152,8 +131,9 @@
 
 /* Seção apenas com texto */
 .section-text-only {
-    padding: 80px 0; /* Mantém padding vertical, remove lateral para fundo full-width */
-    margin: 0 !important; /* Garante que não haja margem entre seções */
+    padding: 60px 20px;
+    margin-top: 0;
+    margin-bottom: 0; /* Alterado para 0 para colar as seções */
     text-align: center;
 }
 
@@ -168,28 +148,19 @@
 }
 
 /* Estilos para títulos de seção */
-.section-text-only h2,
-.section-content-split h2 {
+.section-text-only h2 {
     color: #8B0000;
     margin-bottom: 20px;
     font-size: 2rem;
 }
 
 /* Estilos para parágrafos */
-.section-text-only p,
-.section-content-split p {
+.section-text-only p {
     color: #333;
     margin-bottom: 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Container para seções de texto apenas */
-.section-text-only .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; /* Padding lateral para o conteúdo interno */
 }
 
 /* Estilos para listas */
@@ -304,13 +275,11 @@
     }
     
     .profile-name-large {
-        font-size: 2.8rem; /* Ajuste responsivo para o nome */
-        text-align: center; /* Centraliza o nome em telas menores */
+        font-size: 2.5rem;
     }
     
     .profile-role-text {
-        font-size: 1.1rem; /* Ajuste responsivo para o cargo */
-        text-align: left; /* CORRIGIDO: Alinha à esquerda em telas menores */
+        font-size: 1rem;
     }
 }
 
@@ -321,7 +290,7 @@
     }
     
     .profile-name-large {
-        font-size: 2.2rem; /* Ajuste ainda menor para o nome em telas muito pequenas */
+        font-size: 2rem;
     }
     
     .section-text-only {
@@ -332,3 +301,5 @@
         padding: 10px;
     }
 }
+
+
