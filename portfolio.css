@@ -127,7 +127,7 @@
 
 /* Estilos para o nome em grande formato */
 .profile-name-large {
-    font-size: 7rem; /* Mantido: Tamanho maior para o nome */
+    font-size: 10rem; /* Mantido: Tamanho maior para o nome */
     font-weight: 700;
     color: #8B0000;
     margin: 0; /* Garante que não haja margem acima ou abaixo */
