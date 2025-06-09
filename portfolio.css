@@ -163,13 +163,14 @@
 .section-text-only {
     padding: 0; /* O padding vertical será movido para o container interno */
     margin: 0 !important; /* Garante que as seções se colem */
-    text-align: center; /* Alinhamento padrão para o conteúdo da seção (será sobrescrito para left) */
+    /* REMOVIDO: text-align: center; para que o conteúdo interno possa se alinhar à esquerda */
 }
 
 /* Container para seções de texto apenas (controla o padding interno e largura máxima) */
 .section-text-only .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* REMOVIDO: max-width: 1200px; */ /* Permitir que o container ocupe a largura total disponível */
+    /* REMOVIDO: margin: 0 auto; */ /* Remover centralização do bloco do container */
+    width: 100%; /* Garante que o container ocupe a largura total de seu pai */
     padding: 80px 20px; /* Padding vertical e horizontal para o conteúdo dentro da faixa */
 }
 
@@ -188,9 +189,11 @@
     color: #8B0000;
     margin-bottom: 20px;
     font-size: 2rem;
+    text-align: left !important; /* Força alinhamento à esquerda para todos os h2 em seções text-only */
 }
 
 /* Estilos para o título alinhado à esquerda (Formação, etc.) */
+/* Mantido para clareza, embora a regra acima de section-text-only h2 já possa cobrir */
 .section-title-left {
     text-align: left !important; /* Força alinhamento à esquerda */
     color: #8B0000;
@@ -202,9 +205,9 @@
 .section-text-only p {
     color: #333;
     margin-bottom: 20px;
-    max-width: 800px; /* Largura máxima para legibilidade */
+    /* REMOVIDO: max-width: 800px; */ /* Permitir que o parágrafo ocupe a largura total do container */
     /* REMOVIDO: margin-left: auto; e margin-right: auto; para evitar centralização do bloco */
-    text-align: justify; /* Padrão justificado */
+    text-align: left !important; /* Força alinhamento à esquerda para parágrafos */
 }
 
 /* Estilos para texto em negrito e alinhado à esquerda (Pós graduação...) */
@@ -226,8 +229,8 @@
 .section-text-only ul {
     list-style-type: disc; /* Bolinhas padrão */
     padding-left: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    /* REMOVIDO: max-width: 800px; */ /* Permitir que a lista ocupe a largura total do container */
+    margin: 0; /* Alterado de 0 auto para 0 para alinhar à esquerda */
     text-align: left;
 }
 
@@ -351,6 +354,7 @@
 
     .section-text-only .container {
         padding: 40px 20px; /* Ajuste de padding para seções de texto em telas menores */
+        /* REMOVIDO: max-width e margin: auto nas media queries se existissem */
     }
 
     .section-title-left {
