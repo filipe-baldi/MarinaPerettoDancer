@@ -395,10 +395,17 @@
     padding-right: 20px;
 }
 
-.content-wrapper-single-image img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Centraliza a imagem */
+
+/* Ajuste de fontes maiores para a seção Formação */
+.section-text-only.section-full-width h2.section-title-left {
+    font-size: 2.4rem;
+}
+
+.section-text-only.section-full-width p {
+    font-size: 1.2rem;
+}
+
+/* Reduz o espaçamento entre os dois parágrafos */
+.text-bold-left {
+    margin-bottom: 10px; /* Antes era 20px ou 5px */
 }
