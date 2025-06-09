@@ -409,3 +409,9 @@
 .text-bold-left {
     margin-bottom: 10px; /* Antes era 20px ou 5px */
 }
+
+
+/* Reduzido ainda mais para aproximar o título e o conteúdo */
+.text-bold-left {
+    margin-bottom: 2px;
+}
