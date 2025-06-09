@@ -204,7 +204,7 @@
 /* Estilos para parágrafos (dentro de text-only) */
 .section-text-only p {
     color: #333;
-    margin-bottom: 20px;
+     /*margin-bottom: 20px;*/
     /* REMOVIDO: max-width: 800px; */ /* Permitir que o parágrafo ocupe a largura total do container */
     /* REMOVIDO: margin-left: auto; e margin-right: auto; para evitar centralização do bloco */
     text-align: left !important; /* Força alinhamento à esquerda para parágrafos */
