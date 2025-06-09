@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Marina Peretto | Danças Árabes</title>
+    <!-- Corrigido o caminho do CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Substituído components.css pelo novo portfolio.css exclusivo -->
     <link rel="stylesheet" href="portfolio.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -22,120 +24,60 @@
 </section>
 
 <main class="main-experiencia">
-    <!-- SEÇÃO 1: MARINA PERETTO (Fundo Branco) -->
+    <!-- A PRIMEIRA SEÇÃO AGORA OCUPA A LARGURA TOTAL DA TELA, SEM O CONTAINER INTERNO -->
     <section class="section-content-split section-background-white section-reverse section-full-width">
         <div class="content-wrapper">
             <div class="text-col-left">
                 <h2 class="profile-name-large">MARINA</h2>
                 <h2 class="profile-name-large">PERETTO</h2>
-                <p class="profile-role-text">Bailarina, professora, coreógrafa </p>
-                <p class="profile-role-text">e pesquisadora de Danças Árabes</p>
+                <p class="profile-role-text">Bailarina, professora, coreógrafa e pesquisadora de Danças Árabes</p>
             </div>
             <div class="image-col-right">
-                <img src="imagens/portfolio/Siteurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem';">
+                <img src="imagens/portfolio/Siteurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src=\'https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem\';">
             </div>
         </div>
     </section>
+    <!-- FIM DA SEÇÃO DE LARGURA TOTAL -->
 
-    <!-- SEÇÃO 2: FORMAÇÃO (Fundo #f5e8ca - Apenas Texto) -->
-    <section class="section-text-only section-background-primary">
-        <div class="container">
-            <h2>Formação e Aperfeiçoamento</h2>
-            <p>Acredito que o estudo constante é a chave para a evolução artística. Minha formação inclui:</p>
-            <ul>
-                <li>Imersões e workshops com mestres renomados do Egito, Líbano e Iraque.</li>
-                <li>Certificação em "Oriental Dance Technique" com Dr. Tamer Aziz (Egito).</li>
-                <li>Participação em festivais internacionais, ampliando minha visão sobre as diversas vertentes da dança árabe.</li>
-                <li>Pesquisa contínua sobre a história, folclore e música árabe para uma interpretação autêntica e respeitosa.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 3: PREMIAÇÕES (Fundo Branco - Texto à Esquerda, Imagem à Direita) -->
-    <section class="section-content-split section-background-white section-reverse">
-        <div class="content-wrapper">
-            <div class="text-col-left">
-                <h2>Reconhecimento e Premiações</h2>
-                <p>É com grande honra que compartilho alguns dos reconhecimentos e premiações que tive o privilégio de receber ao longo da minha carreira.</p>
-                <p>Esses momentos são o reflexo de dedicação, paixão e um constante esforço em aprimorar minha arte e levar a dança árabe a novos patamares, sendo um incentivo para continuar a trilhar este caminho com excelência e autenticidade.</p>
+    <div class="container"> <!-- ESTE CONTAINER CONTINUA PARA AS SEÇÕES SEGUINTES -->
+        <!-- SEÇÃO: FORMAÇÃO (Fundo #f5e8ca) -->
+        <section class="section-text-only section-background-primary">
+            <div class="container">
+                <h2>Formação e Aperfeiçoamento</h2>
+                <p>Acredito que o estudo constante é a chave para a evolução artística. Minha formação inclui:</p>
                 <ul>
-                    <li><strong>2023:</strong> Prêmio "Bailarina Destaque do Ano" no Festival Internacional de Danças Árabes.</li>
-                    <li><strong>2022:</strong> 1º Lugar na categoria "Solo Profissional Clássico" no Campeonato Nacional de Dança Oriental.</li>
-                    <li><strong>2021:</strong> Homenagem Especial por Contribuição Artística ao Folclore Árabe.</li>
+                    <li>Imersões e workshops com mestres renomados do Egito, Líbano e Iraque.</li>
+                    <li>Certificação em "Oriental Dance Technique" com Dr. Tamer Aziz (Egito).</li>
+                    <li>Participação em festivais internacionais, ampliando minha visão sobre as diversas vertentes da dança árabe.</li>
+                    <li>Pesquisa contínua sobre a história, folclore e música árabe para uma interpretação autêntica e respeitosa.</li>
                 </ul>
             </div>
-            <div class="image-col-right">
-                <img src="https://placehold.co/556x800/F0F0F0/8B0000?text=Premiações" alt="Marina Peretto recebendo premiação" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Premiações';">
-            </div>
-        </div>
-    </section>
+        </section>
+        <!-- FIM DA SEÇÃO -->
 
-    <!-- SEÇÃO 4: EXPERIÊNCIA ARTÍSTICA (Fundo #f5e8ca - Apenas Texto) -->
-    <section class="section-text-only section-background-primary">
-        <div class="container">
-            <h2>Experiência Artística</h2>
-            <p>Ao longo de mais de 15 anos dedicados às danças árabes, construí uma trajetória sólida e diversificada, explorando diferentes vertentes e estilos desta arte milenar.</p>
-            <p>Minha experiência abrange desde apresentações em teatros renomados até workshops internacionais, sempre buscando a excelência técnica e a autenticidade cultural em cada performance.</p>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 5: PERFORMANCES (Fundo Branco - Imagem à Esquerda, Texto à Direita) -->
-    <section class="section-content-split section-background-white">
-        <div class="content-wrapper">
-            <div class="image-col-left">
-                <img src="https://placehold.co/556x800/F0F0F0/8B0000?text=Performance" alt="Marina Peretto em performance" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Performance';">
+        <!-- SEÇÃO: PREMIAÇÕES (IMAGEM DIREITA, TEXTO ESQUERDA, Fundo Branco) -->
+        <section class="section-content-split section-background-white section-reverse">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="text-col-left">
+                        <h2>Reconhecimento e Premiações</h2>
+                        <p>É com grande honra que compartilho alguns dos reconhecimentos e premiações que tive o privilégio de receber ao longo da minha carreira.</p>
+                        <p>Esses momentos são o reflexo de dedicação, paixão e um constante esforço em aprimorar minha arte e levar a dança árabe a novos patamares, sendo um incentivo para continuar a trilhar este caminho com excelência e autenticidade.</p>
+                        <ul>
+                            <li><strong>2023:</strong> Prêmio "Bailarina Destaque do Ano" no Festival Internacional de Danças Árabes.</li>
+                            <li><strong>2022:</strong> 1º Lugar na categoria "Solo Profissional Clássico" no Campeonato Nacional de Dança Oriental.</li>
+                            <li><strong>2021:</strong> Homenagem Especial por Contribuição Artística ao Folclore Árabe.</li>
+                        </ul>
+                    </div>
+                    <div class="image-col-right">
+                        <img src="https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem" alt="Sua imagem aqui (560x800px)" onerror="this.onerror=null;this.src=\'https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem\';">
+                    </div>
+                </div>
             </div>
-            <div class="text-col-right">
-                <h2>Performances e Apresentações</h2>
-                <p>Minhas performances são caracterizadas pela fusão harmoniosa entre técnica apurada e expressão emocional autêntica, criando experiências únicas para o público.</p>
-                <p>Cada apresentação é cuidadosamente preparada, desde a escolha musical até os detalhes do figurino, garantindo que a essência da dança árabe seja transmitida de forma respeitosa e envolvente.</p>
-                <ul>
-                    <li>Mais de 200 apresentações em teatros e eventos culturais</li>
-                    <li>Participação em festivais nacionais e internacionais</li>
-                    <li>Colaborações com músicos e artistas renomados</li>
-                    <li>Performances em embaixadas e centros culturais árabes</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 6: ENSINO E PEDAGOGIA (Fundo #f5e8ca - Apenas Texto) -->
-    <section class="section-text-only section-background-primary">
-        <div class="container">
-            <h2>Ensino e Pedagogia</h2>
-            <p>A transmissão do conhecimento é uma das minhas maiores paixões. Desenvolvi uma metodologia própria que combina técnica tradicional com abordagens pedagógicas modernas.</p>
-            <p>Acredito que cada aluna possui um potencial único, e meu papel é guiá-la na descoberta de sua própria expressão artística através da dança árabe.</p>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 7: WORKSHOPS E MASTERCLASSES (Fundo Branco - Texto à Esquerda, Imagem à Direita) -->
-    <section class="section-content-split section-background-white section-reverse">
-        <div class="content-wrapper">
-            <div class="text-col-left">
-                <h2>Workshops e Masterclasses</h2>
-                <p>Ministro workshops e masterclasses em todo o Brasil, compartilhando conhecimentos técnicos e culturais sobre as danças árabes.</p>
-                <p>Cada workshop é uma oportunidade de mergulhar profundamente em aspectos específicos da dança, desde técnicas de véu até interpretação musical e história cultural.</p>
-                <ul>
-                    <li>Workshops de técnica clássica e folclore</li>
-                    <li>Masterclasses de interpretação musical</li>
-                    <li>Seminários sobre história e cultura árabe</li>
-                    <li>Formação de professoras</li>
-                </ul>
-            </div>
-            <div class="image-col-right">
-                <img src="https://placehold.co/556x800/F0F0F0/8B0000?text=Workshop" alt="Marina Peretto ensinando em workshop" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Workshop';">
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 8: PESQUISA E CULTURA (Fundo #f5e8ca - Apenas Texto) -->
-    <section class="section-text-only section-background-primary">
-        <div class="container">
-            <h2>Pesquisa e Preservação Cultural</h2>
-            <p>Dedico parte significativa do meu tempo à pesquisa sobre as origens e evolução das danças árabes, contribuindo para a preservação e disseminação desta rica tradição cultural.</p>
-            <p>Através de estudos aprofundados e viagens aos países árabes, busco sempre aprimorar meu conhecimento e garantir a autenticidade em meu trabalho artístico e pedagógico.</p>
-        </div>
-    </section>
+        </section>
+        <!-- FIM DA SEÇÃO -->
+        
+    </div> <!-- FIM DO CONTAINER PRINCIPAL PARA AS SEÇÕES SEGUINTES -->
 </main>
 
 <!-- Placeholder para a seção de Contato -->
@@ -146,86 +88,89 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- ESTRUTURA DO MODAL (LIGHTBOX) -->
+<!-- ESTRUTURA DO MODAL (LIGHTBOX) - Reutilizada e definida em portfolio.css -->
 <div id="imageModal" class="modal-overlay">
     <div class="modal-content">
         <img id="modalImage" src="" alt="Imagem Ampliada">
         <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
     </div>
 </div>
+<!-- FIM DA ESTRUTURA DO MODAL -->
 
 <!-- Script principal para carregar header e contato -->
 <script src="scripts.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Lógica dos cabeçalhos colapsáveis
-        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+    document.addEventListener(\'DOMContentLoaded\', function() {
+        // Lógica dos cabeçalhos colapsáveis (agora global para todas as páginas que usam .collapsible-header)
+        const collapsibleHeaders = document.querySelectorAll(\'.collapsible-header\');
 
         collapsibleHeaders.forEach(header => {
             const collapsibleContent = header.nextElementSibling;
 
             if (collapsibleContent) {
-                collapsibleContent.style.maxHeight = '0';
-                collapsibleContent.style.paddingTop = '0';
-                collapsibleContent.style.paddingBottom = '0';
+                collapsibleContent.style.maxHeight = \'0\';
+                collapsibleContent.style.paddingTop = \'0\';
+                collapsibleContent.style.paddingBottom = \'0\';
 
-                header.addEventListener('click', function() {
-                    this.classList.toggle('active');
+                header.addEventListener(\'click\', function() {
+                    this.classList.toggle(\'active\');
 
-                    if (collapsibleContent.classList.contains('expanded')) {
-                        collapsibleContent.classList.remove('expanded');
-                        collapsibleContent.style.maxHeight = '0';
-                        collapsibleContent.style.paddingTop = '0';
-                        collapsibleContent.style.paddingBottom = '0';
+                    if (collapsibleContent.classList.contains(\'expanded\')) {
+                        collapsibleContent.classList.remove(\'expanded\');
+                        collapsibleContent.style.maxHeight = \'0\';
+                        collapsibleContent.style.paddingTop = \'0\';
+                        collapsibleContent.style.paddingBottom = \'0\';
                     } else {
-                        collapsibleContent.classList.add('expanded');
-                        collapsibleContent.style.paddingTop = '20px';
-                        collapsibleContent.style.paddingBottom = '20px';
+                        collapsibleContent.classList.add(\'expanded\');
+                        collapsibleContent.style.paddingTop = \'20px\';
+                        collapsibleContent.style.paddingBottom = \'20px\';
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
-                window.addEventListener('resize', () => {
-                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
+                window.addEventListener(\'resize\', () => {
+                    if (collapsibleContent.classList.contains(\'expanded\') && collapsibleContent.style.maxHeight !== \'none\') {
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
-                collapsibleContent.addEventListener('transitionend', () => {
-                    if (collapsibleContent.classList.contains('expanded')) {
-                        collapsibleContent.style.maxHeight = 'none';
+                collapsibleContent.addEventListener(\'transitionend\', () => {
+                    if (collapsibleContent.classList.contains(\'expanded\')) {
+                        collapsibleContent.style.maxHeight = \'none\';
                     }
                 });
             }
         });
 
-        // Lógica do Modal de Imagem
-        const portfolioImages = document.querySelectorAll('.section-content-split img');
-        const imageModal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const closeModalBtn = document.getElementById('closeModalBtn');
+        // Lógica do Modal de Imagem (agora global para todas as páginas que usam .enlarge-image)
+        // Alterado para selecionar apenas imagens dentro das novas seções de conteúdo dividido se elas tivessem .enlarge-image
+        // ou remover completamente se a galeria principal for a única com isso
+        const portfolioImages = document.querySelectorAll(\'.section-content-split img\'); // Seleciona apenas imagens nas novas seções
+        const imageModal = document.getElementById(\'imageModal\');
+        const modalImage = document.getElementById(\'modalImage\');
+        const closeModalBtn = document.getElementById(\'closeModalBtn\');
 
         portfolioImages.forEach(img => {
-            img.addEventListener('click', function() {
+            img.addEventListener(\'click\', function() {
                 modalImage.src = this.src;
-                imageModal.classList.add('visible');
+                imageModal.classList.add(\'visible\');
             });
         });
 
-        closeModalBtn.addEventListener('click', function() {
-            imageModal.classList.remove('visible');
+        closeModalBtn.addEventListener(\'click\', function() {
+            imageModal.classList.remove(\'visible\');
         });
 
-        imageModal.addEventListener('click', function(event) {
+        imageModal.addEventListener(\'click\', function(event) {
             if (event.target === imageModal) {
-                imageModal.classList.remove('visible');
+                imageModal.classList.remove(\'visible\');
             }
         });
 
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
-                imageModal.classList.remove('visible');
+        document.addEventListener(\'keydown\', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains(\'visible\')) {
+                imageModal.classList.remove(\'visible\');
             }
         });
     });
@@ -233,3 +178,5 @@
 
 </body>
 </html>
+
+
