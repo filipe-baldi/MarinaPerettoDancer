@@ -1,334 +1,235 @@
-/* portfolio.css - Estilos exclusivos para a página de portfólio */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Marina Peretto | Danças Árabes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="body-portfolio-page">
 
-/* ========================================= */
-/* Estilos para o banner do portfólio */
-/* ========================================= */
+<!-- Placeholder para o Header dinâmico -->
+<header id="header-placeholder"></header>
 
-/* Garantir que não haja espaço entre o banner e a seção seguinte */
-.hero-small {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
+<section class="hero-small">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Portfólio</h1>
+        <p>Confira um pouco da minha trajetória artística através de fotos e vídeos.</p>
+    </div>
+</section>
 
-/* Garantir que o overlay não adicione espaço */
-.hero-small .overlay {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
+<main class="main-experiencia">
+    <!-- SEÇÃO 1: MARINA PERETTO (Fundo Branco) -->
+    <section class="section-content-split section-background-white section-reverse section-full-width">
+        <div class="content-wrapper">
+            <div class="text-col-left">
+                <h2 class="profile-name-large">MARINA</h2>
+                <h2 class="profile-name-large">PERETTO</h2>
+                <p class="profile-role-text">Bailarina, professora, coreógrafa </p>
+                <p class="profile-role-text">e pesquisadora de Danças Árabes</p>
+            </div>
+            <div class="image-col-right">
+                <img src="imagens/portfolio/Siteurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem';">
+            </div>
+        </div>
+    </section>
 
-/* Garantir que o hero-content não adicione espaço */
-.hero-small .hero-content {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
+    <!-- SEÇÃO 2: FORMAÇÃO (Fundo #f5e8ca - Apenas Texto) -->
+    <section class="section-text-only section-background-primary">
+        <div class="container">
+            <h2>Formação e Aperfeiçoamento</h2>
+            <p>Acredito que o estudo constante é a chave para a evolução artística. Minha formação inclui:</p>
+            <ul>
+                <li>Imersões e workshops com mestres renomados do Egito, Líbano e Iraque.</li>
+                <li>Certificação em "Oriental Dance Technique" com Dr. Tamer Aziz (Egito).</li>
+                <li>Participação em festivais internacionais, ampliando minha visão sobre as diversas vertentes da dança árabe.</li>
+                <li>Pesquisa contínua sobre a história, folclore e música árabe para uma interpretação autêntica e respeitosa.</li>
+            </ul>
+        </div>
+    </section>
 
-/* Remove margem/padding superior do main para colar a primeira seção */
-.main-experiencia {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
+    <!-- SEÇÃO 3: PREMIAÇÕES (Fundo Branco - Texto à Esquerda, Imagem à Direita) -->
+    <section class="section-content-split section-background-white section-reverse">
+        <div class="content-wrapper">
+            <div class="text-col-left">
+                <h2>Reconhecimento e Premiações</h2>
+                <p>É com grande honra que compartilho alguns dos reconhecimentos e premiações que tive o privilégio de receber ao longo da minha carreira.</p>
+                <p>Esses momentos são o reflexo de dedicação, paixão e um constante esforço em aprimorar minha arte e levar a dança árabe a novos patamares, sendo um incentivo para continuar a trilhar este caminho com excelência e autenticidade.</p>
+                <ul>
+                    <li><strong>2023:</strong> Prêmio "Bailarina Destaque do Ano" no Festival Internacional de Danças Árabes.</li>
+                    <li><strong>2022:</strong> 1º Lugar na categoria "Solo Profissional Clássico" no Campeonato Nacional de Dança Oriental.</li>
+                    <li><strong>2021:</strong> Homenagem Especial por Contribuição Artística ao Folclore Árabe.</li>
+                </ul>
+            </div>
+            <div class="image-col-right">
+                <img src="https://placehold.co/556x800/F0F0F0/8B0000?text=Premiações" alt="Marina Peretto recebendo premiação" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Premiações';">
+            </div>
+        </div>
+    </section>
 
-/* ========================================= */
-/* Estilos para seções de conteúdo do portfólio */
-/* ========================================= */
+    <!-- SEÇÃO 4: EXPERIÊNCIA ARTÍSTICA (Fundo #f5e8ca - Apenas Texto) -->
+    <section class="section-text-only section-background-primary">
+        <div class="container">
+            <h2>Experiência Artística</h2>
+            <p>Ao longo de mais de 15 anos dedicados às danças árabes, construí uma trajetória sólida e diversificada, explorando diferentes vertentes e estilos desta arte milenar.</p>
+            <p>Minha experiência abrange desde apresentações em teatros renomados até workshops internacionais, sempre buscando a excelência técnica e a autenticidade cultural em cada performance.</p>
+        </div>
+    </section>
 
-/* Estilos para seções com imagem e texto */
-.section-content-split {
-    padding: 80px 0; /* Padding vertical para a seção, mas o horizontal é 0 para fundo full-width */
-    border-radius: 0;
-    box-shadow: none !important;
-    margin: 0; /* Garante que não haja margens externas */
-    background: #fff;
-}
+    <!-- SEÇÃO 5: PERFORMANCES (Fundo Branco - Imagem à Esquerda, Texto à Direita) -->
+    <section class="section-content-split section-background-white">
+        <div class="content-wrapper">
+            <div class="image-col-left">
+                <img src="https://placehold.co/556x800/F0F0F0/8B0000?text=Performance" alt="Marina Peretto em performance" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Performance';">
+            </div>
+            <div class="text-col-right">
+                <h2>Performances e Apresentações</h2>
+                <p>Minhas performances são caracterizadas pela fusão harmoniosa entre técnica apurada e expressão emocional autêntica, criando experiências únicas para o público.</p>
+                <p>Cada apresentação é cuidadosamente preparada, desde a escolha musical até os detalhes do figurino, garantindo que a essência da dança árabe seja transmitida de forma respeitosa e envolvente.</p>
+                <ul>
+                    <li>Mais de 200 apresentações em teatros e eventos culturais</li>
+                    <li>Participação em festivais nacionais e internacionais</li>
+                    <li>Colaborações com músicos e artistas renomados</li>
+                    <li>Performances em embaixadas e centros culturais árabes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-/* Classe para a primeira seção do portfólio para largura total */
-.section-content-split.section-full-width {
-    max-width: 100vw;
-    padding: 0; /* Remove todo o padding para esta seção, para colagem */
-    margin: 0;
-    box-sizing: border-box;
-}
+    <!-- SEÇÃO 6: ENSINO E PEDAGOGIA (Fundo #f5e8ca - Apenas Texto) -->
+    <section class="section-text-only section-background-primary">
+        <div class="container">
+            <h2>Ensino e Pedagogia</h2>
+            <p>A transmissão do conhecimento é uma das minhas maiores paixões. Desenvolvi uma metodologia própria que combina técnica tradicional com abordagens pedagógicas modernas.</p>
+            <p>Acredito que cada aluna possui um potencial único, e meu papel é guiá-la na descoberta de sua própria expressão artística através da dança árabe.</p>
+        </div>
+    </section>
 
-/* Wrapper de conteúdo para seções divididas */
-.section-content-split .content-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px; /* Reduzido o espaço entre foto e texto */
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    <!-- SEÇÃO 7: WORKSHOPS E MASTERCLASSES (Fundo Branco - Texto à Esquerda, Imagem à Direita) -->
+    <section class="section-content-split section-background-white section-reverse">
+        <div class="content-wrapper">
+            <div class="text-col-left">
+                <h2>Workshops e Masterclasses</h2>
+                <p>Ministro workshops e masterclasses em todo o Brasil, compartilhando conhecimentos técnicos e culturais sobre as danças árabes.</p>
+                <p>Cada workshop é uma oportunidade de mergulhar profundamente em aspectos específicos da dança, desde técnicas de véu até interpretação musical e história cultural.</p>
+                <ul>
+                    <li>Workshops de técnica clássica e folclore</li>
+                    <li>Masterclasses de interpretação musical</li>
+                    <li>Seminários sobre história e cultura árabe</li>
+                    <li>Formação de professoras</li>
+                </ul>
+            </div>
+            <div class="image-col-right">
+                <img src="https://placehold.co/556x800/F0F0F0/8B0000?text=Workshop" alt="Marina Peretto ensinando em workshop" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Workshop';">
+            </div>
+        </div>
+    </section>
 
-/* Remover padding superior especificamente para a primeira seção após o banner */
-/* Esta regra garante que o conteúdo interno desta seção não tenha padding-top extra */
-.section-content-split.section-full-width .content-wrapper {
-    padding: 0 20px; /* Mantém padding lateral, mas remove top/bottom */
-    margin: 0; /* Garante que o wrapper não tenha margens */
-    max-width: 100%; /* Garante que o wrapper ocupe a largura total disponível */
-    justify-content: flex-start;
-}
+    <!-- SEÇÃO 8: PESQUISA E CULTURA (Fundo #f5e8ca - Apenas Texto) -->
+    <section class="section-text-only section-background-primary">
+        <div class="container">
+            <h2>Pesquisa e Preservação Cultural</h2>
+            <p>Dedico parte significativa do meu tempo à pesquisa sobre as origens e evolução das danças árabes, contribuindo para a preservação e disseminação desta rica tradição cultural.</p>
+            <p>Através de estudos aprofundados e viagens aos países árabes, busco sempre aprimorar meu conhecimento e garantir a autenticidade em meu trabalho artístico e pedagógico.</p>
+        </div>
+    </section>
+</main>
 
-/* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
-.section-content-split.section-reverse .content-wrapper {
-    flex-direction: row-reverse;
-}
+<!-- Placeholder para a seção de Contato -->
+<div id="secao-contato"></div>
 
-/* Colunas de imagem */
-.section-content-split .image-col-left,
-.section-content-split .image-col-right {
-    flex-basis: 556px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    height: 800px;
-    overflow: hidden;
-    border-radius: 0;
-    box-shadow: none;
-}
+<!-- Botão Fixo WhatsApp -->
+<a href="https://wa.me/5551981380686" target="_blank" class="whatsapp-fixo">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
-/* Ajuste específico para a primeira seção - imagem colada à esquerda */
-.section-content-split.section-full-width .image-col-right {
-    margin-left: 0;
-    align-self: flex-start;
-}
+<!-- ESTRUTURA DO MODAL (LIGHTBOX) -->
+<div id="imageModal" class="modal-overlay">
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem Ampliada">
+        <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
+    </div>
+</div>
 
-/* Imagens dentro das colunas */
-.section-content-split .image-col-left img,
-.section-content-split .image-col-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
+<!-- Script principal para carregar header e contato -->
+<script src="scripts.js"></script>
 
-.section-content-split .image-col-left img:hover,
-.section-content-split .image-col-right img:hover {
-    transform: scale(1.02);
-}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Lógica dos cabeçalhos colapsáveis
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
 
-/* Colunas de texto */
-.section-content-split .text-col-left,
-.section-content-split .text-col-right {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0; /* Permite que a coluna de texto se ajuste */
-    min-width: 350px; /* Garante um tamanho mínimo para o texto */
-    padding: 20px; /* Padding interno para o texto dentro da coluna */
-    align-self: flex-start;
-}
+        collapsibleHeaders.forEach(header => {
+            const collapsibleContent = header.nextElementSibling;
 
-/* Ajuste específico para o texto da primeira seção */
-.section-content-split.section-full-width .text-col-left {
-    padding: 100px 20px 20px 20px; /* AJUSTADO: Aumentado padding superior para descer mais o texto */
-    margin-top: 0; /* Garante que não haja margem superior aqui */
-}
+            if (collapsibleContent) {
+                collapsibleContent.style.maxHeight = '0';
+                collapsibleContent.style.paddingTop = '0';
+                collapsibleContent.style.paddingBottom = '0';
 
-/* Estilos para o nome em grande formato */
-.profile-name-large {
-    font-size: 7rem; /* AUMENTADO: Tamanho ainda maior para o nome */
-    font-weight: 700;
-    color: #8B0000;
-    margin: 0; /* Garante que não haja margem acima ou abaixo */
-    line-height: 1; /* Garante que o texto ocupe apenas sua própria altura */
-    letter-spacing: 1px;
-    text-align: left; /* Garante alinhamento à esquerda */
-}
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
 
-/* Estilos para o texto de função/papel */
-.profile-role-text {
-    font-size: 1.6rem; /* AUMENTADO: Tamanho ligeiramente maior para o cargo para complementar o nome */
-    color: #333;
-    margin-top: 10px; /* AJUSTADO: Espaço levemente maior para separar do nome */
-    margin-bottom: 5px;
-    line-height: 1.2; /* Ajusta a altura da linha para a leitura */
-    text-align: left; /* Garante alinhamento à esquerda */
-}
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.classList.remove('expanded');
+                        collapsibleContent.style.maxHeight = '0';
+                        collapsibleContent.style.paddingTop = '0';
+                        collapsibleContent.style.paddingBottom = '0';
+                    } else {
+                        collapsibleContent.classList.add('expanded');
+                        collapsibleContent.style.paddingTop = '20px';
+                        collapsibleContent.style.paddingBottom = '20px';
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
 
-/* ========================================= */
-/* Estilos para seções de texto */
-/* ========================================= */
+                window.addEventListener('resize', () => {
+                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
+                        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
+                    }
+                });
 
-/* Seção apenas com texto */
-.section-text-only {
-    padding: 80px 0; /* Mantém padding vertical, remove lateral para fundo full-width */
-    margin: 0 !important; /* Garante que não haja margem entre seções */
-    text-align: center;
-}
+                collapsibleContent.addEventListener('transitionend', () => {
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.style.maxHeight = 'none';
+                    }
+                });
+            }
+        });
 
-/* Fundo primário (bege claro) */
-.section-background-primary {
-    background-color: #f5e8ca;
-}
+        // Lógica do Modal de Imagem
+        const portfolioImages = document.querySelectorAll('.section-content-split img');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModalBtn');
 
-/* Fundo branco */
-.section-background-white {
-    background-color: #fff;
-}
+        portfolioImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modalImage.src = this.src;
+                imageModal.classList.add('visible');
+            });
+        });
 
-/* Estilos para títulos de seção */
-.section-text-only h2,
-.section-content-split h2 {
-    color: #8B0000;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
+        closeModalBtn.addEventListener('click', function() {
+            imageModal.classList.remove('visible');
+        });
 
-/* Estilos para parágrafos */
-.section-text-only p,
-.section-content-split p {
-    color: #333;
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
+        imageModal.addEventListener('click', function(event) {
+            if (event.target === imageModal) {
+                imageModal.classList.remove('visible');
+            }
+        });
 
-/* Container para seções de texto apenas */
-.section-text-only .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; /* Padding lateral para o conteúdo interno */
-}
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
+                imageModal.classList.remove('visible');
+            }
+        });
+    });
+</script>
 
-/* Estilos para listas */
-.section-text-only ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.section-text-only li {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* ========================================= */
-/* Estilos para o Modal de Imagem (Lightbox) */
-/* ========================================= */
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.modal-overlay.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    position: relative;
-    background: #fff;
-    padding: 0;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content img {
-    max-width: 90vw;
-    max-height: 90vh;
-    width: auto;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-    object-fit: contain;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.modal-close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #8B0000;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.modal-close-btn:hover {
-    background: #a30000;
-}
-
-/* ========================================= */
-/* Media Queries para Responsividade */
-/* ========================================= */
-
-@media (max-width: 768px) {
-    .section-content-split .content-wrapper {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .section-content-split.section-reverse .content-wrapper {
-        flex-direction: column;
-    }
-    
-    .section-content-split .image-col-left,
-    .section-content-split .image-col-right {
-        flex-basis: 100%;
-        height: 400px;
-    }
-    
-    .section-content-split .text-col-left,
-    .section-content-split .text-col-right {
-        flex-basis: 100%;
-        padding: 10px;
-    }
-    
-    .profile-name-large {
-        font-size: 2.8rem; /* Ajuste responsivo para o nome */
-        text-align: center; /* Centraliza o nome em telas menores */
-    }
-    
-    .profile-role-text {
-        font-size: 1.1rem; /* Ajuste responsivo para o cargo */
-        text-align: center; /* Centraliza o cargo em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .section-content-split .image-col-left,
-    .section-content-split .image-col-right {
-        height: 300px;
-    }
-    
-    .profile-name-large {
-        font-size: 2.2rem; /* Ajuste ainda menor para o nome em telas muito pequenas */
-    }
-    
-    .section-text-only {
-        padding: 40px 15px;
-    }
-    
-    .modal-content img {
-        padding: 10px;
-    }
-}
+</body>
+</html>
