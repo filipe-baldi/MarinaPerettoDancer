@@ -105,6 +105,7 @@
     flex-basis: 500px;
     flex-grow: 1;
     padding: 20px;
+    padding-top: 120px; /* Adicionado padding-top para alinhar com a cabeça na foto */
 }
 
 /* Estilos para o nome em grande formato */
