@@ -75,7 +75,7 @@
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: contain; /* Alterado para contain para garantir que a imagem inteira seja visível */
 }
 
 /* Remover padding superior especificamente para a primeira seção após o banner */
@@ -139,10 +139,14 @@
 
 /* Seção apenas com texto */
 .section-text-only {
-    padding: 60px 20px;
+    padding: 0 20px; /* Removido padding vertical */
     margin-top: 0;
     margin-bottom: 0; /* Alterado para 0 para colar as seções */
     text-align: center;
+}
+
+.section-text-only .container {
+    padding: 60px 0; /* Adicionado padding vertical ao container interno */
 }
 
 /* Fundo primário (bege claro) */
