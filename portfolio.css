@@ -54,7 +54,7 @@
 .section-content-split .content-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Alterado para flex-start para alinhar o texto com o nome */
+    align-items: center; /* Alterado para center para alinhar a imagem */
     gap: 40px;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -89,7 +89,7 @@
 .section-content-split .image-col-right img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Alterado para contain para garantir que a imagem inteira seja visível */
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -99,31 +99,22 @@
     transform: scale(1.02);
 }
 
-/* Colunas de texto */
+/* Colunas de texto (agora para a imagem com texto) */
 .section-content-split .text-col-left,
 .section-content-split .text-col-right {
     flex-basis: 500px;
     flex-grow: 1;
-    padding: 20px;
-    padding-top: 120px; /* Adicionado padding-top para alinhar com a cabeça na foto */
+    padding: 0; /* Removido padding para a imagem com texto */
 }
 
-/* Estilos para o nome em grande formato */
+/* Estilos para o nome em grande formato (não mais necessário para a imagem com texto) */
 .profile-name-large {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #8B0000;
-    margin: 0;
-    line-height: 1;
-    letter-spacing: 1px;
+    /* Removido */
 }
 
-/* Estilos para o texto de função/papel */
+/* Estilos para o texto de função/papel (não mais necessário para a imagem com texto) */
 .profile-role-text {
-    font-size: 1.2rem;
-    color: #333;
-    margin-top: 0; /* Removido margin-top para alinhar com o nome */
-    margin-bottom: 5px;
+    /* Removido */
 }
 
 /* ========================================= */
@@ -302,5 +293,3 @@
         padding: 10px;
     }
 }
-
-
