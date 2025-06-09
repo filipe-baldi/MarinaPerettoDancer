@@ -62,6 +62,22 @@
     padding: 0 20px 20px 20px;
 }
 
+/* Novo wrapper para a seção de imagem única */
+.content-wrapper-single-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+.content-wrapper-single-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 /* Remover padding superior especificamente para a primeira seção após o banner */
 .section-content-split.section-full-width .content-wrapper {
     padding-top: 0 !important;
@@ -293,3 +309,5 @@
         padding: 10px;
     }
 }
+
+
