@@ -213,14 +213,14 @@
 /* Estilos para texto em negrito e alinhado à esquerda (Pós graduação...) */
 .text-bold-left {
     font-weight: bold;
-    text-align: left !important; /* Força alinhamento à esquerda */
+    text-align: left; /* Força alinhamento à esquerda */
     color: #000;
     margin-bottom: 5px;
 }
 
 /* Estilos para texto normal alinhado à esquerda (BRADANÇA...) */
 .text-left {
-    text-align: left !important; /* Força alinhamento à esquerda */
+    text-align: left; /* Força alinhamento à esquerda */
     color: #000;
     margin-bottom: 20px;
 }
