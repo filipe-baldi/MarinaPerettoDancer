@@ -180,8 +180,8 @@
 /* Estilos para parágrafos */
 .section-text-only p {
     color: #333;
-    margin-bottom: 20px;
-    max-width: 800px;
+    /*margin-bottom: 20px; */
+   /* max-width: 800px; */
     margin-left: auto;
     margin-right: auto;
 }
