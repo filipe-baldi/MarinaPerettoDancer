@@ -396,10 +396,9 @@
 }
 
 
-  .premiacao-texto {
+.premiacao-texto {
   max-width: 600px;
-  align-self: center; /* Alinha verticalmente ao centro da imagem */
-  padding-top: 20px;  /* Ajuste fino para descer um pouco */
-}
+  align-self: flex-start; /* Alinha o topo */
+  margin-top: 40px;        /* Controla o espaçamento em relação à imagem */
 }
 
