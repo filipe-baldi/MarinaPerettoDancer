@@ -389,9 +389,13 @@
   }
 
   .premiacao-imagem {
-    max-width: 100%;
-    margin-top: -40px
-  }
+  max-width: 560px;      /* Define um limite confortável */
+  width: 100%;           /* Permite que responda ao tamanho do container */
+  height: auto;          /* Mantém proporção */
+  margin-top: -40px;     /* Sobe a imagem */
+  flex-shrink: 0;        /* Evita que a imagem encolha */
+}
+
 
   .premiacao-texto {
     padding: 10px;
