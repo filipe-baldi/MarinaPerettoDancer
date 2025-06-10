@@ -1,16 +1,5 @@
 /* portfolio.css - Estilos exclusivos para a página de portfólio */
 
-/* Reset de body e html para garantir que a página de portfólio não tenha margens padrão indesejadas */
-/* Aplicado apenas quando a classe body-portfolio-page está presente */
-/* É essencial que body-portfolio-page seja adicionada à tag <body> de portfolio.html */
-.body-portfolio-page,
-.body-portfolio-page html {
-    margin: 0 !important; /* Força a remoção de margens */
-    padding: 0 !important; /* Força a remoção de paddings */
-    overflow-x: hidden; /* Evita scroll horizontal indesejado */
-    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura/altura */
-}
-
 /* ========================================= */
 /* Estilos para o banner do portfólio */
 /* ========================================= */
@@ -34,50 +23,49 @@
 }
 
 /* Remove margem/padding superior do main para colar a primeira seção */
-.main-experiencia-portfolio {
+.main-experiencia {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
 /* ========================================= */
-/* Estilos para seções de conteúdo do portfólio (com imagem e texto) */
+/* Estilos para seções de conteúdo do portfólio */
 /* ========================================= */
 
 /* Estilos para seções com imagem e texto */
 .section-content-split {
-    padding: 0; /* Remove padding na própria seção para controle total pelo content-wrapper */
+    padding: 0;
     border-radius: 0;
     box-shadow: none !important;
-    margin: 0 !important; /* Garante que não haja margem entre as seções */
-    background: #fff; /* Fundo padrão para essas seções */
+    margin-top: 0;
+    margin-bottom: 40px;
+    background: #fff;
 }
 
-/* Estilo para a classe que garante largura total (faixas coladas) */
+/* Classe para a primeira seção do portfólio para largura total */
 .section-content-split.section-full-width {
     max-width: 100vw;
-    padding: 0; /* Remove todo o padding para esta seção, para colagem */
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* Wrapper de conteúdo para seções divididas (agora com flexbox para colunas) */
+/* Wrapper de conteúdo para seções divididas */
 .section-content-split .content-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Alinha o topo das colunas */
-    gap: 20px; /* Espaço entre as colunas de imagem e texto */
-    flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha em telas menores */
-    max-width: 1200px; /* Largura máxima para o conteúdo dentro da faixa */
-    margin: 0 auto; /* Centraliza o wrapper dentro da faixa full-width */
-    padding: 80px 20px; /* Padding interno para o conteúdo dentro da faixa full-width */
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 20px 20px 20px;
 }
 
-/* Ajuste específico para a primeira seção do portfólio (Marina Peretto) */
-.section-content-split.section-full-width .content-wrapper:first-of-type {
-    padding-top: 130px; /* Ajustado: Desce o conteúdo desta primeira seção (nome/cargo) */
-   /* padding-bottom: opx;  Adiciona padding abaixo para separar da próxima seção */
+/* Remover padding superior especificamente para a primeira seção após o banner */
+.section-content-split.section-full-width .content-wrapper {
+    padding-top: 0 !important;
 }
-
 
 /* Quando a seção está em ordem inversa (texto à esquerda, imagem à direita) */
 .section-content-split.section-reverse .content-wrapper {
@@ -87,19 +75,13 @@
 /* Colunas de imagem */
 .section-content-split .image-col-left,
 .section-content-split .image-col-right {
-    flex-basis: 556px; /* Largura base da coluna de imagem */
-    flex-shrink: 0; /* Não encolher a imagem a menos que seja forçada por responsividade */
+    flex-basis: 400px;
+    flex-shrink: 1;
     flex-grow: 0;
-    height: 800px; /* Altura da coluna de imagem */
+    height: 550px;
     overflow: hidden;
-    border-radius: 0;
-    box-shadow: none;
-    display: block;
-    margin: 0;
-    border: none;
-    outline: none;
-    padding: 0;
-    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Imagens dentro das colunas */
@@ -107,7 +89,7 @@
 .section-content-split .image-col-right img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem cobrir o espaço, cortando se necessário */
+    object-fit: cover;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -120,58 +102,39 @@
 /* Colunas de texto */
 .section-content-split .text-col-left,
 .section-content-split .text-col-right {
-    flex-grow: 1; /* Permite que a coluna de texto ocupe o espaço restante */
-    flex-shrink: 1;
-    flex-basis: 0; /* Ajuda o flex-grow a funcionar */
-    min-width: 350px; /* Garante um tamanho mínimo para o texto em telas maiores */
-    padding: 0; /* Remove padding aqui, para ser controlado pelo conteúdo interno */
-    align-self: flex-start; /* Alinha o texto ao topo da coluna */
+    flex-basis: 500px;
+    flex-grow: 1;
+    padding: 20px;
 }
 
-/* Ajuste específico para o texto da primeira seção */
-.section-content-split.section-full-width .text-col-left {
-    padding: 130px 20px 20px 20px; /* Mantido padding superior para descer mais o texto */
-    margin-top: 0; /* Garante que não haja margem superior aqui */
-}
-
-/* Estilos para o nome "Marina Peretto" */
+/* Estilos para o nome em grande formato */
 .profile-name-large {
-    font-size: 8rem; /* Mantido: Tamanho grande para o nome */
+    font-size: 3.5rem;
     font-weight: 700;
     color: #8B0000;
-    margin: 0; /* Remove margens padrão */
-    line-height: 1; /* Garante que o texto ocupe apenas sua própria altura */
+    margin: 0;
+    line-height: 1;
     letter-spacing: 1px;
-    text-align: left !important; /* Garante alinhamento à esquerda */
 }
 
 /* Estilos para o texto de função/papel */
 .profile-role-text {
-    font-size: 1.6rem; /* Mantido: Tamanho ligeiramente maior para o cargo para complementar o nome */
+    font-size: 1.2rem;
     color: #333;
-    margin-top: 10px; /* Espaço levemente maior para separar do nome */
+    margin-top: 10px;
     margin-bottom: 5px;
-    line-height: 1.2; /* Ajusta a altura da linha para a leitura */
-    text-align: left !important; /* Força alinhamento à esquerda */
 }
 
 /* ========================================= */
-/* Estilos para seções de texto (gerais para portfólio, faixas) */
+/* Estilos para seções de texto */
 /* ========================================= */
 
 /* Seção apenas com texto */
 .section-text-only {
-    padding: 0; /* O padding vertical será movido para o container interno */
-    margin: 0 !important; /* Garante que as seções se colem */
-    /* REMOVIDO: text-align: center; para que o conteúdo interno possa se alinhar à esquerda */
-}
-
-/* Container para seções de texto apenas (controla o padding interno e largura máxima) */
-.section-text-only .container {
-    /* REMOVIDO: max-width: 1200px; */ /* Permitir que o container ocupe a largura total disponível */
-    /* REMOVIDO: margin: 0 auto; */ /* Remover centralização do bloco do container */
-    width: 100%; /* Garante que o container ocupe a largura total de seu pai */
-     padding: 20px 20px 80px 20px; /* Padding vertical e horizontal para o conteúdo dentro da faixa */
+    padding: 60px 20px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 /* Fundo primário (bege claro) */
@@ -184,53 +147,28 @@
     background-color: #fff;
 }
 
-/* Estilos para títulos de seção (dentro de text-only) */
+/* Estilos para títulos de seção */
 .section-text-only h2 {
     color: #8B0000;
     margin-bottom: 20px;
     font-size: 2rem;
-    text-align: left !important; /* Força alinhamento à esquerda para todos os h2 em seções text-only */
 }
 
-/* Estilos para o título alinhado à esquerda (Formação, etc.) */
-/* Mantido para clareza, embora a regra acima de section-text-only h2 já possa cobrir */
-.section-title-left {
-    text-align: left !important; /* Força alinhamento à esquerda */
-    color: #8B0000;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-/* Estilos para parágrafos (dentro de text-only) */
+/* Estilos para parágrafos */
 .section-text-only p {
     color: #333;
-     /*margin-bottom: 20px;*/
-    /* REMOVIDO: max-width: 800px; */ /* Permitir que o parágrafo ocupe a largura total do container */
-    /* REMOVIDO: margin-left: auto; e margin-right: auto; para evitar centralização do bloco */
-    text-align: left !important; /* Força alinhamento à esquerda para parágrafos */
-}
-
-/* Estilos para texto em negrito e alinhado à esquerda (Pós graduação...) */
-.text-bold-left {
-    font-weight: bold;
-    text-align: left; /* Força alinhamento à esquerda */
-    color: #000;
-    margin-bottom: 5px;
-}
-
-/* Estilos para texto normal alinhado à esquerda (BRADANÇA...) */
-.text-left {
-    text-align: left; /* Força alinhamento à esquerda */
-    color: #000;
     margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Estilos para listas (dentro de text-only) */
+/* Estilos para listas */
 .section-text-only ul {
-    list-style-type: disc; /* Bolinhas padrão */
+    list-style-type: disc;
     padding-left: 20px;
-    /* REMOVIDO: max-width: 800px; */ /* Permitir que a lista ocupe a largura total do container */
-    margin: 0; /* Alterado de 0 auto para 0 para alinhar à esquerda */
+    max-width: 800px;
+    margin: 0 auto;
     text-align: left;
 }
 
@@ -316,102 +254,50 @@
 
 @media (max-width: 768px) {
     .section-content-split .content-wrapper {
-        flex-direction: column; /* Colunas empilham em telas menores */
+        flex-direction: column;
         gap: 20px;
-        padding: 40px 20px; /* Ajuste de padding para seções em telas menores */
     }
     
-    .section-content-split.section-full-width .content-wrapper:first-of-type {
-        padding-top: 40px; /* Ajuste para a primeira seção em telas menores */
-        padding-bottom: 40px;
-    }
-
     .section-content-split.section-reverse .content-wrapper {
-        flex-direction: column; /* Ordem reversa ainda empilha */
+        flex-direction: column;
     }
     
     .section-content-split .image-col-left,
     .section-content-split .image-col-right {
-        flex-basis: 100%; /* Imagem ocupa 100% da largura */
-        height: 400px; /* Altura ajustada para telas menores */
+        flex-basis: 100%;
+        height: 400px;
     }
     
     .section-content-split .text-col-left,
     .section-content-split .text-col-right {
-        flex-basis: 100%; /* Texto ocupa 100% da largura */
-        padding: 10px; /* Padding ajustado para o texto */
+        flex-basis: 100%;
+        padding: 10px;
     }
     
     .profile-name-large {
-        font-size: 3.5rem; /* Ajuste responsivo para o nome */
-        text-align: center !important; /* Centraliza o nome em telas menores */
+        font-size: 2.5rem;
     }
     
     .profile-role-text {
-        font-size: 1.2rem; /* Ajuste responsivo para o cargo */
-        text-align: left !important; /* Alinha à esquerda em telas menores */
-    }
-
-    .section-text-only .container {
-        padding: 40px 20px; /* Ajuste de padding para seções de texto em telas menores */
-        /* REMOVIDO: max-width e margin: auto nas media queries se existissem */
-    }
-
-    .section-title-left {
-        text-align: left !important; /* Mantido alinhamento à esquerda em telas menores */
-    }
-    .text-bold-left, .text-left {
-        text-align: left !important; /* Alinha à esquerda em telas menores */
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .section-content-split .image-col-left,
     .section-content-split .image-col-right {
-        height: 300px; /* Altura menor para telas muito pequenas */
+        height: 300px;
     }
     
     .profile-name-large {
-        font-size: 2.5rem; /* Ajuste ainda menor para o nome */
+        font-size: 2rem;
     }
     
-    .profile-role-text {
-        font-size: 1rem; /* Ajuste ainda menor para o cargo */
-    }
-    
-    .section-text-only .container {
-        padding: 30px 15px; /* Padding menor para seções de texto em telas muito pequenas */
+    .section-text-only {
+        padding: 40px 15px;
     }
     
     .modal-content img {
         padding: 10px;
     }
-}
-
-
-/* Ajuste de padding lateral para seções full-width de texto */
-.section-text-only.section-full-width {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-
-/* Ajuste de fontes maiores para a seção Formação */
-.section-text-only.section-full-width h2.section-title-left {
-    font-size: 3rem;
-}
-
-.section-text-only.section-full-width p {
-    font-size: 1.6rem;
-}
-
-/* Reduz o espaçamento entre os dois parágrafos */
-.text-bold-left {
-    margin-bottom: 10px; /* Antes era 20px ou 5px */
-}
-
-
-/* Reduzido ainda mais para aproximar o título e o conteúdo */
-.text-bold-left {
-    margin-bottom: 2px;
 }
