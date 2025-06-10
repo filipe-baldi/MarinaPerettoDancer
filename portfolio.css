@@ -366,9 +366,6 @@
   flex-shrink: 0;
 }*/
 
-.premiacao-texto {
-  max-width: 600px;
-}
 
 .premiacao-texto h2 {
   font-size: 3rem;
@@ -394,7 +391,6 @@
   margin-top: -40px;     /* Sobe a imagem */
   flex-shrink: 0;        /* Evita que a imagem encolha */
 }
-
 
 .premiacao-texto {
   max-width: 600px;
