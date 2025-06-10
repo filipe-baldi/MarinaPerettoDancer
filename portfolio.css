@@ -350,11 +350,12 @@
 
 .premiacao-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* permite responsividade */
+  padding-left: 40px; /* puxando o conteúdo mais à esquerda */
+  align-items: flex-start;
+  gap: 40px;
 }
 
 .premiacao-imagem {
