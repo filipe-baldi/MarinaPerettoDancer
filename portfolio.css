@@ -344,44 +344,43 @@
 
 /* Seção de Premiações */
 .premiacao-section {
-  background-color: #ffffff;
-  padding: 60px 20px;
+  background-color: white;
+  padding: 60px 0;
 }
 
 .premiacao-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 40px; /* puxando o conteúdo mais à esquerda */
   align-items: flex-start;
   gap: 40px;
+  width: 100%;
+  max-width: none; /* remove restrição */
+  margin: 0; /* elimina centralização */
+  padding-left: 60px; /* alinhamento mais à esquerda */
+  padding-right: 20px;
 }
 
 .premiacao-imagem {
-  width: 100%;
-  max-width: 560px;
+  width: 280px;
   height: auto;
-  margin-bottom: 20px;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .premiacao-texto {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
+  max-width: 600px;
 }
 
 .premiacao-texto h2 {
-  color: #8B0000; /* tom vinho para seguir o padrão */
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .premiacao-texto p {
-  font-size: 18px;
-  margin-bottom: 10px;
-  line-height: 1.6;
+  margin: 5px 0;
+  font-size: 1rem;
 }
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
