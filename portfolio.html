@@ -25,15 +25,22 @@
 
 <main class="main-experiencia">
     <!-- A PRIMEIRA SEÇÃO AGORA OCUPA A LARGURA TOTAL DA TELA, SEM O CONTAINER INTERNO -->
-    <section class="section-content-split section-background-white section-reverse section-full-width">
-        <div class="content-wrapper">
-            <!-- Removido o text-col-left para exibir apenas a imagem -->
-            <div class="image-col-right">
-                <img src="imagens/portfolio/Sitecurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src=\'https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem\';">
-            </div>
+    <section class="section-content-split section-background-white section-full-width">
+        <div class="content-wrapper-single-image">
+            <img src="imagens/portfolio/Siteurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src=\'https://placehold.co/1200x800/F0F0F0/8B0000?text=Sua+Imagem\';">
         </div>
     </section>
     <!-- FIM DA SEÇÃO DE LARGURA TOTAL -->
+
+    <!-- NOVA SEÇÃO: FORMAÇÃO (Fundo #f5e8ca, somente texto, largura total) -->
+    <section class="section-text-only section-background-primary section-full-width">
+        <div class="container">
+            <h2 class="section-title-left">Formação</h2>
+            <p class="text-bold-left">Pós graduação em docência no ensino da dança do ventre e danças folclóricas árabes</p>
+            <p class="text-left">BRADANÇA - conclusão em 2025</p>
+        </div>
+    </section>
+    <!-- FIM DA NOVA SEÇÃO -->
 
     <div class="container"> <!-- ESTE CONTAINER CONTINUA PARA AS SEÇÕES SEGUINTES -->
         <!-- SEÇÃO: FORMAÇÃO (Fundo #f5e8ca) -->
@@ -99,7 +106,8 @@
 <script>
     document.addEventListener(\'DOMContentLoaded\', function() {
         // Lógica dos cabeçalhos colapsáveis (agora global para todas as páginas que usam .collapsible-header)
-        const collapsibleHeaders = document.querySelectorAll(\'.collapsible-header\');
+        const collapsibleHeaders = document.querySelectorAll(\'\\.collapsible-header\\
+');
 
         collapsibleHeaders.forEach(header => {
             const collapsibleContent = header.nextElementSibling;
@@ -142,7 +150,8 @@
         // Lógica do Modal de Imagem (agora global para todas as páginas que usam .enlarge-image)
         // Alterado para selecionar apenas imagens dentro das novas seções de conteúdo dividido se elas tivessem .enlarge-image
         // ou remover completamente se a galeria principal for a única com isso
-        const portfolioImages = document.querySelectorAll(\'.section-content-split img\'); // Seleciona apenas imagens nas novas seções
+        const portfolioImages = document.querySelectorAll(\'\\.section-content-split img\\
+'); // Seleciona apenas imagens nas novas seções
         const imageModal = document.getElementById(\'imageModal\');
         const modalImage = document.getElementById(\'modalImage\');
         const closeModalBtn = document.getElementById(\'closeModalBtn\');
@@ -174,3 +183,5 @@
 
 </body>
 </html>
+
+
