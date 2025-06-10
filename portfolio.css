@@ -75,7 +75,7 @@
 /* Ajuste específico para a primeira seção do portfólio (Marina Peretto) */
 .section-content-split.section-full-width .content-wrapper:first-of-type {
     padding-top: 130px; /* Ajustado: Desce o conteúdo desta primeira seção (nome/cargo) */
-   /* padding-bottom: 100px;  Adiciona padding abaixo para separar da próxima seção */
+   /* padding-bottom: opx;  Adiciona padding abaixo para separar da próxima seção */
 }
 
 
@@ -171,7 +171,7 @@
     /* REMOVIDO: max-width: 1200px; */ /* Permitir que o container ocupe a largura total disponível */
     /* REMOVIDO: margin: 0 auto; */ /* Remover centralização do bloco do container */
     width: 100%; /* Garante que o container ocupe a largura total de seu pai */
-    padding: 80px 20px; /* Padding vertical e horizontal para o conteúdo dentro da faixa */
+     padding: 20px 20px 80px 20px; /* Padding vertical e horizontal para o conteúdo dentro da faixa */
 }
 
 /* Fundo primário (bege claro) */
