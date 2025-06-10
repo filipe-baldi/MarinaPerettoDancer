@@ -7,7 +7,7 @@
     <!-- Corrigido o caminho do CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Substituído components.css pelo novo portfolio.css exclusivo -->
-    <link rel="stylesheet" href="portfolio_modificado.css"> 
+    <link rel="stylesheet" href="portfolio.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="body-portfolio-page">
@@ -23,38 +23,45 @@
     </div>
 </section>
 
-<main class="main-experiencia-portfolio">
+<main class="main-experiencia">
     <!-- A PRIMEIRA SEÇÃO AGORA OCUPA A LARGURA TOTAL DA TELA, SEM O CONTAINER INTERNO -->
-    <section class="section-content-split section-background-white section-full-width">
-        <div class="content-wrapper-single-image">
-            <img src="imagens/portfolio/Sitecurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src=\'https://placehold.co/1200x800/F0F0F0/8B0000?text=Sua+Imagem\';">
+    <section class="section-content-split section-background-white section-reverse section-full-width">
+        <div class="content-wrapper">
+            <div class="text-col-left">
+                <h2 class="profile-name-large">MARINA</h2>
+                <h2 class="profile-name-large">PERETTO</h2>
+                <p class="profile-role-text">Bailarina, professora, coreógrafa </p>
+                <p class="profile-role-text">e pesquisadora de Danças Árabes</p>
+            </div>
+            <div class="image-col-right">
+                <img src="imagens/portfolio/Siteurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem';">
+            </div>
         </div>
     </section>
     <!-- FIM DA SEÇÃO DE LARGURA TOTAL -->
 
-    <!-- NOVA SEÇÃO: FORMAÇÃO (Fundo #f5e8ca, somente texto, largura total) -->
-    <section class="section-text-only section-background-primary section-full-width">
-        
-            <h2 class="section-title-left">Formação</h2>
-            <p class="text-bold-left">Pós-graduação em Docência no Ensino da Dança do Ventre e Danças Folclóricas Árabes</p>
-            <p class="text-left">BRADANÇA - conclusão em 2025</p>
-            <p class="text-bold-left">Curso livre - Oriental Dance Technique</p>
-            <p class="text-left">Dr. Tamer Aziz - 2020 a 2021</p>
-            <p class="text-bold-left">Bacharelado em Arquitetura e Urbanismo</p>
-            <p class="text-left">ULBRA - conclusão em 2020</p>
-            <p class="text-bold-left">Curso livre - Formação de Professoras em Dança Árabe</p>
-            <p class="text-left">Lucy Linck Danças e terapias - conclusão em 2016</p>
-    </section>
-    <!-- FIM DA NOVA SEÇÃO -->
-
     <div class="container"> <!-- ESTE CONTAINER CONTINUA PARA AS SEÇÕES SEGUINTES -->
-       
+        <!-- SEÇÃO: FORMAÇÃO (Fundo #f5e8ca) -->
+        <section class="section-text-only section-background-primary">
+            <div class="container">
+                <h2>Formação e Aperfeiçoamento</h2>
+                <p>Acredito que o estudo constante é a chave para a evolução artística. Minha formação inclui:</p>
+                <ul>
+                    <li>Imersões e workshops com mestres renomados do Egito, Líbano e Iraque.</li>
+                    <li>Certificação em "Oriental Dance Technique" com Dr. Tamer Aziz (Egito).</li>
+                    <li>Participação em festivais internacionais, ampliando minha visão sobre as diversas vertentes da dança árabe.</li>
+                    <li>Pesquisa contínua sobre a história, folclore e música árabe para uma interpretação autêntica e respeitosa.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- FIM DA SEÇÃO -->
+
         <!-- SEÇÃO: PREMIAÇÕES (IMAGEM DIREITA, TEXTO ESQUERDA, Fundo Branco) -->
         <section class="section-content-split section-background-white section-reverse">
             <div class="container">
                 <div class="content-wrapper">
                     <div class="text-col-left">
-                        <h2>Premiações</h2>
+                        <h2>Reconhecimento e Premiações</h2>
                         <p>É com grande honra que compartilho alguns dos reconhecimentos e premiações que tive o privilégio de receber ao longo da minha carreira.</p>
                         <p>Esses momentos são o reflexo de dedicação, paixão e um constante esforço em aprimorar minha arte e levar a dança árabe a novos patamares, sendo um incentivo para continuar a trilhar este caminho com excelência e autenticidade.</p>
                         <ul>
@@ -64,7 +71,7 @@
                         </ul>
                     </div>
                     <div class="image-col-right">
-                        <img src="imagens/portfolio/premiação.png" alt="Premiação" onerror="this.onerror=null;this.src=\'https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem\';">
+                        <img src="https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem" alt="Sua imagem aqui (560x800px)" onerror="this.onerror=null;this.src='https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem';">
                     </div>
                 </div>
             </div>
@@ -95,43 +102,43 @@
 <script src="scripts.js"></script>
 
 <script>
-    document.addEventListener(\'DOMContentLoaded\', function() {
+    document.addEventListener('DOMContentLoaded', function() {
         // Lógica dos cabeçalhos colapsáveis (agora global para todas as páginas que usam .collapsible-header)
-        const collapsibleHeaders = document.querySelectorAll(\\.collapsible-header\\');
+        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
 
         collapsibleHeaders.forEach(header => {
             const collapsibleContent = header.nextElementSibling;
 
             if (collapsibleContent) {
-                collapsibleContent.style.maxHeight = \'0\';
-                collapsibleContent.style.paddingTop = \'0\';
-                collapsibleContent.style.paddingBottom = \'0\';
+                collapsibleContent.style.maxHeight = '0';
+                collapsibleContent.style.paddingTop = '0';
+                collapsibleContent.style.paddingBottom = '0';
 
-                header.addEventListener(\'click\', function() {
-                    this.classList.toggle(\'active\');
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
 
-                    if (collapsibleContent.classList.contains(\'expanded\')) {
-                        collapsibleContent.classList.remove(\'expanded\');
-                        collapsibleContent.style.maxHeight = \'0\';
-                        collapsibleContent.style.paddingTop = \'0\';
-                        collapsibleContent.style.paddingBottom = \'0\';
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.classList.remove('expanded');
+                        collapsibleContent.style.maxHeight = '0';
+                        collapsibleContent.style.paddingTop = '0';
+                        collapsibleContent.style.paddingBottom = '0';
                     } else {
-                        collapsibleContent.classList.add(\'expanded\');
-                        collapsibleContent.style.paddingTop = \'20px\';
-                        collapsibleContent.style.paddingBottom = \'20px\';
+                        collapsibleContent.classList.add('expanded');
+                        collapsibleContent.style.paddingTop = '20px';
+                        collapsibleContent.style.paddingBottom = '20px';
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
-                window.addEventListener(\'resize\', () => {
-                    if (collapsibleContent.classList.contains(\'expanded\') && collapsibleContent.style.maxHeight !== \'none\') {
+                window.addEventListener('resize', () => {
+                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
-                collapsibleContent.addEventListener(\'transitionend\', () => {
-                    if (collapsibleContent.classList.contains(\'expanded\')) {
-                        collapsibleContent.style.maxHeight = \'none\';
+                collapsibleContent.addEventListener('transitionend', () => {
+                    if (collapsibleContent.classList.contains('expanded')) {
+                        collapsibleContent.style.maxHeight = 'none';
                     }
                 });
             }
@@ -140,31 +147,31 @@
         // Lógica do Modal de Imagem (agora global para todas as páginas que usam .enlarge-image)
         // Alterado para selecionar apenas imagens dentro das novas seções de conteúdo dividido se elas tivessem .enlarge-image
         // ou remover completamente se a galeria principal for a única com isso
-        const portfolioImages = document.querySelectorAll(\\.section-content-split img\\'); // Seleciona apenas imagens nas novas seções
-        const imageModal = document.getElementById(\'imageModal\');
-        const modalImage = document.getElementById(\'modalImage\');
-        const closeModalBtn = document.getElementById(\'closeModalBtn\');
+        const portfolioImages = document.querySelectorAll('.section-content-split img'); // Seleciona apenas imagens nas novas seções
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModalBtn');
 
         portfolioImages.forEach(img => {
-            img.addEventListener(\'click\', function() {
+            img.addEventListener('click', function() {
                 modalImage.src = this.src;
-                imageModal.classList.add(\'visible\');
+                imageModal.classList.add('visible');
             });
         });
 
-        closeModalBtn.addEventListener(\'click\', function() {
-            imageModal.classList.remove(\'visible\');
+        closeModalBtn.addEventListener('click', function() {
+            imageModal.classList.remove('visible');
         });
 
-        imageModal.addEventListener(\'click\', function(event) {
+        imageModal.addEventListener('click', function(event) {
             if (event.target === imageModal) {
-                imageModal.classList.remove(\'visible\');
+                imageModal.classList.remove('visible');
             }
         });
 
-        document.addEventListener(\'keydown\', function(event) {
-            if (event.key === "Escape" && imageModal.classList.contains(\'visible\')) {
-                imageModal.classList.remove(\'visible\');
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
+                imageModal.classList.remove('visible');
             }
         });
     });
@@ -172,5 +179,3 @@
 
 </body>
 </html>
-
-
