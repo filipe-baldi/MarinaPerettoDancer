@@ -359,13 +359,13 @@
   padding-left: 60px; /* alinhamento mais à esquerda */
   padding-right: 20px;
 }
-
+/*
 .premiacao-imagem {
   max-width: 560px;
   width: 100%;
   height: auto;
-  flex-shrink: 0; /* Impede a imagem de encolher quando o espaço é apertado */
-}
+  flex-shrink: 0;
+}*/
 
 .premiacao-texto {
   max-width: 600px;
