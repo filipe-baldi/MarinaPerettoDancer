@@ -23,7 +23,7 @@
 }
 
 /* Remove margem/padding superior do main para colar a primeira seção */
-.main-experiencia {
+.main-experiencia-portfolio {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
