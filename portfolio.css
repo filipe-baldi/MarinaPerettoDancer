@@ -342,4 +342,58 @@
     }
 }
 
+/* Seção de Premiações */
+.premiacao-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.premiacao-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* permite responsividade */
+}
+
+.premiacao-imagem {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.premiacao-texto {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.premiacao-texto h2 {
+  color: #800000; /* tom vinho para seguir o padrão */
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.premiacao-texto p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .premiacao-container {
+    flex-direction: column;
+  }
+
+  .premiacao-imagem {
+    max-width: 100%;
+  }
+
+  .premiacao-texto {
+    padding: 10px;
+  }
+}
 
