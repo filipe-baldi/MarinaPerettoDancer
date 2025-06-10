@@ -372,15 +372,20 @@
 }
 
 .premiacao-texto h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
+  color: #8B0000
 }
 
+.premiacao-texto-bold p {
+  margin: 5px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 .premiacao-texto p {
   margin: 5px 0;
-  font-size: 1rem;
+  font-size: 1.4rem; 
 }
-
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
