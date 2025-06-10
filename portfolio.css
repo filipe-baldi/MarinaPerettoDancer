@@ -38,7 +38,7 @@
     border-radius: 0;
     box-shadow: none !important;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 0; /* Alterado para 0 para colar as seções */
     background: #fff;
 }
 
@@ -50,16 +50,35 @@
     box-sizing: border-box;
 }
 
-/* Wrapper de conteúdo para seções divididas */
+/* Wrapper de con/* /* Wrapper de conteúdo para seções divididas */
 .section-content-split .content-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start; /* Alinhado à esquerda */
     gap: 40px;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0;
+    margin: 0 auto; /* Centraliza o wrapper */
     padding: 0 20px 20px 20px;
+}0px 20px 20px;
+}
+}
+
+/* Novo wrapper para a seção de imagem única */
+.content-wrapper-single-image {
+    display: flex;
+    justify-content: flex-start; /* Alinha a imagem à esquerda */
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+}
+
+.content-wrapper-single-image img {
+    width: auto; /* Para manter a proporção e não esticar */
+    max-width: 100%; /* Garante que não ultrapasse o contêiner */
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 /* Remover padding superior especificamente para a primeira seção após o banner */
@@ -75,14 +94,13 @@
 /* Colunas de imagem */
 .section-content-split .image-col-left,
 .section-content-split .image-col-right {
-    flex-basis: 400px;
+    flex-basis: auto; /* Alterado para auto para responsividade */
     flex-shrink: 1;
     flex-grow: 0;
-    /* Removido height fixo para permitir responsividade */
-    height: auto; /* Permitir que a altura se ajuste ao conteúdo */
+    height: auto; /* Alterado para auto para responsividade */
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: none; /* Removido o shadow box */
+    border-radius: 0; /* Removido border-radius */
+    box-shadow: none; /* Removido box-shadow */
 }
 
 /* Imagens dentro das colunas */
@@ -100,30 +118,22 @@
     transform: scale(1.02);
 }
 
-/* Colunas de texto */
+/* Colunas de texto (agora para a imagem com texto) */
 .section-content-split .text-col-left,
 .section-content-split .text-col-right {
     flex-basis: 500px;
     flex-grow: 1;
-    padding: 20px;
+    padding: 0; /* Removido padding para a imagem com texto */
 }
 
-/* Estilos para o nome em grande formato */
+/* Estilos para o nome em grande formato (não mais necessário para a imagem com texto) */
 .profile-name-large {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #8B0000;
-    margin: 0;
-    line-height: 1;
-    letter-spacing: 1px;
+    /* Removido */
 }
 
-/* Estilos para o texto de função/papel */
+/* Estilos para o texto de função/papel (não mais necessário para a imagem com texto) */
 .profile-role-text {
-    font-size: 1.2rem;
-    color: #333;
-    margin-top: 0; /* Ajustado para alinhar com o nome */
-    margin-bottom: 5px;
+    /* Removido */
 }
 
 /* ========================================= */
@@ -132,10 +142,14 @@
 
 /* Seção apenas com texto */
 .section-text-only {
-    padding: 60px 20px;
+    padding: 0 20px; /* Removido padding vertical */
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 0; /* Alterado para 0 para colar as seções */
     text-align: center;
+}
+
+.section-text-only .container {
+    padding: 60px 0; /* Adicionado padding vertical ao container interno */
 }
 
 /* Fundo primário (bege claro) */
@@ -155,6 +169,14 @@
     font-size: 2rem;
 }
 
+/* Estilos para o título alinhado à esquerda */
+.section-title-left {
+    text-align: left;
+    color: #8B0000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
 /* Estilos para parágrafos */
 .section-text-only p {
     color: #333;
@@ -162,6 +184,21 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Estilos para texto em negrito e alinhado à esquerda */
+.text-bold-left {
+    font-weight: bold;
+    text-align: left;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+/* Estilos para texto normal alinhado à esquerda */
+.text-left {
+    text-align: left;
+    color: #000;
+    margin-bottom: 20px;
 }
 
 /* Estilos para listas */
@@ -266,8 +303,7 @@
     .section-content-split .image-col-left,
     .section-content-split .image-col-right {
         flex-basis: 100%;
-        /* Removido height fixo para permitir responsividade */
-        height: auto; /* Ajustar altura automaticamente para manter proporção */
+        height: 400px;
     }
     
     .section-content-split .text-col-left,
@@ -288,8 +324,7 @@
 @media (max-width: 480px) {
     .section-content-split .image-col-left,
     .section-content-split .image-col-right {
-        /* Removido height fixo para permitir responsividade */
-        height: auto; /* Ajustar altura automaticamente para manter proporção */
+        height: 300px;
     }
     
     .profile-name-large {
