@@ -142,7 +142,7 @@
 
 /* Seção apenas com texto */
 .section-text-only {
-    padding: 0 20px; /* Removido padding vertical */
+    padding: 0 99px; /* Removido padding vertical */
     margin-top: 0;
     margin-bottom: 0; /* Alterado para 0 para colar as seções */
     text-align: center;
@@ -166,7 +166,7 @@
 .section-text-only h2 {
     color: #8B0000;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 /* Estilos para o título alinhado à esquerda */
@@ -191,6 +191,7 @@
     font-weight: bold;
     text-align: left;
     color: #000;
+    font-size: 1.8rem;
     margin-bottom: 5px;
 }
 
@@ -198,6 +199,7 @@
 .text-left {
     text-align: left;
     color: #000;
+    font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
