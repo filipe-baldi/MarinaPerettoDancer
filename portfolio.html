@@ -27,14 +27,9 @@
     <!-- A PRIMEIRA SEÇÃO AGORA OCUPA A LARGURA TOTAL DA TELA, SEM O CONTAINER INTERNO -->
     <section class="section-content-split section-background-white section-reverse section-full-width">
         <div class="content-wrapper">
-            <div class="text-col-left">
-                <h2 class="profile-name-large">MARINA</h2>
-                <h2 class="profile-name-large">PERETTO</h2>
-                <p class="profile-role-text">Bailarina, professora, coreógrafa </p>
-                <p class="profile-role-text">e pesquisadora de Danças Árabes</p>
-            </div>
+            <!-- Removido o text-col-left para exibir apenas a imagem -->
             <div class="image-col-right">
-                <img src="imagens/portfolio/Sitecurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src='https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem';">
+                <img src="imagens/portfolio/Sitecurriculo.png" alt="Marina Peretto em traje de dança árabe" onerror="this.onerror=null;this.src=\'https://placehold.co/556x800/F0F0F0/8B0000?text=Sua+Imagem\';">
             </div>
         </div>
     </section>
@@ -71,7 +66,7 @@
                         </ul>
                     </div>
                     <div class="image-col-right">
-                        <img src="https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem" alt="Sua imagem aqui (560x800px)" onerror="this.onerror=null;this.src='https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem';">
+                        <img src="https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem" alt="Sua imagem aqui (560x800px)" onerror="this.onerror=null;this.src=\'https://placehold.co/560x800/F0F0F0/8B0000?text=Sua+Imagem\';">
                     </div>
                 </div>
             </div>
@@ -102,43 +97,43 @@
 <script src="scripts.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener(\'DOMContentLoaded\', function() {
         // Lógica dos cabeçalhos colapsáveis (agora global para todas as páginas que usam .collapsible-header)
-        const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+        const collapsibleHeaders = document.querySelectorAll(\'.collapsible-header\');
 
         collapsibleHeaders.forEach(header => {
             const collapsibleContent = header.nextElementSibling;
 
             if (collapsibleContent) {
-                collapsibleContent.style.maxHeight = '0';
-                collapsibleContent.style.paddingTop = '0';
-                collapsibleContent.style.paddingBottom = '0';
+                collapsibleContent.style.maxHeight = \'0\';
+                collapsibleContent.style.paddingTop = \'0\';
+                collapsibleContent.style.paddingBottom = \'0\';
 
-                header.addEventListener('click', function() {
-                    this.classList.toggle('active');
+                header.addEventListener(\'click\', function() {
+                    this.classList.toggle(\'active\');
 
-                    if (collapsibleContent.classList.contains('expanded')) {
-                        collapsibleContent.classList.remove('expanded');
-                        collapsibleContent.style.maxHeight = '0';
-                        collapsibleContent.style.paddingTop = '0';
-                        collapsibleContent.style.paddingBottom = '0';
+                    if (collapsibleContent.classList.contains(\'expanded\')) {
+                        collapsibleContent.classList.remove(\'expanded\');
+                        collapsibleContent.style.maxHeight = \'0\';
+                        collapsibleContent.style.paddingTop = \'0\';
+                        collapsibleContent.style.paddingBottom = \'0\';
                     } else {
-                        collapsibleContent.classList.add('expanded');
-                        collapsibleContent.style.paddingTop = '20px';
-                        collapsibleContent.style.paddingBottom = '20px';
+                        collapsibleContent.classList.add(\'expanded\');
+                        collapsibleContent.style.paddingTop = \'20px\';
+                        collapsibleContent.style.paddingBottom = \'20px\';
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
-                window.addEventListener('resize', () => {
-                    if (collapsibleContent.classList.contains('expanded') && collapsibleContent.style.maxHeight !== 'none') {
+                window.addEventListener(\'resize\', () => {
+                    if (collapsibleContent.classList.contains(\'expanded\') && collapsibleContent.style.maxHeight !== \'none\') {
                         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + "px";
                     }
                 });
 
-                collapsibleContent.addEventListener('transitionend', () => {
-                    if (collapsibleContent.classList.contains('expanded')) {
-                        collapsibleContent.style.maxHeight = 'none';
+                collapsibleContent.addEventListener(\'transitionend\', () => {
+                    if (collapsibleContent.classList.contains(\'expanded\')) {
+                        collapsibleContent.style.maxHeight = \'none\';
                     }
                 });
             }
@@ -147,31 +142,31 @@
         // Lógica do Modal de Imagem (agora global para todas as páginas que usam .enlarge-image)
         // Alterado para selecionar apenas imagens dentro das novas seções de conteúdo dividido se elas tivessem .enlarge-image
         // ou remover completamente se a galeria principal for a única com isso
-        const portfolioImages = document.querySelectorAll('.section-content-split img'); // Seleciona apenas imagens nas novas seções
-        const imageModal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const closeModalBtn = document.getElementById('closeModalBtn');
+        const portfolioImages = document.querySelectorAll(\'.section-content-split img\'); // Seleciona apenas imagens nas novas seções
+        const imageModal = document.getElementById(\'imageModal\');
+        const modalImage = document.getElementById(\'modalImage\');
+        const closeModalBtn = document.getElementById(\'closeModalBtn\');
 
         portfolioImages.forEach(img => {
-            img.addEventListener('click', function() {
+            img.addEventListener(\'click\', function() {
                 modalImage.src = this.src;
-                imageModal.classList.add('visible');
+                imageModal.classList.add(\'visible\');
             });
         });
 
-        closeModalBtn.addEventListener('click', function() {
-            imageModal.classList.remove('visible');
+        closeModalBtn.addEventListener(\'click\', function() {
+            imageModal.classList.remove(\'visible\');
         });
 
-        imageModal.addEventListener('click', function(event) {
+        imageModal.addEventListener(\'click\', function(event) {
             if (event.target === imageModal) {
-                imageModal.classList.remove('visible');
+                imageModal.classList.remove(\'visible\');
             }
         });
 
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape" && imageModal.classList.contains('visible')) {
-                imageModal.classList.remove('visible');
+        document.addEventListener(\'keydown\', function(event) {
+            if (event.key === "Escape" && imageModal.classList.contains(\'visible\')) {
+                imageModal.classList.remove(\'visible\');
             }
         });
     });
@@ -179,3 +174,5 @@
 
 </body>
 </html>
+
+
