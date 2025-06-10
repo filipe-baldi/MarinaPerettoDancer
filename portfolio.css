@@ -1,4 +1,4 @@
-/* portfolio.css - Estilos exclusivos para a página de portfólio */
+\/* portfolio.css - Estilos exclusivos para a página de portfólio */
 
 /* ========================================= */
 /* Estilos para o banner do portfólio */
@@ -361,10 +361,10 @@
 }
 
 .premiacao-imagem {
-  width: 280px;
+  max-width: 560px;
+  width: 100%;
   height: auto;
-  max-width: 100%;
-  object-fit: cover;
+  flex-shrink: 0; /* Impede a imagem de encolher quando o espaço é apertado */
 }
 
 .premiacao-texto {
