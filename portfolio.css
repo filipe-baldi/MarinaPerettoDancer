@@ -155,9 +155,14 @@
     background-color: #f5e8ca;
 }
 
-/* Fundo branco */
-.section-background-white {
-    background-color: #fff;
+/* Seção de evento com fundo branco */
+.evento-section.section-background-white {
+  background-color: #fff;
+}
+
+/* Títulos em seções com fundo branco */
+.evento-section.section-background-white .evento-titulo {
+  color: #8b0000; /* Mantém a cor vermelha para contraste */
 }
 
 /* Estilos para títulos de seção */
@@ -242,12 +247,20 @@
 /* Conteúdo com imagem à direita */
 .evento-conteudo.layout-imagem-direita {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: nowrap; /* Impede quebra para manter lado a lado em telas largas */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 20px;
+}
+
+.evento-conteudo.layout-imagem-direita .evento-main-content {
+  display: flex;
+  flex-direction: row-reverse; /* Inverte a ordem para colocar a imagem à direita */
+  gap: 2rem;
+  width: 100%;
+  align-items: flex-start;
 }
 
 /* Layout com imagem à esquerda */
@@ -276,8 +289,8 @@
 
 /* Coluna da imagem principal */
 .evento-imagem {
-  flex: 0 0 362px;
-  height: 362px;
+  flex: 0 0 300px;
+  height: 200px;
   border: 1px solid #000;
   display: flex;
   justify-content: center;
@@ -466,14 +479,16 @@
 }
 
 @media (max-width: 768px) {
-  .evento-conteudo.layout-imagem-esquerda {
+  .evento-conteudo.layout-imagem-esquerda,
+  .evento-conteudo.layout-imagem-direita {
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
     padding: 10px;
   }
 
-  .evento-main-content {
+  .evento-main-content,
+  .evento-conteudo.layout-imagem-direita .evento-main-content {
     flex-direction: column;
     gap: 1rem;
   }
@@ -577,3 +592,5 @@
     margin-top: 0;
   }
 }
+
+
