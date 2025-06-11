@@ -257,7 +257,7 @@
 
 .evento-conteudo.layout-imagem-direita .evento-main-content {
   display: flex;
-  flex-direction: row-reverse; /* Inverte a ordem para colocar a imagem à direita */
+  flex-direction: row; /* Inverte a ordem para colocar a imagem à direita */
   gap: 2rem;
   width: 100%;
   align-items: flex-start;
@@ -290,7 +290,7 @@
 /* Coluna da imagem principal */
 .evento-imagem {
   flex: 0 0 362px;
-  height: 262px;
+  height: 362px;
   border: 1px solid #000;
   display: flex;
   justify-content: center;
