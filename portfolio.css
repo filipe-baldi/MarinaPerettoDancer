@@ -392,9 +392,6 @@
   flex-shrink: 0;        /* Evita que a imagem encolha */
 }
 
-.premiacao-texto {
-  max-width: 600px;
-  align-self: flex-start; /* Alinha o topo */
-  margin-top: 40px;        /* Controla o espaçamento em relação à imagem */
+section.premiacao-section .premiacao-container .premiacao-texto {
+  margin-top: 40px;
 }
-
