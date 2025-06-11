@@ -230,6 +230,58 @@
   text-align: justify;
 }
 
+/* ================================= */
+/* Seção de evento - container geral */
+/* ================================= */
+
+.evento-section {
+  padding: 3rem 1rem;
+  background-color: #f5e8ca; /* ou use uma variável se tiver */
+}
+
+/* Conteúdo com imagem à direita */
+.evento-conteudo.layout-imagem-direita {
+  display: flex;
+  flex-direction: row-reverse; /* Imagem à direita */
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Coluna da imagem */
+.evento-imagem {
+  flex: 1 1 50%;
+}
+
+.evento-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Coluna do texto */
+.evento-texto {
+  flex: 1 1 50%;
+  padding: 1rem;
+  color: #2c2c2c;
+}
+
+.evento-titulo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #8b0000;
+}
+
+.evento-info {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+
 
 /* ========================================= */
 /* Estilos para o Modal de Imagem (Lightbox) */
