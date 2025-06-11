@@ -383,5 +383,9 @@
 .premiacao-texto {
   max-width: 600px;
   margin-top: 200px; /* ajuste fino conforme necessário */
+ 
+  background: yellow !important;
+  margin-top: 200px !important;
+}
 }
 
