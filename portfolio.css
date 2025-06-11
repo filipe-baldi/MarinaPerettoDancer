@@ -353,7 +353,7 @@
 }
 
 .premiacao-texto {
-  max-width: 360px;
+ /* max-width: 360px;*/
   margin-top: -90px; /* ou ajuste fino */
 }
 
@@ -370,7 +370,7 @@
 
 .premiacao-texto p strong {
   display: block;
-  margin-bottom: 20px; /* Ajuste conforme quiser */
+  margin-top: 20px; /* Ajuste conforme quiser */
 }
 
 .premiacao-imagem {
