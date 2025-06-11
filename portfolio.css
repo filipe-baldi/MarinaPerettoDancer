@@ -368,6 +368,11 @@
   font-size: 1.4rem;
 }
 
+.premiacao-texto p strong {
+  display: block;
+  margin-bottom: 20px; /* Ajuste conforme quiser */
+}
+
 .premiacao-imagem {
   max-width: 560px;
   width: 100%;
