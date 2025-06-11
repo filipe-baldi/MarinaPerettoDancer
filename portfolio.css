@@ -435,9 +435,12 @@
 /* Coluna do texto */
 .evento-texto {
   flex: 1;
-  max-width: 50%;
+  max-width: 55%;
   padding: 1rem;
   color: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
