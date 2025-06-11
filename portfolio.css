@@ -345,6 +345,7 @@
 /* Seção de Premiações */
 .premiacao-section {
   background-color: white;
+  padding-top: 60px; /* Ajuste esse valor conforme necessário */
 }
 
 .premiacao-container {
