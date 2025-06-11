@@ -347,7 +347,7 @@
 .premiacao-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
   width: 100%;
   max-width: none; /* remove restrição */
@@ -355,13 +355,6 @@
   padding-left: 60px; /* alinhamento mais à esquerda */
   padding-right: 20px;
 }
-/*
-.premiacao-imagem {
-  max-width: 560px;
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}*/
 
 
 .premiacao-texto h2 {
