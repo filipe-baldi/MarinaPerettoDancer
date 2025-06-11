@@ -347,7 +347,7 @@
 .premiacao-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   width: 100%;
   max-width: none; /* remove restrição */
@@ -382,9 +382,8 @@
   flex-shrink: 0;        /* Evita que a imagem encolha */
 }
 
-section.premiacao-section .premiacao-container .premiacao-texto {
+.premiacao-texto {
   max-width: 600px;
-  align-self: flex-start;
-  margin-top: 40px !important;
+  margin-top: 20px; /* ajuste fino conforme necessário */
 }
 
