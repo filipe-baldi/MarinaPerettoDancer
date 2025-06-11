@@ -354,7 +354,7 @@
 
 .premiacao-texto {
   max-width: 600px;
-  margin-top: 0; /* ou ajuste fino */
+  margin-top: -390; /* ou ajuste fino */
 }
 
 .premiacao-texto h2 {
