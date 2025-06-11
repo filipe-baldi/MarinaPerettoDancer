@@ -253,42 +253,77 @@
 /* Layout com imagem à esquerda */
 .evento-conteudo.layout-imagem-esquerda {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: nowrap;
+  flex-direction: column; /* Altera para coluna para empilhar os elementos */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  gap: 1rem; /* Espaçamento entre os blocos principais */
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
-/* Coluna da imagem */
+.evento-header {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.evento-main-content {
+  display: flex;
+  flex-direction: row; /* Imagem e texto lado a lado */
+  gap: 2rem;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Coluna da imagem principal */
 .evento-imagem {
-  flex: 0 0 45%;
-  max-width: 45%;
+  flex: 0 0 300px; /* Largura fixa para a imagem principal */
+  height: 200px; /* Altura fixa para a imagem principal */
+  border: 1px solid #000; /* Borda para simular o quadrado em branco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .evento-imagem img {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
   display: block;
+  border-radius: 0; /* Remove border-radius */
 }
 
 /* Coluna do texto */
 .evento-texto {
-  
   flex: 1;
-  max-width: 50%;
-  padding: 1rem;
+  max-width: none; /* Remove max-width para o texto ocupar o espaço restante */
+  padding: 0; /* Remove padding */
   color: #2c2c2c;
+  display: block; /* Altera para block para o texto fluir normalmente */
 }
 
-@media (max-width: 768px) {
-  .evento-imagem,
-  .evento-texto {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
+.evento-texto p {
+  font-size: 1rem; /* Ajusta o tamanho da fonte do texto */
+  line-height: 1.5; /* Espaçamento entre linhas */
+  text-align: justify;
+}
+
+.evento-miniaturas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espaçamento entre as miniaturas */
+  margin-top: 20px;
+  width: 100%;
+}
+
+.miniatura-item {
+  width: 80px; /* Largura da miniatura */
+  height: 80px; /* Altura da miniatura */
+  border: 1px solid #000; /* Borda para simular o quadrado em branco */
+  background-color: #fff; /* Fundo branco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .evento-titulo {
@@ -416,38 +451,32 @@
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
+    padding: 10px;
   }
-}
 
-/* Coluna da imagem */
-.evento-imagem {
-  flex: 0 0 45%;
-  max-width: 45%;
-}
+  .evento-main-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-.evento-imagem img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-}
+  .evento-imagem {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 250px;
+  }
 
-/* Coluna do texto */
-.evento-texto {
-  flex: 1;
-  max-width: 55%;
-  padding: 1rem;
-  color: #2c2c2c;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .evento-imagem,
   .evento-texto {
     max-width: 100%;
-    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .evento-miniaturas {
+    justify-content: center;
+  }
+
+  .miniatura-item {
+    width: 60px;
+    height: 60px;
   }
 }
 
