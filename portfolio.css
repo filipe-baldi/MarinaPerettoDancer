@@ -393,5 +393,8 @@
 }
 
 section.premiacao-section .premiacao-container .premiacao-texto {
+  max-width: 600px;
+  align-self: flex-start;
   margin-top: 40px;
 }
+
