@@ -215,6 +215,22 @@
     color: #333;
 }
 
+/* Info de local e data abaixo do título */
+.evento-info {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+/* Ajustes visuais no texto da direita */
+.text-col-right p {
+  font-size: 1.3rem;
+  color: #333;
+  text-align: justify;
+}
+
+
 /* ========================================= */
 /* Estilos para o Modal de Imagem (Lightbox) */
 /* ========================================= */
