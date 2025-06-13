@@ -257,7 +257,7 @@
 
 .evento-conteudo.layout-imagem-direita .evento-main-content {
   display: flex;
-  flex-direction: row; /* Inverte a ordem para colocar a imagem à direita */
+  flex-direction: row-reverse; /* Inverte a ordem para colocar a imagem à direita */
   gap: 2rem;
   width: 100%;
   align-items: flex-start;
@@ -289,13 +289,59 @@
 
 /* Coluna da imagem principal */
 .evento-imagem {
-  flex: 0 0 362px;
-  height: 362px;
+  flex: 0 0 300px;
+  height: 200px;
   border: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+/* Dimensões específicas para imagens principais em layout-imagem-direita */
+.evento-conteudo.layout-imagem-direita .evento-imagem {
+  flex: 0 0 362px;
+  height: 362px;
+}
+
+/* ========================================= */
+/* Classes para tamanhos personalizados de imagens */
+/* ========================================= */
+
+/* Tamanho Médio - Imagem Principal */
+.evento-conteudo.tamanho-medio .evento-imagem {
+  flex: 0 0 400px;
+  height: 250px;
+}
+
+/* Tamanho Pequeno - Imagem Principal */
+.evento-conteudo.tamanho-pequeno .evento-imagem {
+  flex: 0 0 250px;
+  height: 180px;
+}
+
+/* Tamanho Grande - Imagem Principal */
+.evento-conteudo.tamanho-grande .evento-imagem {
+  flex: 0 0 450px;
+  height: 300px;
+}
+
+/* Miniaturas Médias */
+.evento-conteudo.tamanho-medio .miniatura-item {
+  width: 90px;
+  height: 90px;
+}
+
+/* Miniaturas Pequenas */
+.evento-conteudo.tamanho-pequeno .miniatura-item {
+  width: 70px;
+  height: 70px;
+}
+
+/* Miniaturas Grandes */
+.evento-conteudo.tamanho-grande .miniatura-item {
+  width: 100px;
+  height: 100px;
 }
 
 .evento-imagem img {
@@ -499,6 +545,40 @@
     height: 250px;
   }
 
+  /* Responsividade específica para layout-imagem-direita */
+  .evento-conteudo.layout-imagem-direita .evento-imagem {
+    height: 300px; /* Altura maior para manter proporção em mobile */
+  }
+
+  /* Responsividade para tamanhos personalizados */
+  .evento-conteudo.tamanho-medio .evento-imagem {
+    height: 220px;
+  }
+
+  .evento-conteudo.tamanho-pequeno .evento-imagem {
+    height: 180px;
+  }
+
+  .evento-conteudo.tamanho-grande .evento-imagem {
+    height: 280px;
+  }
+
+  /* Miniaturas responsivas */
+  .evento-conteudo.tamanho-medio .miniatura-item {
+    width: 70px;
+    height: 70px;
+  }
+
+  .evento-conteudo.tamanho-pequeno .miniatura-item {
+    width: 55px;
+    height: 55px;
+  }
+
+  .evento-conteudo.tamanho-grande .miniatura-item {
+    width: 75px;
+    height: 75px;
+  }
+
   .evento-texto-miniaturas {
     width: 100%;
   }
@@ -592,5 +672,3 @@
     margin-top: 0;
   }
 }
-
-
