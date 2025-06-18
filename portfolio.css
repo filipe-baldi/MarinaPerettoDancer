@@ -672,3 +672,11 @@
     margin-top: 0;
   }
 }
+
+
+@media (max-width: 768px) {
+  .evento-conteudo.layout-imagem-direita .evento-main-content .evento-imagem {
+    order: -1;
+  }
+}
+
