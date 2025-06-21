@@ -680,3 +680,14 @@
   }
 }
 
+
+
+.evento-main-content {
+  align-items: center; /* Alinha verticalmente o conteúdo */
+}
+
+.premiacao-container {
+  align-items: center; /* Garante alinhamento vertical para a seção de premiações */
+}
+
+
