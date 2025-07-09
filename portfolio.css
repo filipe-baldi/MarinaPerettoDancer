@@ -417,6 +417,13 @@
 }
 
 
+/* Nova classe para imagens com tamanho original */
+.imagem-tamanho-original {
+    width: auto !important;   /* Define a largura para o tamanho intrínseco da imagem */
+    height: auto !important;  /* Define a altura para o tamanho intrínseco da imagem */
+    max-width: none !important; /* Remove qualquer limitação de largura máxima */
+    object-fit: none !important; /* Garante que a imagem não seja "cortada" ou "esticada" para caber */
+
 
 /* ========================================= */
 /* Estilos para o Modal de Imagem (Lightbox) */
@@ -545,13 +552,6 @@
     height: 250px;
   }
 
-/* Nova classe para imagens com tamanho original */
-.imagem-tamanho-original {
-    width: auto !important;   /* Define a largura para o tamanho intrínseco da imagem */
-    height: auto !important;  /* Define a altura para o tamanho intrínseco da imagem */
-    max-width: none !important; /* Remove qualquer limitação de largura máxima */
-    object-fit: none !important; /* Garante que a imagem não seja "cortada" ou "esticada" para caber */
-    
   /* Responsividade específica para layout-imagem-direita */
   .evento-conteudo.layout-imagem-direita .evento-imagem {
     height: 300px; /* Altura maior para manter proporção em mobile */
