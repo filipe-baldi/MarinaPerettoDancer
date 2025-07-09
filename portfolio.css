@@ -79,6 +79,14 @@
     object-fit: contain;
 }
 
+.img-original-size {
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Garante que a imagem não transborde o contêiner se for muito grande */
+    display: block; /* Para centralizar ou controlar melhor o layout */
+    margin: 0 auto; /* Para centralizar a imagem se ela for menor que o contêiner */
+}
+
 /* Remover padding superior especificamente para a primeira seção após o banner */
 .section-content-split.section-full-width .content-wrapper {
     padding-top: 0 !important;
