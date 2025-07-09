@@ -308,6 +308,15 @@
 /* Classes para tamanhos personalizados de imagens */
 /* ========================================= */
 
+
+/* Nova classe para imagens com tamanho original */
+.imagem-tamanho-original {
+    width: auto !important;   /* Define a largura para o tamanho intrínseco da imagem */
+    height: auto !important;  /* Define a altura para o tamanho intrínseco da imagem */
+    max-width: none !important; /* Remove qualquer limitação de largura máxima */
+    object-fit: none !important; /* Garante que a imagem não seja "cortada" ou "esticada" para caber */
+
+
 /* Tamanho Médio - Imagem Principal */
 .evento-conteudo.tamanho-medio .evento-imagem {
   flex: 0 0 435px;
@@ -416,13 +425,6 @@
   margin-bottom: 1rem;
 }
 
-
-/* Nova classe para imagens com tamanho original */
-.imagem-tamanho-original {
-    width: auto !important;   /* Define a largura para o tamanho intrínseco da imagem */
-    height: auto !important;  /* Define a altura para o tamanho intrínseco da imagem */
-    max-width: none !important; /* Remove qualquer limitação de largura máxima */
-    object-fit: none !important; /* Garante que a imagem não seja "cortada" ou "esticada" para caber */
 
 
 /* ========================================= */
@@ -628,23 +630,17 @@
 
 .premiacao-container {
   display: flex;
-  flex-wrap: wrap; /* Pode manter ou remover dependendo do efeito desejado em telas menores */
-  align-items: center; /* Ótimo para centralizar verticalmente */
+  flex-wrap: wrap;
+  align-items: center; /* Centraliza verticalmente */
   gap: 40px;
   width: 100%;
   padding-left: 60px;
   padding-right: 20px;
 }
 
-.premiacao-imagem {
-  max-width: 450px; /* Ajuste o tamanho máximo da imagem como desejar */
-  height: auto;
-  flex-shrink: 0;
-}
-
 .premiacao-texto {
-  flex: 1; /* Ocupa o espaço flexível restante */
-  margin-top: 0;
+ /* max-width: 360px;*/
+  margin-top: -90px; /* ou ajuste fino */
 }
 
 .premiacao-texto h2 {
@@ -660,7 +656,14 @@
 
 .premiacao-texto p strong {
   display: block;
-  margin-top: 20px;
+  margin-top: 20px; /* Ajuste conforme quiser */
+}
+
+.premiacao-imagem {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
 
 /* Responsivo */
@@ -692,4 +695,6 @@
   align-items: center; /* Alinha verticalmente o conteúdo */
 }
 
-
+.premiacao-container {
+  align-items: center; /* Garante alinhamento vertical para a seção de premiações */
+}
