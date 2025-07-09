@@ -309,12 +309,7 @@
 /* ========================================= */
 
 
-/* Nova classe para imagens com tamanho original */
-.imagem-tamanho-original {
-    width: auto !important;   /* Define a largura para o tamanho intrínseco da imagem */
-    height: auto !important;  /* Define a altura para o tamanho intrínseco da imagem */
-    max-width: none !important; /* Remove qualquer limitação de largura máxima */
-    object-fit: none !important; /* Garante que a imagem não seja "cortada" ou "esticada" para caber */
+
 
 
 /* Tamanho Médio - Imagem Principal */
