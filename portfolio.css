@@ -307,7 +307,7 @@
 
 /* Dimensões específicas para imagens principais em layout-imagem-direita */
 .evento-conteudo.layout-imagem-direita .evento-imagem {
-  flex: 0 0 520px;
+  flex: 0 0 440px;
   height: 428px;
 }
 
