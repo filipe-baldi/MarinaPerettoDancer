@@ -510,10 +510,10 @@
 }
 
 .btn-email {
-    background-color: #8B0000;
+    background-color: #5E4D49;
 }
 .btn-email:hover {
-    background-color: #a30000;
+    background-color: #5E4D49;
     transform: translateY(-3px);
 }
 
