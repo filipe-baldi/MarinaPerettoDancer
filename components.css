@@ -245,6 +245,7 @@
     line-height: 1.2;
 }
 .card-btn p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
     color: #333;
     margin-top: 10px;
