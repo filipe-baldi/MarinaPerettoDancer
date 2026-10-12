@@ -22,7 +22,7 @@ body {
 
 /* Header */
 header {
-    background: #8B0000;
+    background: #2B3454;
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -110,7 +110,7 @@ header h1 {
         top: 70px; /* Posiciona abaixo do header */
         left: 0;
         width: 100%;
-        background: #8B0000; /* Mesmo fundo do header */
+        background: #2B3454; /* Mesmo fundo do header */
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease-out;
