@@ -284,6 +284,8 @@ header h1 {
     justify-content: space-between;
 }
 .texto-quem-sou p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.90rem;
     text-align: justify;
     hyphens: auto;
     margin-bottom: 1rem;
