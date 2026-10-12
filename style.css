@@ -259,7 +259,7 @@ header h1 {
 /* Seção Quem Sou */
 .sobre {
     padding: 60px 20px;
-    background: #fdf5e6;
+    background: #f4eee6;
 }
 .sobre h2 {
     font-family: 'DM Sans', sans-serif;
@@ -321,7 +321,7 @@ header h1 {
     gap: 20px;
 }
 .card-btn {
-    background: #fdf5e6;
+    background: #f4eee6;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -338,7 +338,7 @@ header h1 {
 }
 .card-btn:hover {
     transform: scale(1.03);
-    background-color: #f5e8ca;
+    background-color: #e0b97c;
 }
 .card-btn h3 {
     margin-top: 0;
