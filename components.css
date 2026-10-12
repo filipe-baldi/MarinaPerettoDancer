@@ -195,6 +195,8 @@
     margin-bottom: 40px;
 }
 .servicos h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     color: #2B3454;
     margin-bottom: 40px;
     font-size: 2rem;
@@ -227,6 +229,8 @@
     background-color: #e0b97c;
 }
 .card-btn h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     margin-top: 0;
     font-size: 1rem;
     color: #2B3454;
