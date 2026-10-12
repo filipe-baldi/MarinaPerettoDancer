@@ -310,6 +310,8 @@ header h1 {
     background: #fff;
 }
 .servicos h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
@@ -341,6 +343,8 @@ header h1 {
     background-color: #e0b97c;
 }
 .card-btn h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     margin-top: 0;
     font-size: 1rem;
     color: #8B0000;
