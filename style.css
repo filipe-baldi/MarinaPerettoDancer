@@ -262,10 +262,12 @@ header h1 {
     background: #fdf5e6;
 }
 .sobre h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
     font-size: 2rem;
-    color: #8B0000;
+    color: #2B3454;
 }
 .sobre-conteudo {
     display: flex;
