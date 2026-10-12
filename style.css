@@ -86,7 +86,8 @@ header h1 {
 #main-nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     transition: opacity 0.3s;
     padding: 5px 0; /* Adiciona algum padding para facilitar o clique */
 }
