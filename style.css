@@ -252,8 +252,8 @@ header h1 {
 }
 .hero p {
     font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-weight: 300;
+    font-size: 1.0rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
